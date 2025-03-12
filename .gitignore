@@ -32,3 +32,5 @@ Thumbs.db
 .env.production
 .env.development
 .env.test
+
+sss_key.pem
