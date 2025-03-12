@@ -8,6 +8,6 @@
 </template>
 <script lang="ts" setup>
 import { defineAsyncComponent } from 'vue'
-const StarterMain = defineAsyncComponent(() => import("@/components/theme/dashbord/StarterMain.vue"))
+const StarterMain = defineAsyncComponent(() => import("@/components/theme/dashboard/StarterMain.vue"))
 
 </script>

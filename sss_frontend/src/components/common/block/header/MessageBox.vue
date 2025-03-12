@@ -9,13 +9,13 @@
         <ul class="messages">
             <li class="d-flex  gap-2" :class="item.class" v-for="(item, index) in messages" :key="index">
                 <div class="flex-shrink-0"><img :src="getImages(item.img)" alt="Graph"></div>
-                <div class="flex-grow-1"> <a href="private-chat.html">
+                <div class="flex-grow-1"> <router-link to="/app/private_chat">
                         <h6 class="font-primary f-w-600">{{ item.name }}</h6>
-                    </a>
+                    </router-link>
                     <p>{{ item.msg }}</p>
                 </div><span>{{ item.time }}</span>
             </li>
-            <li><a class="f-w-700" href="email-application.html">Check all</a></li>
+            <li><router-link class="f-w-700" to="/app/letter_box">Check all</router-link></li>
         </ul>
     </div>
 </template>

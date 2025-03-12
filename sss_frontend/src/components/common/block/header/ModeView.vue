@@ -21,8 +21,6 @@ function customizeMixLayout(val: string) {
     actives.value = !actives.value
     store.setLayout({ class: val })
 }
-
-
 onMounted(() => {
     const savedMode = localStorage.getItem('mode');
     if (savedMode) {

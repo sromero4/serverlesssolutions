@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 import BodyView from "@/layout/BodyView.vue"
-import indexDashboard from "@/pages/indexDashboard.vue"
+import indexDashboard from "@/pages/ecommerce/indexProductList.vue"
 
 const routes: Array<RouteRecordRaw> = [
   {
