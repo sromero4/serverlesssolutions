@@ -31,6 +31,10 @@ ALLOWED_HOSTS = ['*']
 
 # Application definition
 
+THIRD_PARTY_APPS = [
+    'graphene_django',
+]
+
 DJANGO_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -44,7 +48,7 @@ LOCAL_APPS_CONJUNTO = [
     
 ]
 
-INSTALLED_APPS = DJANGO_APPS + LOCAL_APPS_CONJUNTO
+INSTALLED_APPS = THIRD_PARTY_APPS + DJANGO_APPS + LOCAL_APPS_CONJUNTO
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -130,6 +134,10 @@ USE_I18N = True
 USE_TZ = True
 
 DATETIME_FORMAT = 'Y-m-d H:i:s'
+
+GRAPHENE = {
+    "SCHEMA": "sss_backend.utils.schema.schema"
+}
 
 
 # Static files (CSS, JavaScript, Images)
