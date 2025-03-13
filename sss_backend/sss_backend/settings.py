@@ -45,7 +45,7 @@ DJANGO_APPS = [
 ]
 
 LOCAL_APPS_CONJUNTO = [
-    
+    'Apps.conjunto.apartamento',
 ]
 
 INSTALLED_APPS = THIRD_PARTY_APPS + DJANGO_APPS + LOCAL_APPS_CONJUNTO

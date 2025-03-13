@@ -2,7 +2,7 @@ from django.db import models
 
 
 class Usuario(models.Model):
-    usu_codigo = models.IntegerField(primary_key=True)
+    usu_codigo = models.BigAutoField(primary_key=True)
     usu_nombre = models.CharField(max_length=100, blank=True, null=True)
     usu_apellido = models.CharField(max_length=100, blank=True, null=True)
     usu_documento = models.IntegerField()
