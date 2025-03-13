@@ -73,34 +73,32 @@ export const bookmarks = [
 export const cart = [
     {
         title: "Furniture Chair for Home",
-        price: "$500",
-        img: "other-images/cart-img.jpg"
+        price: "$500"
     },
     {
         title: "Furniture Table for Office",
-        price: "$500.00",
-        img: "other-images/table-img.jpg"
+        price: "$500.00"
     }
 ]
 export const profile = [
     {
         icon: "user",
         title: "Account",
-        path: ""
+        path: "/users/profile"
     },
     {
         icon: "mail",
         title: "Inbox",
-        path: ""
+        path: "/app/letter_box"
     },
     {
         icon: "file-text",
         title: "Taskboard",
-        path: ""
+        path: "/app/task"
     },
     {
         icon: "settings",
         title: "Settings",
-        path: ""
+        path: "/users/edit"
     }
 ]

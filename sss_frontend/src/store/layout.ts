@@ -26,15 +26,32 @@ export const uselayoutStore = defineStore("layout", () => {
     const svg = ref<string>('stroke-svg')
 
 
+
     function setLayout(val: any) {
 
-
-        if (val?.class == "dark-only") {
-            document.body.classList.contains("light") && document.body.classList.remove("light");
-        } else {
-            document.body.classList.contains("dark-only") && document.body.classList.remove("dark-only");
+        if ((document.body.className == 'rtl' || document.body.className == 'dark-only' || document.body.className == 'light rtl') && val.class == 'dark-only') {
+            document.body.className = val.class + ' rtl';
         }
-        document.body.classList.add(val?.class || "");
+
+        else if (val.class == 'light' && document.body.getAttribute('main-theme-layout') == 'rtl') {
+            document.body.className = 'rtl'
+        }
+        else if (val.class == 'light' && document.body.getAttribute('main-theme-layout') == 'ltr') {
+            document.body.className = 'ltr'
+        }
+        else if (val.class == 'light' && document.body.getAttribute('main-theme-layout') == 'box-layout') {
+            document.body.className = 'box-layout'
+        }
+        else if (document.body.className == 'box-layout' || document.body.className == 'dark-only' || document.body.className == 'light box-layout') {
+            document.body.className = val.class + ' box-layout';
+        }
+        else if (document.body.className == 'ltr' || document.body.className == 'dark-only' || document.body.className == 'light ltr' || document.body.className == 'light') {
+            document.body.className = val.class + ' ltr';
+        }
+        else {
+            document.body.className = val.class;
+        }
+
     }
     document.body.setAttribute("main-theme-layout", layouts.value.settings.layout_type);
     document.getElementsByTagName("html")[0].setAttribute("dir", layouts.value.settings.layout_type);

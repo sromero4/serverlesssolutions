@@ -6,22 +6,26 @@ body {
 		color: $dark-all-font-color;
 		background-color: $light-sidebar-bg;
 		--bs-body-color: rgba(255, 255, 255, 0.7);
+
 		.page-body {
 			.bg-light {
 				background-color: $dark-body-background !important;
 			}
 		}
+
 		.alert {
 			hr {
 				border-color: $semi-dark
 			}
 		}
+
 		.form-control {
 			&::placeholder {
 				color: $dark-all-font-color;
 				font-weight: 400;
 			}
 		}
+
 		.card {
 			.card-header {
 				p {
@@ -29,13 +33,16 @@ body {
 				}
 			}
 		}
+
 		.more_lang {
 			background-color: $dark-card-background;
 		}
+
 		.swal2-show {
 			background-color: $dark-card-background;
 			color: $dark-all-font-color;
 		}
+
 		.tree {
 			.tree-node {
 				.node-wrapper {
@@ -46,18 +53,21 @@ body {
 							}
 						}
 					}
+
 					.input-wrapper {
 						span {
 							color: $dark-all-font-color;
 						}
 					}
-					&:hover ,
-					&:focus{
+
+					&:hover,
+					&:focus {
 						background-color: $dark-body-background;
 					}
 				}
 			}
 		}
+
 		.page-wrapper {
 			.compact-wrapper {
 				.page-header {
@@ -66,20 +76,25 @@ body {
 					}
 				}
 			}
+
 			.page-header {
 				.page-title {
 					h4 {
 						color: rgba($white, 0.9);
 					}
+
 					.breadcrumb {
 						.breadcrumb-item {
 							color: rgba($white, 0.8);
+
 							&.active {
 								color: $primary-color !important;
 							}
+
 							&::before {
 								color: rgba($white, 0.6);
 							}
+
 							a {
 								svg {
 									stroke: rgba($white, 0.6);
@@ -90,15 +105,19 @@ body {
 				}
 			}
 		}
+
 		.box-layout .page-wrapper.horizontal-wrapper .page-body-wrapper .sidebar-wrapper .sidebar-main #sidebar-menu {
 			background-color: $dark-card-background;
 		}
+
 		.msger-chat {
 			background: $dark-body-background;
 		}
+
 		.fc .fc-toolbar-title {
 			color: rgba($white, 0.8);
 		}
+
 		.calendar-basic {
 			#external-events {
 				h4 {
@@ -106,6 +125,7 @@ body {
 				}
 			}
 		}
+
 		.modal-body {
 			.modal-toggle-wrapper {
 				h4 {
@@ -113,11 +133,13 @@ body {
 				}
 			}
 		}
+
 		.grid-showcase {
 			.grid-wrapper {
 				background-color: $dark-body-background;
 			}
 		}
+
 		.dropdown-basic {
 			.dropdown {
 				.dropdown-content {
@@ -125,6 +147,7 @@ body {
 						background-color: $dark-body-background;
 						color: rgba($white, 0.8);
 						opacity: 1;
+
 						&:first-child {
 							border-top: none;
 						}
@@ -132,9 +155,11 @@ body {
 				}
 			}
 		}
+
 		.btn-dark {
 			color: rgba($white, 0.8);
 		}
+
 		.dark-dropdown {
 			.dropdown-block {
 				li {
@@ -146,6 +171,7 @@ body {
 				}
 			}
 		}
+
 		.filepond--drop-label {
 			&.filepond--drop-label {
 				label {
@@ -153,16 +179,19 @@ body {
 				}
 			}
 		}
+
 		.filepond--root {
 			.filepond--drop-label {
 				background: $dark-body-background;
 			}
 		}
+
 		.my-activity {
 			h6 {
 				color: rgba($white, 0.8);
 			}
 		}
+
 		.timeline-calendar {
 			.custom-calendar {
 				.time-line {
@@ -170,8 +199,10 @@ body {
 						.fc-timegrid-col-frame {
 							.fc-timegrid-event-harness {
 								border: none;
+
 								.fc-v-event {
 									border: none;
+
 									.fc-event-main {
 										.fc-sticky {
 											.fc-task-text-box {
@@ -188,11 +219,13 @@ body {
 				}
 			}
 		}
+
 		.fc-timegrid-event-harness-inset {
 			.fc-timegrid-event {
 				box-shadow: none;
 			}
 		}
+
 		.breadcrumb-item {
 			+.breadcrumb-item {
 				&::before {
@@ -200,11 +233,13 @@ body {
 				}
 			}
 		}
+
 		.main {
 			.langChoice {
 				color: rgba($white, 0.6);
 			}
 		}
+
 		.new-users-social {
 			.d-flex {
 				.flex-grow-1 {
@@ -214,14 +249,17 @@ body {
 				}
 			}
 		}
+
 		.modal-title {
 			color: rgba($white, 0.8);
 		}
+
 		.msger-inputarea .dropdown-form .chat-icon div .dropdown-menu {
 			.dropdown-item {
 				border-top: rgba(var(--white), 0.4);
 			}
 		}
+
 		.dropdown-menu {
 			.dropdown-item {
 				background: $dark-body-background;
@@ -231,11 +269,13 @@ body {
 				box-shadow: 0 2px 28px $dark-card-background;
 			}
 		}
+
 		.msger-inputarea {
 			.dropdown-form {
 				.chat-icon {
 					div {
 						background-color: $dark-card-background;
+
 						&:nth-child(2) svg {
 							stroke: rgba(var(--white), 0.8);
 						}
@@ -243,9 +283,11 @@ body {
 				}
 			}
 		}
+
 		.invoice-dark {
 			background-color: $dark-body-background !important;
 		}
+
 		// Dashboard-1 
 		.default-dashboard,
 		.dashboard-2,
@@ -255,13 +297,17 @@ body {
 				.dataTables_paginate {
 					border: none !important;
 				}
+
 				table.dataTable {
 					border: none;
+
 					thead {
 						background-color: $dark-body-background;
+
 						>tr {
 							>th {
 								border: none !important;
+
 								.form-check-input {
 									input {
 										background-color: $dark-card-background !important;
@@ -273,6 +319,7 @@ body {
 				}
 			}
 		}
+
 		.apexcharts-canvas {
 			.apexcharts-svg {
 				.apexcharts-inner {
@@ -286,6 +333,7 @@ body {
 				}
 			}
 		}
+
 		.page-wrapper {
 			.page-body-wrapper {
 				.page-body {
@@ -298,6 +346,7 @@ body {
 										color: $white;
 									}
 								}
+
 								.page-link {
 									color: $dark-all-font-color;
 								}
@@ -307,6 +356,7 @@ body {
 				}
 			}
 		}
+
 		// .pagination {
 		// 	.page-item {
 		// 		&.active {
@@ -321,58 +371,77 @@ body {
 		// 		}
 		// 	}
 		// }
-		.ql-toolbar.ql-snow ,.ql-container.ql-snow{
+		.ql-toolbar.ql-snow,
+		.ql-container.ql-snow {
 			border-color: $dark-card-border;
 		}
-		.job-description{
-			.multiselect__tags{
+
+		.job-description {
+			.multiselect__tags {
 				background-color: $dark-body-background;
 				border-color: $dark-card-border;
-				.multiselect__input, .multiselect__single{
+
+				.multiselect__input,
+				.multiselect__single {
 					background-color: $dark-body-background;
 					color: $dark-all-font-color;
 				}
 			}
-			.multiselect__content-wrapper{
+
+			.multiselect__content-wrapper {
 				border-color: $dark-card-border;
 				background-color: $dark-card-background;
-				.multiselect__element{
+
+				.multiselect__element {
 					background-color: $dark-card-background;
 					color: $dark-all-font-color;
 				}
 			}
 		}
+
 		.appointments {
 			.dp__flex_display {
 				.dp__outer_menu_wrap {
 					.dp__theme_light {
 						background-color: transparent;
 						border-color: unset;
+
 						.dp__pointer {
 							color: $dark-all-font-color;
 						}
+
 						.dp__cell_offset {
 							color: rgba($dark-all-font-color, 0.2);
 						}
-						.dp--year-select, .dp__month_year_select {
+
+						.dp--year-select,
+						.dp__month_year_select {
 							color: $dark-all-font-color;
 						}
-						.dp__date_hover_end:hover, .dp__date_hover_start:hover, .dp__date_hover:hover {
+
+						.dp__date_hover_end:hover,
+						.dp__date_hover_start:hover,
+						.dp__date_hover:hover {
 							background: $primary-color;
 							color: $dark-all-font-color;
 						}
-						.dp--year-select:hover, .dp__month_year_select:hover {
+
+						.dp--year-select:hover,
+						.dp__month_year_select:hover {
 							background: $primary-color;
 							color: $dark-all-font-color;
 						}
+
 						.dp__overlay {
 							background-color: $dark-card-background;
 							color: $dark-all-font-color;
 						}
+
 						.dp__overlay_cell:hover {
 							background: $primary-color;
 							color: $dark-all-font-color;
 						}
+
 						.dp__button:hover {
 							background: $primary-color;
 							color: $dark-all-font-color;
@@ -381,65 +450,88 @@ body {
 				}
 			}
 		}
+
 		.dp__theme_light {
 			background-color: $dark-card-background;
 			border-color: $dark-card-border;
 		}
+
 		.dp__calendar_item {
 			color: $dark-all-font-color;
 		}
-		.dp__date_hover_end:hover, .dp__date_hover_start:hover, .dp__date_hover:hover {
+
+		.dp__date_hover_end:hover,
+		.dp__date_hover_start:hover,
+		.dp__date_hover:hover {
 			background-color: $primary-color;
 			color: $dark-all-font-color;
 		}
+
 		.dp__calendar_header_separator {
 			background-color: $dark-card-border;
 		}
-		.dp__arrow_bottom ,.dp__arrow_top{
+
+		.dp__arrow_bottom,
+		.dp__arrow_top {
 			background-color: $dark-card-background;
 		}
-		.dp--year-select, .dp__month_year_select {
+
+		.dp--year-select,
+		.dp__month_year_select {
 			color: $dark-all-font-color;
 		}
+
 		.dp__cell_offset {
 			color: rgba($dark-all-font-color, 0.2);
 		}
-		.dp--year-select:hover, .dp__month_year_select:hover {
+
+		.dp--year-select:hover,
+		.dp__month_year_select:hover {
 			background-color: $primary-color;
 		}
+
 		.dp__action_cancel {
 			border: 1px solid $primary-color;
 			color: $dark-all-font-color;
 		}
+
 		.dp__overlay {
 			background-color: $dark-card-background;
 			color: $dark-all-font-color;
 		}
+
 		.dp__overlay_cell:hover {
 			background: $primary-color;
 			color: $dark-all-font-color;
 		}
+
 		.dp__button:hover {
 			background: $primary-color;
 			color: $dark-all-font-color;
 		}
+
 		.ql-snow .ql-picker-options {
 			background-color: $dark-card-background;
 			border-color: $dark-card-border !important;
 		}
-		.ql-snow.ql-toolbar button svg, .ql-snow .ql-toolbar button svg {
+
+		.ql-snow.ql-toolbar button svg,
+		.ql-snow .ql-toolbar button svg {
 			stroke: $dark-all-font-color;
 		}
+
 		// ---dashboard-1
 		.default-dashboard {
 			.datepicker--cell-day {
 				color: rgba($white, 0.6);
 			}
+
 			.datepicker-inline {
 				.datepicker {
 					background-color: transparent !important;
 				}
 			}
+
 			.overview {
 				.apexcharts-canvas {
 					svg {
@@ -450,6 +542,7 @@ body {
 										fill: $dark-card-background !important;
 									}
 								}
+
 								.apexcharts-slices {
 									.apexcharts-series {
 										path {
@@ -462,6 +555,7 @@ body {
 					}
 				}
 			}
+
 			.profile-greeting {
 				.img-overlay {
 					h1 {
@@ -469,6 +563,7 @@ body {
 					}
 				}
 			}
+
 			.shifts-overview {
 				.d-flex {
 					.flex-grow-1 {
@@ -478,6 +573,7 @@ body {
 					}
 				}
 			}
+
 			.notification-box {
 				li {
 					&.d-flex {
@@ -485,6 +581,7 @@ body {
 							a {
 								h5 {
 									color: rgba($white, 0.8);
+
 									&:hover {
 										color: $primary-color !important;
 									}
@@ -494,6 +591,7 @@ body {
 					}
 				}
 			}
+
 			.appointments-user {
 				li {
 					&.d-flex {
@@ -507,11 +605,13 @@ body {
 					}
 				}
 			}
+
 			.active-members {
 				table {
 					thead {
 						tr {
 							background-color: $dark-body-background;
+
 							th {
 								.form-check-input {
 									input {
@@ -521,6 +621,7 @@ body {
 							}
 						}
 					}
+
 					tbody {
 						tr {
 							td {
@@ -534,6 +635,7 @@ body {
 										}
 									}
 								}
+
 								&:hover {
 									.d-flex {
 										.flex-grow-1 {
@@ -550,13 +652,16 @@ body {
 					}
 				}
 			}
+
 			.sale-statistic {
 				.statistic-icon {
 					.balance-card {
 						background-color: $dark-body-background;
+
 						h5 {
 							color: rgba($white, 0.8);
 						}
+
 						.icon-box {
 							background: $dark-card-background;
 							box-shadow: none;
@@ -564,11 +669,13 @@ body {
 					}
 				}
 			}
+
 			.sales-product {
 				table {
 					thead {
 						tr {
 							background-color: $dark-body-background;
+
 							th {
 								.form-check {
 									input {
@@ -578,6 +685,7 @@ body {
 							}
 						}
 					}
+
 					tbody {
 						tr {
 							td {
@@ -591,9 +699,11 @@ body {
 										}
 									}
 								}
+
 								.progress {
 									background-color: $dark-body-background;
 								}
+
 								&:hover {
 									.d-flex {
 										.flex-grow-1 {
@@ -611,6 +721,7 @@ body {
 				}
 			}
 		}
+
 		// dashboard-2
 		.dashboard-2 {
 			.upcoming-box {
@@ -618,8 +729,10 @@ body {
 					color: rgba($white, 0.8);
 				}
 			}
+
 			.projects {
 				border-radius: 0 0 10px 10px;
+
 				table {
 					thead {
 						tr {
@@ -632,6 +745,7 @@ body {
 							}
 						}
 					}
+
 					tbody {
 						tr {
 							&:hover {
@@ -645,6 +759,7 @@ body {
 									}
 								}
 							}
+
 							td {
 								.customers {
 									ul {
@@ -657,6 +772,7 @@ body {
 										}
 									}
 								}
+
 								.d-flex {
 									.flex-grow-1.ms-2 {
 										a {
@@ -666,6 +782,7 @@ body {
 										}
 									}
 								}
+
 								a {
 									color: rgba($white, 0.8);
 								}
@@ -674,19 +791,23 @@ body {
 					}
 				}
 			}
+
 			.total-project {
 				h5 {
 					color: rgba($white, 0.8);
 				}
+
 				ul {
 					li {
 						p {
 							color: rgba($white, 0.8);
 						}
+
 						background-color: $dark-body-background;
 					}
 				}
 			}
+
 			.client-activity {
 				table {
 					thead {
@@ -700,6 +821,7 @@ body {
 							}
 						}
 					}
+
 					tbody {
 						tr {
 							td {
@@ -713,12 +835,14 @@ body {
 										}
 									}
 								}
+
 								.progress-showcase {
 									.progress {
 										background-color: $dark-body-background;
 									}
 								}
 							}
+
 							&:hover {
 								td {
 									.d-flex {
@@ -736,6 +860,7 @@ body {
 					}
 				}
 			}
+
 			.designer-card {
 				.d-flex {
 					.flex-grow-1 {
@@ -746,6 +871,7 @@ body {
 						}
 					}
 				}
+
 				.ratting-button {
 					.d-flex {
 						.flex-shrink-0 {
@@ -753,10 +879,12 @@ body {
 						}
 					}
 				}
+
 				.progress {
 					background-color: $dark-body-background;
 				}
 			}
+
 			.task-box {
 				>li {
 					.d-flex {
@@ -768,6 +896,7 @@ body {
 					}
 				}
 			}
+
 			.running-box {
 				.d-flex {
 					.flex-grow-1 {
@@ -778,6 +907,7 @@ body {
 						}
 					}
 				}
+
 				>ul {
 					li {
 						h5 {
@@ -787,6 +917,7 @@ body {
 				}
 			}
 		}
+
 		// dashboard 3
 		.dashboard-3 {
 			.recent-customers {
@@ -799,12 +930,14 @@ body {
 								}
 							}
 						}
+
 						div {
 							h5 {
 								color: rgba($white, 0.7);
 							}
 						}
 					}
+
 					&:hover {
 						&.d-flex {
 							.flex-grow-1 {
@@ -818,6 +951,7 @@ body {
 					}
 				}
 			}
+
 			.recent-orders,
 			.seller-month {
 				table {
@@ -834,6 +968,7 @@ body {
 					}
 				}
 			}
+
 			.seller-month {
 				table {
 					tbody {
@@ -841,6 +976,7 @@ body {
 							&:hover {
 								background-color: $dark-body-background !important;
 								box-shadow: 0px 0px 10px 6px rgba(255, 255, 255, 0.06) !important;
+
 								td {
 									.d-flex {
 										.flex-grow-1 {
@@ -851,9 +987,11 @@ body {
 											}
 										}
 									}
+
 									p {
 										background-color: rgba($primary-color, 0.1) !important;
 									}
+
 									&:nth-child(2) {
 										color: var(--theme-deafult) !important;
 									}
@@ -863,6 +1001,7 @@ body {
 					}
 				}
 			}
+
 			.recent-orders {
 				table {
 					tbody {
@@ -878,6 +1017,7 @@ body {
 											}
 										}
 									}
+
 									&:nth-child(3) {
 										color: var(--theme-deafult) !important;
 									}
@@ -887,30 +1027,36 @@ body {
 					}
 				}
 			}
+
 			.product-slider {
 				.slick-slide {
 					img {
 						background: $dark-body-background;
 					}
 				}
+
 				.pro-slide-right {
 					img {
 						background: $dark-body-background;
 					}
 				}
+
 				.product-details {
 					h5 {
 						color: rgba($white, 0.7);
 					}
+
 					.discount-box {
 						h6 {
 							background: linear-gradient(90deg, $dark-body-background 0%, rgba(255, 255, 255, 0.00) 100%);
 							color: rgba($white, 0.7);
 						}
 					}
+
 					.countdown {
 						ul li {
 							background-color: $dark-body-background;
+
 							span {
 								&:nth-child(2) {
 									color: rgba($white, 0.6);
@@ -921,13 +1067,16 @@ body {
 				}
 			}
 		}
+
 		.msger-inputarea {
 			.emoji_picker {
 				background-color: $dark-card-background;
 			}
 		}
+
 		// dashboard 4
 		.dashboard-4 {
+
 			.student,
 			.student-2,
 			.student-3,
@@ -937,12 +1086,14 @@ body {
 						h2 {
 							color: rgba($white, 0.9);
 						}
+
 						p {
 							color: rgba($white, 0.7);
 						}
 					}
 				}
 			}
+
 			.assignments-table {
 				table {
 					thead {
@@ -956,6 +1107,7 @@ body {
 							}
 						}
 					}
+
 					tbody {
 						tr {
 							td {
@@ -965,6 +1117,7 @@ body {
 									}
 								}
 							}
+
 							&:hover {
 								td {
 									.d-flex {
@@ -976,6 +1129,7 @@ body {
 											}
 										}
 									}
+
 									&:nth-child(5) {
 										color: var(--theme-deafult) !important;
 									}
@@ -985,6 +1139,7 @@ body {
 					}
 				}
 			}
+
 			#schedulechart {
 				.apexcharts-canvas {
 					.apexcharts-svg {
@@ -994,6 +1149,7 @@ body {
 									&:nth-child(odd) {
 										fill: $dark-body-background;
 									}
+
 									&:nth-child(even) {
 										fill: $dark-card-background;
 									}
@@ -1004,6 +1160,7 @@ body {
 				}
 			}
 		}
+
 		.product-box {
 			.modal {
 				.modal-header {
@@ -1012,8 +1169,9 @@ body {
 							ul {
 								li {
 									button {
-										&:hover ,
-										&:focus{
+
+										&:hover,
+										&:focus {
 											background-color: $dark-body-background !important;
 											color: $dark-all-font-color !important;
 											border-color: $dark-card-border !important;
@@ -1026,6 +1184,7 @@ body {
 				}
 			}
 		}
+
 		// General-widgest
 		.designer-card {
 			.d-flex {
@@ -1037,6 +1196,7 @@ body {
 					}
 				}
 			}
+
 			.ratting-button {
 				.d-flex {
 					.flex-shrink-0 {
@@ -1044,10 +1204,12 @@ body {
 					}
 				}
 			}
+
 			.progress {
 				background-color: $dark-body-background;
 			}
 		}
+
 		.student,
 		.student-2,
 		.student-3,
@@ -1057,12 +1219,14 @@ body {
 					h2 {
 						color: rgba($white, 0.9);
 					}
+
 					p {
 						color: rgba($white, 0.7);
 					}
 				}
 			}
 		}
+
 		.appointments-user {
 			li {
 				&.d-flex {
@@ -1076,6 +1240,7 @@ body {
 				}
 			}
 		}
+
 		.icon-dropdown {
 			.dropdown-toggle {
 				i {
@@ -1083,28 +1248,34 @@ body {
 				}
 			}
 		}
+
 		.left-msg {
 			.msg-bubble {
 				background: $dark-card-background;
 				color: rgba($white, 0.6);
 			}
 		}
+
 		.contact-edit {
 			&.chat-alert {
 				background: $dark-body-background;
 			}
+
 			i {
 				color: rgba($white, 0.6);
 			}
 		}
+
 		.right-msg {
 			.msg-bubble {
 				color: rgba($white, 0.6);
 			}
 		}
+
 		.ql-snow .ql-stroke {
 			stroke: $dark-all-font-color;
 		}
+
 		.right-sidebar-title {
 			.common-space {
 				.chat-time {
@@ -1116,9 +1287,11 @@ body {
 				}
 			}
 		}
+
 		.msger-inputarea {
 			background: $dark-card-background;
 		}
+
 		.left-sidebar-wrapper {
 			.advance-options {
 				.chats-user {
@@ -1126,6 +1299,7 @@ body {
 						background-color: $dark-body-background;
 					}
 				}
+
 				ul {
 					.nav-item {
 						.nav-link {
@@ -1135,6 +1309,7 @@ body {
 				}
 			}
 		}
+
 		.page-wrapper {
 			.page-header {
 				.header-wrapper {
@@ -1146,6 +1321,7 @@ body {
 				}
 			}
 		}
+
 		.order-box {
 			.title-box {
 				.checkbox-title {
@@ -1155,20 +1331,24 @@ body {
 				}
 			}
 		}
+
 		.pricingtable {
 			.title {
 				color: rgba($white, 0.8);
 			}
 		}
+
 		.form-control {
 			&::placeholder {
 				color: rgba($white, 0.4);
 			}
 		}
+
 		.email-body {
 			.light-square {
 				background-color: $dark-body-background;
 			}
+
 			.mail-body-wrapper {
 				ul {
 					li {
@@ -1182,6 +1362,7 @@ body {
 					}
 				}
 			}
+
 			.mail-header-wrapper {
 				.mail-header {
 					ul {
@@ -1194,11 +1375,13 @@ body {
 				}
 			}
 		}
+
 		.email-main-wrapper {
 			.email-app-sidebar {
 				.nav-pills {
 					.nav-link {
 						color: rgba($white, 0.6);
+
 						&.active {
 							background-color: rgba($primary-color, 0.20);
 						}
@@ -1206,17 +1389,20 @@ body {
 				}
 			}
 		}
+
 		.pricing-simple {
 			.card-body {
 				h1 {
 					color: rgba($white, 0.8);
 				}
+
 				h4,
 				h6 {
 					color: rgba($white, 0.8);
 				}
 			}
 		}
+
 		.page-wrapper {
 			&.compact-wrapper {
 				.page-header {
@@ -1226,16 +1412,20 @@ body {
 				}
 			}
 		}
+
 		.progress {
 			background-color: $light-sidebar-bg;
 		}
+
 		.light-background {
 			background-color: $light-sidebar-bg;
 		}
+
 		.form-control {
 			background-color: $light-sidebar-bg;
 			border-color: $dark-card-border;
 		}
+
 		.quick-file {
 			li {
 				h6 {
@@ -1243,17 +1433,20 @@ body {
 				}
 			}
 		}
+
 		.product-buttons {
 			.btn {
 				border: 1px solid rgba($white, 0.4);
 				color: rgba($white, 0.4);
 			}
 		}
+
 		.product-date {
 			.form-control[readonly] {
 				background-color: $dark-body-background;
 			}
 		}
+
 		.prooduct-details-box {
 			.product-name {
 				a {
@@ -1261,6 +1454,7 @@ body {
 				}
 			}
 		}
+
 		.product-tag {
 			input {
 				background-color: rgba($white, 0.05);
@@ -1268,6 +1462,7 @@ body {
 				border: none;
 			}
 		}
+
 		.list-product {
 			.datatable-pagination {
 				.datatable-pagination-list-item-link {
@@ -1275,17 +1470,21 @@ body {
 				}
 			}
 		}
+
 		.datatable-selector {
 			color: rgba($white, 0.6);
 		}
+
 		.list-product-header {
 			.light-box {
 				background-color: $dark-body-background;
+
 				svg {
 					color: rgba($white, 0.6);
 				}
 			}
 		}
+
 		.sidebar-left-wrapper {
 			.sidebar-left-icons {
 				.nav-item {
@@ -1294,29 +1493,37 @@ body {
 							h5 {
 								color: rgba($white, 0.8);
 							}
+
 							p {
 								color: rgba($white, 0.6);
 							}
 						}
+
 						.nav-rounded {
 							border: 1px dashed rgba($white, 0.6);
+
 							.product-icons {
 								background-color: $dark-body-background;
+
 								svg {
 									stroke: rgba($white, 0.6);
 								}
 							}
 						}
+
 						&.active {
 							.nav-rounded {
 								border: 1px dashed $primary-color;
+
 								.product-icons {
 									background-color: $primary-color;
+
 									svg {
 										stroke: rgba($white, 0.7);
 									}
 								}
 							}
+
 							.product-tab-content {
 								h5 {
 									color: $primary-color;
@@ -1327,16 +1534,19 @@ body {
 				}
 			}
 		}
+
 		.ql-snow {
 			.ql-picker {
 				color: rgba($white, 0.6);
 			}
 		}
+
 		.file-manager {
 			h5 {
 				color: rgba($white, 0.8);
 			}
 		}
+
 		.file-content {
 			.folder {
 				.folder-box {
@@ -1345,6 +1555,7 @@ body {
 					}
 				}
 			}
+
 			.folder-box {
 				.files-list {
 					h6 {
@@ -1353,6 +1564,7 @@ body {
 				}
 			}
 		}
+
 		.visitor-card {
 			.card-header {
 				svg {
@@ -1360,11 +1572,13 @@ body {
 				}
 			}
 		}
+
 		.social-widget {
 			.social-icons {
 				background: $sidebar-color;
 			}
 		}
+
 		.product-sidebar {
 			.filter-section {
 				.card {
@@ -1374,23 +1588,28 @@ body {
 				}
 			}
 		}
+
 		.select2-drpdwn-product {
 			.form-control {
 				background-color: $sidebar-color;
 				color: rgba($white, 0.6);
 			}
 		}
+
 		.default-dashboard {
 			div.dataTables_wrapper {
 				table.dataTable {
 					border: none !important;
+
 					thead {
 						background-color: $light-sidebar-bg;
 					}
+
 					&.display {
 						tbody {
 							tr.odd {
 								background-color: transparent !important;
+
 								>.sorting_1 {
 									background-color: transparent !important;
 								}
@@ -1400,10 +1619,12 @@ body {
 				}
 			}
 		}
+
 		.theme-form input[type=email] {
 			background-color: $light-sidebar-bg;
 			border-color: rgba($white, 0.30);
 		}
+
 		.feature-products {
 			form {
 				.form-group {
@@ -1413,10 +1634,12 @@ body {
 				}
 			}
 		}
+
 		.theme-form input[type=password] {
 			background-color: $light-sidebar-bg;
 			border-color: rgba($white, 0.30);
 		}
+
 		.pagination-primary {
 			.page-item {
 				.page-link {
@@ -1424,22 +1647,26 @@ body {
 				}
 			}
 		}
+
 		.page-wrapper {
 			.page-header {
 				background-color: $sidebar-color;
 			}
 		}
+
 		.wizard-4 {
 			.step-container {
 				background-color: $dark-card-background;
 				border-color: $dark-card-border;
 			}
+
 			.login-card {
 				.login-main {
 					background-color: $dark-body-background;
 				}
 			}
 		}
+
 		.page-wrapper {
 			.page-header {
 				.header-wrapper {
@@ -1447,6 +1674,7 @@ body {
 						>ul {
 							li {
 								background-color: $light-sidebar-bg;
+
 								&:last-child {
 									background-color: transparent;
 								}
@@ -1456,9 +1684,11 @@ body {
 				}
 			}
 		}
+
 		.total-balance {
 			background-blend-mode: overlay;
 		}
+
 		.icon-state {
 			.switch-state {
 				&:after {
@@ -1466,11 +1696,13 @@ body {
 				}
 			}
 		}
+
 		.social-widget {
 			.social-icons {
 				box-shadow: none;
 			}
 		}
+
 		.wizard-4 {
 			.step-container {
 				div.content {
@@ -1482,6 +1714,7 @@ body {
 				}
 			}
 		}
+
 		.comment-box {
 			.comment-social {
 				li {
@@ -1489,15 +1722,19 @@ body {
 				}
 			}
 		}
+
 		.calendar-basic {
 			.md-sidebar-aside {
 				background: $dark-card-background;
 			}
+
 			#external-events {
 				border-color: $dark-card-border;
 			}
+
 			.calendar-default {
 				.fc {
+
 					.fc-daygrid-day-number,
 					.fc-col-header-cell-cushion {
 						color: $dark-all-font-color;
@@ -1505,47 +1742,59 @@ body {
 				}
 			}
 		}
+
 		.clockpicker-popover {
 			.popover-title {
 				background-color: $dark-card-background;
 			}
+
 			&.bottom {
 				>.arrow {
 					border-bottom-color: $dark-body-background;
+
 					&:after {
 						border-bottom-color: $dark-card-background;
 					}
 				}
 			}
+
 			&.top {
 				>.arrow {
 					border-top-color: $dark-body-background;
+
 					&::after {
 						border-top-color: $dark-card-background;
 					}
 				}
 			}
+
 			&.left {
 				>.arrow {
 					border-left-color: $dark-body-background;
+
 					&::after {
 						border-left-color: $dark-card-background;
 					}
 				}
 			}
+
 			.popover-title {
 				border-bottom-color: $dark-card-background;
 			}
 		}
+
 		.fc-theme-standard {
+
 			.fc-scrollgrid,
 			.fc-list {
 				border-color: $dark-card-border;
 			}
+
 			.fc-list-day-cushion {
 				background-color: $dark-body-background;
 			}
 		}
+
 		.fc {
 			.fc-list-event {
 				&:hover {
@@ -1555,6 +1804,7 @@ body {
 				}
 			}
 		}
+
 		.view-container {
 			.apexcharts-canvas {
 				.apexcharts-point-annotations {
@@ -1564,9 +1814,11 @@ body {
 				}
 			}
 		}
+
 		.form-label {
 			color: rgba($white, 0.8);
 		}
+
 		.edit-profile {
 			.profile-title {
 				.d-flex {
@@ -1578,6 +1830,7 @@ body {
 				}
 			}
 		}
+
 		// apex chart
 		.apexcharts-tooltip.light {
 			.apexcharts-tooltip-title {
@@ -1585,36 +1838,45 @@ body {
 				color: $white;
 			}
 		}
+
 		.apexcharts-tooltip.apexcharts-theme-light {
 			border: 1px solid $dark-card-border;
 			background: $dark-body-background;
 		}
+
 		.apexcharts-tooltip.apexcharts-theme-light .apexcharts-tooltip-title {
 			border: 1px solid $dark-card-border;
 			background: $dark-body-background;
 			color: $dark-all-font-color;
 		}
+
 		.apexcharts-tooltip-series-group {
 			color: $dark-all-font-color !important;
 		}
+
 		.apexcharts-yaxistooltip,
 		.apexcharts-xaxistooltip {
 			color: $dark-all-font-color;
 			background: $dark-body-background;
 			border: 1px solid $dark-card-border;
 		}
+
 		.apexcharts-yaxistooltip-left {
+
 			&::before,
 			&::after {
 				border-left-color: $dark-card-border;
 			}
 		}
+
 		.apexcharts-xaxistooltip-bottom {
+
 			&::before,
 			&::after {
 				border-bottom-color: $dark-card-border;
 			}
 		}
+
 		.bottom-content {
 			.apexcharts-canvas {
 				span {
@@ -1622,57 +1884,70 @@ body {
 				}
 			}
 		}
+
 		.apexcharts-canvas {
 			.apexcharts-tooltip {
 				border: 1px solid $dark-card-border;
+
 				.apexcharts-tooltip-title {
 					margin-bottom: 0;
 				}
+
 				.apexcharts-tooltip-series-group {
 					background-color: $dark-card-background;
 					color: $dark-all-font-color;
 				}
 			}
+
 			.apexcharts-yaxis {
 				text {
 					fill: $dark-small-font-color;
 				}
 			}
 		}
+
 		.apexcharts-xaxistooltip {
 			background-color: $dark-body-background;
 			color: $dark-all-font-color;
 			border: 1px solid $dark-card-border;
 		}
+
 		.apexcharts-xaxistooltip-bottom:before {
 			border-bottom-color: $dark-card-border;
 		}
+
 		.apexcharts-xaxistooltip-bottom:after {
 			border-bottom-color: $dark-card-border;
 		}
+
 		.apexcharts-tooltip.apexcharts-theme-light {
 			border: 1px solid $dark-card-border;
 			background: $dark-body-background;
+
 			.apexcharts-tooltip-text {
 				color: $dark-small-font-color;
 			}
+
 			.apexcharts-tooltip-title {
 				background: $dark-card-background;
 				border-bottom: 1px solid $dark-card-border;
 				color: $dark-small-font-color;
 			}
 		}
+
 		.apexcharts-yaxis {
 			text {
 				color: $dark-all-font-color;
 			}
 		}
+
 		// crypto dashboard
 		.currency-widget {
 			div[class*=bg-light-] {
 				color: $dark-all-font-color;
 			}
 		}
+
 		.btn {
 			&.badge-light-primary {
 				&:hover {
@@ -1680,6 +1955,7 @@ body {
 				}
 			}
 		}
+
 		.portfolio-chart-container {
 			.apexcharts-canvas {
 				.apexcharts-radialbar {
@@ -1689,21 +1965,25 @@ body {
 				}
 			}
 		}
+
 		// online course dashboard css start
 		svg.f-light {
 			fill: rgba($white, 0.6);
 			opacity: 1;
 		}
+
 		.course-widget {
 			.btn-light {
 				background-color: $dark-body-background !important;
 			}
 		}
+
 		.schedule-list {
 			>li {
 				box-shadow: 4px 7px 17px 5px rgba($dark-body-background, 0.2);
 			}
 		}
+
 		.upcoming-event-wrap {
 			.apexcharts-canvas {
 				.apexcharts-data-labels {
@@ -1714,15 +1994,18 @@ body {
 				}
 			}
 		}
+
 		// online course dashboard  css end
 		.page-wrapper {
 			&.advance-layout {
 				.page-header {
 					background: $dark-card-background;
 				}
+
 				.page-body-wrapper {
 					.sidebar-wrapper {
 						border-bottom: 1px dashed $dark-card-border;
+
 						.logo-wrapper {
 							.back-btn {
 								color: $white;
@@ -1731,92 +2014,116 @@ body {
 					}
 				}
 			}
+
 			&.only-body {
 				background: $dark-body-background;
 			}
 		}
+
 		.balance-card {
 			.svg-box {
 				background: $dark-card-background;
 				box-shadow: none;
+
 				svg {
 					fill: $dark-all-font-color;
 				}
 			}
 		}
+
 		.f-light {
 			color: $dark-all-font-color;
 		}
+
 		.apexcharts-tooltip.light {
 			.apexcharts-tooltip-title {
 				background: $dark-card-background;
 				color: $white;
 			}
 		}
+
 		.card {
 			background-color: $dark-card-background;
 		}
+
 		.ecommerce-widget {
 			border: 1px dashed $dark-card-border !important;
 		}
+
 		.btn-light {
 			color: $dark-all-font-color !important;
 		}
+
 		.form-select {
 			color: $dark-all-font-color;
 		}
+
 		.add-project {
 			.text-inherit {
 				color: $dark-all-font-color;
 			}
 		}
+
 		.knowledgebase-search {
 			color: $theme-body-font-color;
+
 			.form-control-plaintext {
 				color: $theme-body-font-color;
 			}
 		}
+
 		// Toasts 
 		.toast {
 			border: 1px solid rgba($white, 0.3);
+
 			.toast-header {
 				background-color: $dark-card-background;
 				color: $dark-all-font-color;
 			}
+
 			.toast-dark {
 				background-color: $dark-card-background;
 				color: $dark-all-font-color !important;
 			}
 		}
+
 		.btn-close {
 			filter: brightness(0.8) invert(1);
 		}
+
 		.prooduct-details-box {
 			.d-flex {
 				border: 1px dashed $dark-card-border;
 			}
 		}
+
 		.product-price {
 			del {
 				color: $dark-small-font-color;
 			}
 		}
+
 		.ProfileCard {
 			border: 1px dashed $dark-card-border !important;
 		}
+
 		.form-control-plaintext {
 			color: $dark-all-font-color;
+
 			&::placeholder {
 				color: $dark-all-font-color;
 			}
 		}
+
 		.form-select {
 			background-color: $dark-body-background;
 			border: 1px dashed rgba($white, 0.1);
 			background-blend-mode: screen;
 		}
+
 		.box-layout {
 			background-color: $dark-body-background;
+
 			.page-wrapper,
 			&.page-wrapper {
 				.page-header {
@@ -1826,6 +2133,7 @@ body {
 				}
 			}
 		}
+
 		.dropzone {
 			.dz-message {
 				span {
@@ -1833,10 +2141,12 @@ body {
 				}
 			}
 		}
+
 		.form-check-input {
 			background-color: $dark-body-background;
 			border: 1px solid rgba($white, 0.1);
 		}
+
 		// Radio and checkbox control
 		.checkbox-wrapper,
 		.radio-wrapper {
@@ -1846,11 +2156,13 @@ body {
 				}
 			}
 		}
+
 		.switch-state {
 			&:before {
 				background-color: $dark-card-background;
 			}
 		}
+
 		// tooltip css start
 		// tooltip css start
 		.tooltip {
@@ -1861,6 +2173,7 @@ body {
 					}
 				}
 			}
+
 			&.bs-tooltip-bottom {
 				.tooltip-arrow {
 					&:before {
@@ -1869,6 +2182,7 @@ body {
 					}
 				}
 			}
+
 			&.bs-tooltip-start {
 				.tooltip-arrow {
 					&:before {
@@ -1877,6 +2191,7 @@ body {
 					}
 				}
 			}
+
 			&.bs-tooltip-end {
 				.tooltip-arrow {
 					&:before {
@@ -1885,16 +2200,19 @@ body {
 					}
 				}
 			}
+
 			.tooltip-inner {
 				background-color: $dark-body-background;
 				color: $white;
 			}
+
 			.tooltip-arrow {
 				&:before {
 					border-top-color: $dark-body-background;
 				}
 			}
 		}
+
 		// tooltip css end
 		.page-wrapper {
 			&.only-body {
@@ -1911,6 +2229,7 @@ body {
 						}
 					}
 				}
+
 				.page-header {
 					.header-wrapper {
 						.search-full {
@@ -1925,42 +2244,51 @@ body {
 					}
 				}
 			}
+
 			.page-header {
 				.header-wrapper {
 					.nav-right {
 						.profile-dropdown li span {
 							color: $white;
 						}
+
 						.flip-card .flip-card-inner {
 							.back {
 								background-color: $dark-body-background !important;
+
 								.flip-back-content {
 									input {
 										background-color: $dark-body-background;
 										border: 1px dashed $dark-card-border;
 										color: $dark-all-font-color;
+
 										&::placeholder {
 											color: $dark-all-font-color;
 										}
 									}
 								}
+
 								li {
 									&:last-child {
 										border-top: 1px dashed $dark-card-border;
 									}
 								}
 							}
+
 							.front {
 								background-color: $dark-body-background !important;
+
 								svg {
 									stroke: $white;
 								}
 							}
 						}
+
 						.cart-dropdown {
 							.total {
 								background-color: $dark-card-background;
 							}
+
 							.qty-box {
 								.input-group {
 									.btn {
@@ -1975,13 +2303,16 @@ body {
 				}
 			}
 		}
+
 		.qty-box {
 			input {
 				color: rgba($white, 0.5);
 			}
 		}
+
 		.customizer-contain {
 			color: $dark-body-background;
+
 			.customizer-body {
 				.main-layout {
 					.box-layout {
@@ -1990,42 +2321,51 @@ body {
 				}
 			}
 		}
+
 		.login-dark {
 			background-color: $dark-card-background;
 			background-blend-mode: overlay;
+
 			.login-main {
 				background-color: $dark-card-inbox;
 			}
 		}
+
 		.login-card {
 			.login-main {
 				.theme-form {
 					label {
 						color: rgba($white, 0.8) !important;
 					}
+
 					.or {
 						color: rgba($white, 0.8) !important;
 					}
 				}
 			}
 		}
+
 		.login-card {
 			.btn-showcase .btn {
 				background-color: $dark-card-background !important;
 				color: #fff;
 				border-color: $dark-card-background !important;
 			}
+
 			.login-main {
 				box-shadow: 0 0 37px rgba($white, 0.05);
+
 				.theme-form {
 					input {
 						background-color: $dark-card-background !important;
 					}
+
 					.or {
 						&:before {
 							background-color: $dark-card-background;
 						}
 					}
+
 					.checkbox label::before {
 						background-color: $dark-card-background !important;
 						border-color: $dark-card-background !important;
@@ -2033,53 +2373,67 @@ body {
 				}
 			}
 		}
+
 		.H_ui {
 			~div {
 				background-color: $dark-body-background !important;
 			}
 		}
+
 		.swal-icon--success:after,
 		.swal-icon--success:before {
 			background: $dark-card-background;
 		}
+
 		.swal-icon--success__hide-corners {
 			background-color: $dark-card-background;
 		}
+
 		.note-editor.note-frame {
 			.note-status-output {
 				border-top: 1px solid $dark-card-background;
 			}
+
 			.note-statusbar {
 				border-top: 1px solid $dark-card-background;
+
 				.note-resizebar {
 					background-color: $dark-card-background;
 				}
 			}
 		}
+
 		.light-font {
 			color: rgba(255, 255, 255, 70%);
 		}
+
 		.page-link {
 			background-color: $dark-body-background;
 			border: 1px dashed $dark-card-border;
 		}
+
 		.nav-tabs {
 			border-bottom-color: rgba(255, 255, 255, 0.3);
 		}
+
 		.b-r-light {
 			border-right: 1px dashed $dark-card-border !important;
 		}
+
 		.history-details {
 			.d-flex {
 				border-top: 1px dashed $dark-card-border;
 			}
 		}
+
 		.modal-header {
 			border-bottom: 1px dashed $dark-card-border;
 		}
+
 		#right-history {
 			background-color: $dark-card-background;
 			box-shadow: 0 0 9px $dark-body-background;
+
 			h6 {
 				span {
 					a {
@@ -2088,75 +2442,101 @@ body {
 				}
 			}
 		}
+
 		.ProfileCard {
 			&:hover {
 				color: $dark-all-font-color;
 				background-color: $dark-card-background;
 			}
 		}
+
 		.morris-hover.morris-default-style {
 			background: $dark-body-background;
 			color: rgba($white, 0.6);
 		}
+
 		.translate_wrapper.active .more_lang {
 			&:before {
 				border-bottom: 7px dashed $dark-card-background;
 			}
+
 			.lang {
 				border-bottom: 1px dashed $dark-body-background;
 			}
 		}
+
 		.toggle-sidebar {
 			svg {
 				stroke: $white;
 			}
 		}
+
 		.multiselect__tags {
 			background-color: $dark-body-background;
 			border-color: $dark-card-border;
 		}
+
 		input[type=file] {
 			&::file-selector-button {
-			  color: $dark-all-font-color;
-			  background-color: $dark-body-background;
+				color: $dark-all-font-color;
+				background-color: $dark-body-background;
 			}
+
 			&:hover:not(:disabled):not([readonly])::file-selector-button {
 				color: $dark-all-font-color !important;
 				background-color: $dark-body-background !important;
 			}
 		}
+
 		.dp__input {
 			color: $dark-all-font-color;
 		}
-		.ck.ck-icon.ck-icon_inherit-color, .ck.ck-icon.ck-icon_inherit-color * {
+
+		.ck.ck-icon.ck-icon_inherit-color,
+		.ck.ck-icon.ck-icon_inherit-color * {
 			color: $dark-all-font-color;
 		}
-		.ck.ck-button .ck-button__label, a.ck.ck-button .ck-button__label {
+
+		.ck.ck-button .ck-button__label,
+		a.ck.ck-button .ck-button__label {
 			color: $dark-all-font-color;
 		}
-		.ck.ck-button:not(.ck-disabled):hover, a.ck.ck-button:not(.ck-disabled):hover {
+
+		.ck.ck-button:not(.ck-disabled):hover,
+		a.ck.ck-button:not(.ck-disabled):hover {
 			background-color: $dark-body-background;
 		}
-		.ck.ck-button:not(.ck-disabled):active, a.ck.ck-button:not(.ck-disabled):active {
+
+		.ck.ck-button:not(.ck-disabled):active,
+		a.ck.ck-button:not(.ck-disabled):active {
 			background-color: $dark-body-background;
 		}
+
 		.ck.ck-list {
 			background-color: $dark-body-background;
 		}
+
+		.v3ti {
+			background: $dark-body-background !important;
+		}
+
 		.knowledgebase-search {
 			h3 {
 				color: $theme-body-font-color;
 			}
 		}
+
 		.bookmark-tabcontent {
 			.details-bookmark {
 				.bookmark-card {
 					.details-website {
 						background-color: $dark-body-background;
 					}
+
 					&.card {
 						.title-bookmark {
 							border-top: none;
+
 							h5 {
 								color: rgba($white, 0.8);
 							}
@@ -2165,6 +2545,7 @@ body {
 				}
 			}
 		}
+
 		.email-wrap {
 			.email-app-sidebar {
 				ul {
@@ -2176,14 +2557,17 @@ body {
 						}
 					}
 				}
+
 				.main-menu {
 					>li {
 						a:hover {
 							background-color: $dark-body-background;
+
 							span {
 								color: $primary-color;
 							}
 						}
+
 						.main-title {
 							.pull-right {
 								a {
@@ -2195,6 +2579,7 @@ body {
 				}
 			}
 		}
+
 		.social-details {
 			.social-follow {
 				li {
@@ -2204,11 +2589,13 @@ body {
 				}
 			}
 		}
+
 		.social {
 			&-img {
 				background: $dark-card-background;
 			}
 		}
+
 		.page-wrapper {
 			&.horizontal-wrapper {
 				div.sidebar-wrapper {
@@ -2234,22 +2621,27 @@ body {
 						}
 					}
 				}
+
 				.page-body-wrapper {
 					.sidebar-main {
 						.sidebar-links {
-							> li {
+							>li {
 								a {
 									color: $dark-all-font-color;
+
 									svg {
 										stroke: $white !important;
 									}
 								}
+
 								.sidebar-submenu {
 									background-color: $dark-card-background;
+
 									li {
 										a {
 											color: $dark-all-font-color;
 										}
+
 										&:hover {
 											.nav-sub-childmenu {
 												background-color: $dark-card-background;
@@ -2262,13 +2654,16 @@ body {
 					}
 				}
 			}
+
 			.page-body-wrapper {
 				background-color: $dark-body-background;
+
 				.page-title {
 					background-color: $dark-card-background;
 					border-bottom: 1px dashed $dark-card-border;
 					box-shadow: rgba(0, 0, 0, 0.07) 0px 4px 40px;
 				}
+
 				div.sidebar-wrapper {
 					.sidebar-main {
 						.sidebar-links {
@@ -2282,16 +2677,19 @@ body {
 														&.stroke-icon {
 															stroke: $white;
 														}
+
 														&.fill-icon {
 															fill: rgba($white, 0.5);
 															stroke: transparent;
 														}
 													}
+
 													&.active {
 														svg {
 															&.stroke-icon {
 																stroke: $white;
 															}
+
 															&.fill-icon {
 																fill: $white;
 																stroke: transparent;
@@ -2307,6 +2705,7 @@ body {
 						}
 					}
 				}
+
 				.sidebar-main {
 					.sidebar-links {
 						.sidebar-link.active {
@@ -2316,6 +2715,7 @@ body {
 								}
 							}
 						}
+
 						li {
 							a {
 								span {
@@ -2323,6 +2723,7 @@ body {
 								}
 							}
 						}
+
 						.simplebar-wrapper {
 							.simplebar-mask {
 								.simplebar-content-wrapper {
@@ -2333,6 +2734,7 @@ body {
 													background-color: rgba($primary-color, 0.2);
 												}
 											}
+
 											.mega-menu-container {
 												.mega-box {
 													.link-section {
@@ -2341,6 +2743,7 @@ body {
 																color: $dark-all-font-color;
 															}
 														}
+
 														.submenu-content {
 															&.opensubmegamenu {
 																li {
@@ -2353,14 +2756,17 @@ body {
 														}
 													}
 												}
+
 												&::after {
 													background-color: $light-all-font-color;
 												}
 											}
+
 											.sidebar-submenu {
 												li {
 													a {
 														color: $dark-all-font-color;
+
 														&.active {
 															color: var(--theme-deafult);
 														}
@@ -2372,6 +2778,7 @@ body {
 								}
 							}
 						}
+
 						.sidebar-list {
 							ul.sidebar-submenu {
 								li {
@@ -2379,6 +2786,7 @@ body {
 										span {
 											color: $dark-all-font-color;
 										}
+
 										&.active {
 											color: var(--theme-deafult);
 										}
@@ -2389,6 +2797,7 @@ body {
 					}
 				}
 			}
+
 			&.modern-type {
 				.page-body-wrapper {
 					.page-title {
@@ -2397,15 +2806,18 @@ body {
 					}
 				}
 			}
+
 			.sidebar-main-title {
 				p {
 					color: $dark-all-font-color;
 				}
 			}
+
 			&.compact-wrapper {
 				.page-body-wrapper {
 					div.sidebar-wrapper {
 						background-color: $sidebar-color;
+
 						.sidebar-main {
 							.sidebar-links {
 								.sidebar-link.active {
@@ -2413,6 +2825,7 @@ body {
 										stroke: var(--theme-deafult);
 									}
 								}
+
 								li {
 									a {
 										span {
@@ -2420,6 +2833,7 @@ body {
 										}
 									}
 								}
+
 								.simplebar-wrapper {
 									.simplebar-mask {
 										.simplebar-content-wrapper {
@@ -2430,6 +2844,7 @@ body {
 															background-color: rgba($primary-color, 0.2);
 														}
 													}
+
 													.mega-menu-container {
 														.mega-box {
 															.link-section {
@@ -2438,6 +2853,7 @@ body {
 																		color: $dark-all-font-color;
 																	}
 																}
+
 																.submenu-content {
 																	&.opensubmegamenu {
 																		li {
@@ -2450,14 +2866,17 @@ body {
 																}
 															}
 														}
+
 														&::after {
 															background-color: $light-all-font-color;
 														}
 													}
+
 													.sidebar-submenu {
 														li {
 															a {
 																color: $dark-all-font-color;
+
 																&.active {
 																	color: $white;
 																}
@@ -2469,6 +2888,7 @@ body {
 										}
 									}
 								}
+
 								.sidebar-list {
 									ul.sidebar-submenu {
 										li {
@@ -2476,6 +2896,7 @@ body {
 												span {
 													color: $dark-all-font-color;
 												}
+
 												&.active {
 													color: var(--theme-deafult);
 												}
@@ -2486,6 +2907,7 @@ body {
 							}
 						}
 					}
+
 					.according-menu {
 						i {
 							color: $dark-all-font-color;
@@ -2493,11 +2915,13 @@ body {
 					}
 				}
 			}
+
 			&.horizontal-wrapper {
 				.page-body-wrapper {
 					.sidebar-wrapper {
 						background: $dark-card-background;
 						border-top: 1px dashed $dark-card-border;
+
 						.sidebar-main {
 							.sidebar-links {
 								.simplebar-wrapper {
@@ -2508,23 +2932,29 @@ body {
 													>a {
 														color: $dark-all-font-color;
 													}
+
 													.sidebar-submenu {
 														background: $dark-card-background;
+
 														li {
 															a {
 																color: $dark-all-font-color;
+
 																&.active,
 																&:hover {
 																	color: var(--theme-deafult);
 																}
 															}
+
 															.nav-sub-childmenu {
 																background: $dark-card-background;
 															}
 														}
 													}
+
 													.mega-menu-container {
 														background: $dark-card-background;
+
 														.mega-box {
 															.link-section {
 																.submenu-content {
@@ -2543,6 +2973,7 @@ body {
 									}
 								}
 							}
+
 							.left-arrow,
 							.right-arrow {
 								background-color: $dark-card-background;
@@ -2552,6 +2983,7 @@ body {
 					}
 				}
 			}
+
 			&.compact-sidebar {
 				.page-body-wrapper {
 					div {
@@ -2559,23 +2991,28 @@ body {
 							>div {
 								background: $dark-card-background;
 							}
+
 							.sidebar-main {
 								.sidebar-links {
 									li {
 										.sidebar-title {
 											border-bottom: 1px dashed $dark-card-border;
 										}
+
 										a {
 											span {
 												color: $dark-all-font-color;
 											}
+
 											svg {
 												stroke: $dark-all-font-color;
 											}
 										}
+
 										.sidebar-submenu,
 										.mega-menu-container {
 											background-color: $dark-card-background;
+
 											li {
 												a {
 													border-bottom: 1px dashed $dark-card-border;
@@ -2583,6 +3020,7 @@ body {
 											}
 										}
 									}
+
 									.simplebar-wrapper {
 										.simplebar-mask {
 											.simplebar-content-wrapper {
@@ -2591,15 +3029,18 @@ body {
 														.sidebar-link {
 															&.active {
 																background-color: rgba($primary-color, 0.2);
+
 																span {
 																	color: var(--theme-deafult);
 																}
+
 																svg {
 																	color: var(--theme-deafult);
 																	stroke: var(--theme-deafult);
 																}
 															}
 														}
+
 														.mega-menu-container {
 															.mega-box {
 																.link-section {
@@ -2608,6 +3049,7 @@ body {
 																			color: $dark-all-font-color;
 																		}
 																	}
+
 																	.submenu-content {
 																		&.opensubmegamenu {
 																			li {
@@ -2620,10 +3062,12 @@ body {
 																	}
 																}
 															}
+
 															&::after {
 																background-color: $light-all-font-color;
 															}
 														}
+
 														.sidebar-submenu {
 															li {
 																a {
@@ -2636,6 +3080,7 @@ body {
 											}
 										}
 									}
+
 									.sidebar-list {
 										ul.sidebar-submenu {
 											li {
@@ -2643,6 +3088,7 @@ body {
 													span {
 														color: $dark-all-font-color;
 													}
+
 													&.active {
 														color: var(--theme-deafult);
 													}
@@ -2654,6 +3100,7 @@ body {
 							}
 						}
 					}
+
 					.according-menu {
 						i {
 							color: $dark-all-font-color;
@@ -2661,6 +3108,7 @@ body {
 					}
 				}
 			}
+
 			&.material-type {
 				.page-header {
 					.header-wrapper {
@@ -2668,20 +3116,24 @@ body {
 					}
 				}
 			}
+
 			// material icon css
 			&.material-icon {
 				.page-header {
 					.header-wrapper {
 						background-color: $transparent-color;
+
 						.nav-right {
 							.language-nav {
 								.more_lang {
 									color: $white;
 								}
 							}
+
 							.onhover-show-div {
 								color: $white;
 							}
+
 							.flip-card {
 								.flip-card-inner {
 									.back {
@@ -2697,33 +3149,41 @@ body {
 							}
 						}
 					}
+
 					.header-logo-wrapper {
 						background-color: $transparent-color;
 					}
 				}
+
 				.page-body-wrapper {
 					.page-body {
 						background-color: $transparent-color;
 					}
 				}
 			}
+
 			&.advance-layout {
 				background-color: $dark-body-background;
+
 				.page-header {
 					.header-wrapper {
 						background: $transparent-color;
+
 						.header-logo-wrapper {
 							background: $transparent-color;
 						}
 					}
 				}
+
 				.page-body-wrapper {
 					background: $transparent-color;
+
 					.page-body {
 						background: $transparent-color;
 					}
 				}
 			}
+
 			&.material-icon {
 				.page-body-wrapper {
 					.page-title {
@@ -2733,10 +3193,12 @@ body {
 					}
 				}
 			}
+
 			.page-header {
 				.header-wrapper {
 					.search-full {
 						background-color: $dark-card-background;
+
 						input {
 							color: $dark-all-font-color;
 						}
@@ -2744,6 +3206,7 @@ body {
 				}
 			}
 		}
+
 		@media only screen and (min-width: 768px) {
 			.page-wrapper {
 				&.material-icon {
@@ -2767,16 +3230,20 @@ body {
 				}
 			}
 		}
+
 		::-webkit-calendar-picker-indicator {
 			filter: invert(1);
 		}
+
 		.kanban-board-header {
 			background-color: $dark-body-background;
 			border-bottom: 1px solid $dark-card-background;
 		}
+
 		.kanban-board .kanban-drag {
 			background: $dark-body-background;
 		}
+
 		.kanban-container {
 			.kanban-item {
 				.kanban-box {
@@ -2785,97 +3252,121 @@ body {
 				}
 			}
 		}
+
 		.project-box {
 			border: 1px dashed rgba($primary-color, 0.15);
 			background-color: $dark-body-background;
 		}
+
 		.file-content {
 			.form-inline {
 				border: 1px solid rgba($white, 0.20);
 			}
+
 			.files {
 				.file-box {
 					border: 1px dashed rgba($primary-color, 0.15);
 					background-color: $dark-body-background;
+
 					.file-top {
 						background-color: $dark-card-background;
 						border: 1px dashed rgba($primary-color, 0.15);
 					}
 				}
 			}
+
 			.folder .folder-box {
 				border: 1px dashed rgba($primary-color, 0.15);
 				background-color: $dark-body-background;
 			}
 		}
+
 		.file-sidebar {
 			h6 {
 				color: rgba($white, 0.8);
 			}
+
 			h5 {
 				color: rgba($white, 0.8);
 			}
+
 			.pricing-plan {
 				border: 1px solid rgba($primary-color, 0.15) !important;
 			}
+
 			.btn-light {
 				color: $dark-all-font-color;
 				background-color: $dark-body-background !important;
 				border: 1px solid rgba($primary-color, 0.15) !important;
 			}
 		}
+
 		#lnb {
 			border-right: 1px dashed $dark-card-border;
 		}
+
 		.lnb-new-schedule,
 		.lnb-calendars>div {
 			border-bottom: 1px dashed $dark-card-border;
 		}
+
 		#menu .sidebar-list .btn-default {
 			color: rgba($dark-all-font-color, 0.2);
 		}
+
 		.tui-full-calendar-timegrid-hour {
 			background-color: $dark-card-background;
 			color: $white !important;
 		}
+
 		.tui-full-calendar-timegrid-gridline {
 			border-bottom: 1px dashed $dark-card-border !important;
 		}
+
 		.tui-full-calendar-time-date,
 		.tui-full-calendar-weekday-grid-line,
 		.tui-full-calendar-left,
 		.tui-full-calendar-timegrid-timezone {
 			border-right-color: $dark-card-border !important;
 		}
+
 		.tui-full-calendar-popup {
 			color: $theme-body-font-color;
 		}
+
 		#menu {
 			.btn-default {
 				color: $dark-all-font-color;
+
 				&:hover {
 					color: $theme-body-font-color;
 				}
 			}
+
 			.dropdown-menu {
 				color: $dark-all-font-color;
 			}
 		}
+
 		.tui-full-calendar-dayname-container,
 		.tui-full-calendar-splitter {
 			border-top-color: $dark-card-border !important;
 			border-bottom-color: $dark-card-border !important;
 		}
+
 		span.tui-full-calendar-dayname-date-area {
 			color: $white !important;
 		}
+
 		.tui-full-calendar-layout {
 			background-color: $dark-card-background !important;
 		}
+
 		// index page css end	
 		.blockquote {
 			border-left: 4px solid $dark-card-border;
 		}
+
 		.figure {
 			&.text-end {
 				blockquote {
@@ -2884,9 +3375,11 @@ body {
 				}
 			}
 		}
+
 		.contacts-tabs {
 			.nav-pills {
 				border-right: 1px dashed $dark-card-border;
+
 				.nav-link {
 					+.nav-link {
 						border-top: 1px dashed $dark-card-border;
@@ -2894,6 +3387,7 @@ body {
 				}
 			}
 		}
+
 		.email-wrap {
 			.flex-grow-1 {
 				h4 {
@@ -2901,14 +3395,17 @@ body {
 				}
 			}
 		}
+
 		.list-persons {
 			.profile-mail {
 				.email-general {
 					color: rgba($white, 0.8);
+
 					h6 {
 						color: rgba($white, 0.8);
 					}
 				}
+
 				.d-flex {
 					.flex-grow-1 {
 						ul {
@@ -2922,6 +3419,7 @@ body {
 				}
 			}
 		}
+
 		.product-wrapper {
 			&.sidebaron {
 				.product-sidebar {
@@ -2935,19 +3433,23 @@ body {
 				}
 			}
 		}
+
 		.apexcharts-gridline {
 			stroke: $dark-border-color;
 		}
+
 		.apexcharts-tooltip-title,
 		.apexcharts-tooltip-series-group,
 		.apexcharts-tooltip.light,
 		.apexcharts-menu-item {
 			color: $black;
 		}
+
 		// peity chart css
 		.small-donut,
 		.donut-peity2,
 		.pie-peity {
+
 			~svg,
 			svg {
 				path {
@@ -2957,6 +3459,7 @@ body {
 				}
 			}
 		}
+
 		// index page css start		
 		.appointment-table {
 			table {
@@ -2971,6 +3474,7 @@ body {
 				}
 			}
 		}
+
 		.notification {
 			.card {
 				.d-flex {
@@ -2980,6 +3484,7 @@ body {
 								color: $dark-all-font-color;
 							}
 						}
+
 						span {
 							color: $dark-all-font-color;
 						}
@@ -2987,47 +3492,60 @@ body {
 				}
 			}
 		}
+
 		.datepicker {
 			background-color: $dark-body-background;
 			color: $dark-all-font-color;
 			box-shadow: 0 2px 28px #2a3650;
 			;
+
 			.datepicker--cell.-current- {
 				color: $primary-color;
 			}
+
 			.datepicker--cell.-current-.-focus- {
 				color: $white;
 			}
+
 			.datepicker--cell-day.-other-month-,
 			.datepicker--cell-year.-other-decade- {
 				color: rgba($white, 0.4);
 			}
+
 			.datepicker--nav {
 				border-bottom: 1px dashed $dark-card-border;
 			}
+
 			.datepicker--pointer {
 				background: $dark-body-background;
 				border-top-color: $dark-body-background;
 				border-right-color: $dark-body-background;
 			}
 		}
+
 		.default-datepicker {
 			.datepicker-inline {
 				.datepicker {
 					background: $dark-card-background;
+
 					.datepicker--nav-title {
 						color: $dark-all-font-color;
+
 						i {
 							color: $dark-all-font-color;
 						}
 					}
+
 					.datepicker--content {
 						.datepicker--days {
+
 							.datepicker--days-names,
 							.datepicker--cells {
+
 								.datepicker--day-name,
 								.datepicker--cell-day {
 									color: $dark-all-font-color;
+
 									&.-selected- {
 										color: $white;
 									}
@@ -3038,11 +3556,13 @@ body {
 				}
 			}
 		}
+
 		// index page css end
 		// ecommerce dashboard css start
 		[class*='activity-dot-'] {
 			background-color: $dark-card-background;
 		}
+
 		// ecommerce dashboard css end
 		.page-header {
 			.header-wrapper {
@@ -3057,6 +3577,7 @@ body {
 				}
 			}
 		}
+
 		$alert-name: primary,
 		secondary,
 		success,
@@ -3073,37 +3594,46 @@ body {
 		$info-color,
 		$light-color,
 		$dark-color;
+
 		@each $var in $alert-name {
 			$i: index($alert-name, $var);
+
 			.alert-#{$var} {
 				background-color: rgba(nth($alert-color, $i), 0.8) !important;
 				border-color: rgba(nth($alert-color, $i), 0.9) !important;
 				color: $white;
+
 				.progress {
 					height: 5px;
 					background-color: darken(nth($alert-color, $i), 1%);
 					border-radius: 0;
 				}
+
 				.progress-bar {
 					background-color: lighten(nth($alert-color, $i), 50%);
 				}
 			}
+
 			.alert-#{$var}.inverse {
 				background-color: $transparent-color !important;
+
 				.btn-close {
 					filter: brightness(1) invert(1);
 				}
 			}
+
 			.alert-#{$var}.outline,
 			.alert-#{$var}.outline-2x {
 				.btn-close {
 					filter: brightness(1) invert(1);
 				}
 			}
+
 			.dismiss-text {
 				.alert-dismissible {
 					.btn-close {
 						filter: unset;
+
 						.bg-light {
 							color: $theme-body-font-color !important;
 						}
@@ -3111,17 +3641,20 @@ body {
 				}
 			}
 		}
+
 		.options {
 			>div {
 				border: 1px dashed $dark-card-border;
 				color: rgba($white, 0.5);
 			}
 		}
+
 		.icon-lists {
 			div:hover {
 				background-color: $dark-body-background;
 			}
 		}
+
 		.was-validated {
 			.custom-control-input {
 				&:invalid {
@@ -3133,12 +3666,15 @@ body {
 				}
 			}
 		}
+
 		.pricing-simple {
 			box-shadow: 1px 1px 2px 1px $dark-body-background !important;
 		}
+
 		.pricing-block {
 			box-shadow: 0 0 10px 5px rgba($primary-color, 0.05) !important;
 		}
+
 		.search-page {
 			ul {
 				&.search-info {
@@ -3150,6 +3686,7 @@ body {
 				}
 			}
 		}
+
 		.browse {
 			.browse-articles {
 				h5 {
@@ -3157,12 +3694,19 @@ body {
 				}
 			}
 		}
-		.ck.ck-button.ck-on, a.ck.ck-button.ck-on {
+
+		.ck.ck-button.ck-on,
+		a.ck.ck-button.ck-on {
 			background-color: $dark-card-background;
 		}
-		.ck.ck-button:active, .ck.ck-button:focus, a.ck.ck-button:active, a.ck.ck-button:focus {
+
+		.ck.ck-button:active,
+		.ck.ck-button:focus,
+		a.ck.ck-button:active,
+		a.ck.ck-button:focus {
 			border-color: var(--theme-deafult);
 		}
+
 		.job-search {
 			.job-description {
 				.theme-form {
@@ -3179,20 +3723,24 @@ body {
 				}
 			}
 		}
+
 		.calendar-wrap {
 			.fc-unthemed {
+
 				td,
 				th {
 					border-color: $dark-body-background;
 				}
 			}
 		}
+
 		.mega-inline,
 		.mega-horizontal,
 		.mega-vertical {
 			.card {
 				box-shadow: 1px 1px 7px 0 rgba($dark-card-border, 0.5) !important;
 			}
+
 			&.plain-style,
 			&.border-style,
 			&.offer-style {
@@ -3200,25 +3748,30 @@ body {
 					box-shadow: none !important;
 				}
 			}
+
 			&.border-style {
 				.card {
 					border: 1px dashed $dark-card-border !important;
 				}
 			}
+
 			&.offer-style {
 				.card {
 					border: 1px dashed $dark-card-border !important;
 				}
 			}
 		}
+
 		.setting-dot {
 			.setting-bg {
 				background-color: var(--theme-secondary);
 			}
 		}
+
 		.bookmark.pull-right {
 			border: none;
 		}
+
 		// popover css start
 		.popover {
 			&.bs-popover-bottom {
@@ -3229,6 +3782,7 @@ body {
 					}
 				}
 			}
+
 			&.bs-popover-top {
 				.popover-arrow {
 					&:after {
@@ -3237,6 +3791,7 @@ body {
 					}
 				}
 			}
+
 			&.bs-popover-start {
 				.popover-arrow {
 					&:after {
@@ -3244,22 +3799,28 @@ body {
 					}
 				}
 			}
+
 			background-color: $dark-body-background;
+
 			.popover-header {
 				background-color: $dark-card-background;
 			}
+
 			.popover-arrow {
 				&:after {
 					border-right-color: $dark-body-background;
 				}
 			}
+
 			.popover-body {
 				color: rgba(255, 255, 255, 0.6);
 			}
+
 			code {
 				background-color: unset;
 			}
 		}
+
 		// popover css end
 		// apex chart css start
 		.apex-chart-container {
@@ -3271,14 +3832,17 @@ body {
 				}
 			}
 		}
+
 		.apexcharts-canvas {
 			svg {
 				.apexcharts-title-text {
 					fill: $white;
 				}
+
 				.apexcharts-subtitle-text {
 					fill: $white;
 				}
+
 				.apexcharts-yaxis {
 					.apexcharts-yaxis-texts-g {
 						.apexcharts-yaxis-label {
@@ -3286,6 +3850,7 @@ body {
 						}
 					}
 				}
+
 				.apexcharts-xaxis {
 					.apexcharts-xaxis-texts-g {
 						.apexcharts-xaxis-label {
@@ -3293,28 +3858,34 @@ body {
 						}
 					}
 				}
+
 				.apexcharts-legend-series {
 					span {
 						color: $dark-all-font-color !important;
 					}
 				}
+
 				.apexcharts-datalabels-group {
 					.apexcharts-datalabel-label {
 						fill: $white;
 					}
+
 					.apexcharts-datalabel-value {
 						fill: $white;
 					}
 				}
 			}
 		}
+
 		// apex chart css end
 		.Typeahead-menu {
 			background-color: $dark-body-background;
 		}
+
 		.ecommerce-widget {
 			border: 1px dashed $dark-border-color;
 		}
+
 		.bookmark {
 			ul {
 				li {
@@ -3325,6 +3896,7 @@ body {
 								border: 1px dashed $dark-border-color;
 								color: $dark-all-font-color;
 							}
+
 							&:before {
 								background: $dark-border-color;
 							}
@@ -3333,6 +3905,7 @@ body {
 				}
 			}
 		}
+
 		// cart css start
 		.cart {
 			.qty-box {
@@ -3344,6 +3917,7 @@ body {
 				}
 			}
 		}
+
 		.mail-header-wrapper {
 			.mail-body1 {
 				svg {
@@ -3351,6 +3925,7 @@ body {
 				}
 			}
 		}
+
 		.mail-body-wrapper {
 			.user-mail-wrapper {
 				.user-title {
@@ -3362,6 +3937,7 @@ body {
 				}
 			}
 		}
+
 		.mail-header-wrapper {
 			.mail-header1 {
 				.btn-email {
@@ -3369,16 +3945,19 @@ body {
 				}
 			}
 		}
+
 		.contact-edit {
 			svg {
 				stroke: $dark-all-font-color;
 			}
 		}
+
 		.msger-inputarea {
 			input {
-			  color: $dark-all-font-color;
+				color: $dark-all-font-color;
 			}
 		}
+
 		.email-wrap {
 			.flex-grow-1 {
 				h6 {
@@ -3386,12 +3965,14 @@ body {
 				}
 			}
 		}
+
 		// cart css end
 		// checkout css start
 		.checkout {
 			.checkout-details {
 				background-color: $dark-body-background;
 				border: 1px dashed $dark-border-color;
+
 				.animate-chk {
 					.radio_animated {
 						&:after {
@@ -3401,30 +3982,36 @@ body {
 				}
 			}
 		}
+
 		// checkout css end
 		.order-box {
 			.title-box {
 				color: #bfc2c6;
 			}
+
 			.qty {
 				li {
 					color: #bfc2c6;
+
 					span {
 						color: #bfc2c6;
 					}
 				}
 			}
+
 			.sub-total {
 				li {
 					color: #bfc2c6;
 				}
 			}
+
 			.total {
 				li {
 					color: #bfc2c6;
 				}
 			}
 		}
+
 		.shopping-checkout-option {
 			.checkbox_animated {
 				&:after {
@@ -3432,6 +4019,7 @@ body {
 				}
 			}
 		}
+
 		.animate-chk {
 			.radio_animated {
 				&:after {
@@ -3439,9 +4027,11 @@ body {
 				}
 			}
 		}
+
 		.custom-scrollbar::-webkit-scrollbar-thumb {
 			background-color: rgba(41, 50, 64, 0.52);
 		}
+
 		.product-box {
 			.product-img {
 				.product-hover {
@@ -3450,6 +4040,7 @@ body {
 							.btn {
 								color: $dark-small-font-color;
 							}
+
 							&:hover {
 								.btn {
 									color: $white;
@@ -3460,6 +4051,7 @@ body {
 				}
 			}
 		}
+
 		.radio_animated,
 		.checkbox_animated {
 			&:after {
@@ -3467,18 +4059,22 @@ body {
 				border: 2px dashed $dark-body-background;
 			}
 		}
+
 		.slider-product {
 			border-top: 1px dashed $dark-border-color;
 			border-bottom: 1px dashed $dark-border-color;
 		}
+
 		.square-product-setting {
 			.icon-grid {
 				background-color: $dark-card-background;
+
 				svg {
 					color: $dark-all-font-color;
 				}
 			}
 		}
+
 		.active-order-table,
 		.market-table {
 			table {
@@ -3489,11 +4085,13 @@ body {
 						}
 					}
 				}
+
 				tbody {
 					tr {
 						td {
 							border-bottom: 1px dashed $dark-border-color;
 						}
+
 						&:last-child {
 							td {
 								border-bottom: none;
@@ -3503,6 +4101,7 @@ body {
 				}
 			}
 		}
+
 		.pricing-card-design-2 {
 			.pricing-block {
 				.pricing-inner {
@@ -3514,12 +4113,14 @@ body {
 				}
 			}
 		}
+
 		.flot-chart-container {
 			.legend {
 				.table {
 					tbody {
 						background-color: $dark-card-background;
 						color: $white;
+
 						.legendLabel {
 							padding-left: 5px;
 						}
@@ -3527,29 +4128,35 @@ body {
 				}
 			}
 		}
+
 		.google-visualization-tooltip {
 			text {
 				fill: rgba(0, 0, 0, 0.7) !important;
 			}
 		}
+
 		.nav-dark,
 		.nav-pills.nav-dark {
 			.nav-link {
 				color: $white;
 			}
 		}
+
 		.loader-wrapper {
 			background-color: $dark-body-background;
+
 			.loader {
 				background-color: $dark-body-background !important;
 			}
 		}
+
 		.page-wrapper {
 			.sidebar-main-title {
 				h6 {
 					color: $dark-all-font-color;
 				}
 			}
+
 			/* Main Header start */
 			.page-header {
 				.translate_wrapper {
@@ -3557,21 +4164,26 @@ body {
 						.more_lang {
 							background-color: $dark-body-background;
 						}
+
 						.lang {
 							background-color: $dark-card-background;
 						}
 					}
 				}
+
 				form {
 					background-color: $dark-body-background;
 				}
+
 				.header-wrapper {
 					background-color: $sidebar-color;
+
 					li {
 						i {
 							color: $light-color;
 						}
 					}
+
 					.nav-right {
 						>ul {
 							>li {
@@ -3580,6 +4192,7 @@ body {
 								}
 							}
 						}
+
 						&.right-header {
 							>ul {
 								>li {
@@ -3593,6 +4206,7 @@ body {
 								}
 							}
 						}
+
 						.nav-menus {
 							li {
 								.d-flex {
@@ -3602,35 +4216,45 @@ body {
 										}
 									}
 								}
+
 								.onhover-show-div {
 									background-color: $dark-body-background;
 									box-shadow: 0 2px 28px $sidebar-color;
+
 									li {
 										border-color: $dark-card-background;
 									}
+
 									h6 {
 										color: rgba($white, 0.9) !important;
 									}
+
 									p {
 										color: rgba($white, 0.6) !important;
 									}
+
 									&:before {
 										border-bottom: 7px dashed $dark-body-background;
 									}
+
 									&:after {
 										border-bottom: 7px dashed $dark-body-background;
 									}
 								}
+
 								.notification-dropdown.onhover-show-div {
 									li {
 										background-color: $dark-card-background;
+
 										span {
 											color: $dark-small-font-color;
 										}
+
 										&:last-child {
 											background-color: transparent;
 										}
 									}
+
 									.bg-light {
 										background-color: #282e38 !important;
 										color: $dark-all-font-color !important;
@@ -3638,20 +4262,26 @@ body {
 								}
 							}
 						}
+
 						.profile-dropdown {
 							li {
 								a {
 									color: $dark-all-font-color;
+
 									svg {
+
 										path,
 										line,
 										circle {
 											color: $dark-all-font-color !important;
 										}
 									}
+
 									&:hover {
 										color: var(--theme-deafult);
+
 										svg {
+
 											line,
 											path,
 											circle {
@@ -3662,6 +4292,7 @@ body {
 								}
 							}
 						}
+
 						>ul {
 							>li {
 								.d-flex {
@@ -3671,19 +4302,24 @@ body {
 										}
 									}
 								}
+
 								.onhover-show-div {
 									background-color: $dark-body-background;
 									box-shadow: 0 0 2px 2px $dark-card-background;
+
 									&:before {
 										border-bottom: 7px dashed $dark-body-background;
 									}
+
 									&:after {
 										border-bottom: 7px dashed $dark-body-background;
 									}
 								}
+
 								.notification-dropdown.onhover-show-div {
 									li {
 										border-color: $dark-card-background;
+
 										span {
 											color: $dark-small-font-color;
 										}
@@ -3691,6 +4327,7 @@ body {
 								}
 							}
 						}
+
 						.bookmark-flip {
 							.bookmark-dropdown {
 								.bookmark-content {
@@ -3702,13 +4339,16 @@ body {
 						}
 					}
 				}
+
 				.header-logo-wrapper {
 					background-color: $sidebar-color;
+
 					.logo-wrapper {
 						a {
 							.image-dark {
 								display: none;
 							}
+
 							.image-light {
 								display: block;
 							}
@@ -3716,8 +4356,10 @@ body {
 					}
 				}
 			}
+
 			/* Main Header ends */
 			.page-body-wrapper {
+
 				/* body start*/
 				.page-body {
 					.topper-lists {
@@ -3733,16 +4375,20 @@ body {
 							}
 						}
 					}
+
 					.header-small {
 						color: $dark-small-font-color;
 					}
+
 					.statistics {
 						p {
 							color: $dark-small-font-color;
 						}
 					}
+
 					.feather-main,
 					.professor-table {
+
 						.flex-grow-1,
 						.professor-block {
 							p {
@@ -3750,6 +4396,7 @@ body {
 							}
 						}
 					}
+
 					.logs-element {
 						span {
 							+span {
@@ -3757,6 +4404,7 @@ body {
 							}
 						}
 					}
+
 					.progress-block {
 						.progress-title {
 							span {
@@ -3766,6 +4414,7 @@ body {
 							}
 						}
 					}
+
 					.ecommerce-icons {
 						div {
 							span {
@@ -3773,6 +4422,7 @@ body {
 							}
 						}
 					}
+
 					.new-users,
 					.recent-notification {
 						.d-flex {
@@ -3783,6 +4433,7 @@ body {
 							}
 						}
 					}
+
 					.progress-media {
 						.d-flex {
 							.flex-grow-1 {
@@ -3791,12 +4442,14 @@ body {
 								}
 							}
 						}
+
 						.progress-change {
 							span {
 								color: $dark-small-font-color;
 							}
 						}
 					}
+
 					.topper-lists {
 						table {
 							tbody {
@@ -3805,6 +4458,7 @@ body {
 										border-top: none !important;
 										border-bottom: 1px dashed $dark-card-border;
 									}
+
 									&:last-child {
 										td {
 											border-bottom: none;
@@ -3814,6 +4468,7 @@ body {
 							}
 						}
 					}
+
 					.notifiaction-media {
 						.d-flex {
 							.flex-grow-1 {
@@ -3823,19 +4478,23 @@ body {
 							}
 						}
 					}
+
 					.upcoming-event {
 						.upcoming-innner {
 							border-bottom: 1px dashed $dark-border-color;
+
 							&:last-child {
 								border-bottom: none;
 							}
 						}
 					}
+
 					.collapse-horizontal {
 						.bg-light-secondary {
 							color: rgba($white, 0.6) !important;
 						}
 					}
+
 					.professor-table {
 						table {
 							tbody {
@@ -3847,6 +4506,7 @@ body {
 							}
 						}
 					}
+
 					.number-widgets {
 						.d-flex {
 							.flex-grow-1 {
@@ -3856,9 +4516,11 @@ body {
 							}
 						}
 					}
+
 					.activity {
 						.d-flex {
 							.gradient-round {
+
 								&.gradient-line-1,
 								&.small-line,
 								&.medium-line {
@@ -3867,6 +4529,7 @@ body {
 									}
 								}
 							}
+
 							.flex-grow-1 {
 								h6 {
 									span {
@@ -3876,16 +4539,19 @@ body {
 							}
 						}
 					}
+
 					.card.custom-card {
 						.card-header {
 							border-bottom: none !important;
 						}
 					}
 				}
+
 				.custom-card .card-header img {
 					background-color: $black;
 					opacity: 0.8;
 				}
+
 				.page-title {
 					.row {
 						h3 {
@@ -3894,10 +4560,12 @@ body {
 							}
 						}
 					}
+
 					.breadcrumb {
 						li {
 							color: $dark-all-font-color;
 						}
+
 						.breadcrumb-item {
 							a {
 								svg {
@@ -3907,36 +4575,45 @@ body {
 						}
 					}
 				}
+
 				.page-body {
 					background-color: $light-sidebar-bg;
+
 					.default-according {
 						.card:not(.email-body) {
 							border: none;
 						}
 					}
+
 					.card:not(.email-body) {
 						background-color: $dark-card-background;
 						box-shadow: 1px 1px 2px 1px rgba(29, 28, 28, 0.08);
 						border: none;
+
 						&.widget-1 {
 							background-color: $sidebar-color;
 							background-blend-mode: overlay;
+
 							.widget-round {
 								.bg-round {
 									box-shadow: 1px 2px 21px -2px rgba(14, 14, 16, 0.83);
+
 									.half-circle {
 										background: rgba(49, 53, 66, 0);
 									}
 								}
 							}
 						}
+
 						&.social-profile {
 							background-blend-mode: overlay;
 							background-color: $dark-card-background;
 						}
+
 						.table {
 							&.table-light {
 								tr {
+
 									th,
 									td {
 										color: $theme-body-font-color;
@@ -3944,10 +4621,13 @@ body {
 								}
 							}
 						}
+
 						table {
+
 							thead,
 							tbody {
 								.border-bottom-light {
+
 									th,
 									td {
 										border-bottom: 1px dashed $dark-card-border !important;
@@ -3955,18 +4635,22 @@ body {
 								}
 							}
 						}
+
 						&.trending-card {
 							background-color: #010314;
 						}
+
 						&.explore-card {
 							background-color: $dark-card-background;
 							background-blend-mode: overlay;
 						}
+
 						// cypto dashboard css start
 						&.balance-box {
 							background-blend-mode: overlay;
 							background-color: $sidebar-color;
 						}
+
 						// cypto dashboard css end
 						.chart-block {
 							#bar-chart2 {
@@ -3974,6 +4658,7 @@ body {
 									>rect {
 										fill: $dark-card-background;
 									}
+
 									>g {
 										text {
 											fill: $dark-all-font-color;
@@ -3981,12 +4666,14 @@ body {
 									}
 								}
 							}
+
 							.word-tree {
 								svg {
 									>g {
 										>rect {
 											fill: $dark-card-background;
 										}
+
 										>text {
 											fill: $dark-all-font-color;
 										}
@@ -3994,12 +4681,15 @@ body {
 								}
 							}
 						}
+
 						.card-header {
 							background-color: $transparent-color;
 							border-color: $light-gray !important;
+
 							>span {
 								color: $dark-all-font-color;
 							}
+
 							h1,
 							h2,
 							h3,
@@ -4007,33 +4697,42 @@ body {
 							h6 {
 								color: $dark-all-font-color;
 							}
+
 							h4 {
 								color: rgba($white, 0.9);
 							}
+
 							.card-header-right {
 								background-color: transparent;
+
 								i {
 									color: $dark-all-font-color;
+
 									&.fa-cog {
 										color: var(--theme-deafult);
 									}
 								}
 							}
+
 							&.note-toolbar {
 								background-color: $dark-card-background;
 							}
 						}
+
 						.alert-dark {
 							color: $dark-small-font-color;
+
 							a {
 								color: $dark-small-font-color;
 							}
 						}
+
 						.alert-light.outline,
 						.alert-light.outline-2x,
 						.alert-light.inverse {
 							color: $dark-all-font-color;
 						}
+
 						#animation-box {
 							.animate-widget {
 								p {
@@ -4041,15 +4740,18 @@ body {
 								}
 							}
 						}
+
 						.grid-item {
 							img {
 								background-color: $dark-card-background;
 								border: 1px dashed $dark-card-border;
 							}
 						}
+
 						.line {
 							color: $dark-all-font-color;
 						}
+
 						thead,
 						tbody,
 						tfoot,
@@ -4058,24 +4760,30 @@ body {
 						th {
 							border-color: $dark-card-border;
 						}
+
 						.table {
+
 							th,
 							td {
 								color: $dark-all-font-color;
+
 								h6 {
 									color: rgba($white, 0.7);
 								}
 							}
+
 							thead {
 								th {
 									border-bottom: 1px dashed $dark-card-border;
 								}
+
 								.border-bottom-primary {
 									th {
 										border-bottom: 1px dashed var(--theme-deafult);
 									}
 								}
 							}
+
 							.table-primary,
 							.table-secondary,
 							.table-success,
@@ -4083,11 +4791,13 @@ body {
 							.table-warning,
 							.table-light,
 							.table-danger {
+
 								th,
 								td {
 									color: $dark-card-background;
 								}
 							}
+
 							.bg-primary,
 							.bg-secondary,
 							.bg-success,
@@ -4096,16 +4806,20 @@ body {
 							.bg-danger {
 								color: $white;
 							}
+
 							.bg-light {
 								color: rgba($white, 0.7);
 							}
+
 							.thead-light {
 								th {
 									color: rgba($white, 0.7);
 								}
 							}
+
 							tbody {
 								.border-bottom-primary {
+
 									th,
 									td {
 										border-bottom: 1px dashed var(--theme-deafult);
@@ -4113,18 +4827,23 @@ body {
 								}
 							}
 						}
+
 						.table[class*='bg-'] {
+
 							th,
 							td {
 								color: $white;
 							}
 						}
+
 						.table-striped {
 							tbody {
 								tr {
 									&:nth-of-type(odd) {
 										--bs-table-accent-bg: rgba(0, 0, 0, 0.05);
+
 										&:hover {
+
 											th,
 											td {
 												color: $white;
@@ -4134,19 +4853,23 @@ body {
 								}
 							}
 						}
+
 						.table-double,
 						.table-dotted,
 						.table-dashed {
 							border-left-color: $dark-card-border;
 							border-right-color: $dark-card-border;
 						}
+
 						.table-bordered {
 							border-color: $dark-card-border !important;
+
 							td,
 							th {
 								border-color: $dark-card-border !important;
 							}
 						}
+
 						.table-inverse {
 							tbody {
 								tr {
@@ -4160,30 +4883,38 @@ body {
 								}
 							}
 						}
+
 						.table-border-vertical {
+
 							tr,
 							th,
 							td {
 								border-right: 1px dashed $dark-border-color;
 							}
 						}
+
 						.table-styling {
+
 							thead,
 							tbody {
+
 								th,
 								td {
 									color: $white;
 								}
 							}
 						}
+
 						.card-footer {
 							background-color: $dark-card-background;
 							border-top: 1px dashed $dark-card-border;
 						}
+
 						.switch {
 							.switch-state {
 								background-color: $dark-body-background;
 							}
+
 							input {
 								&:checked {
 									+.switch-state {
@@ -4192,41 +4923,51 @@ body {
 								}
 							}
 						}
+
 						.bg-white {
 							background-color: $dark-card-background !important;
 							color: rgba($white, 0.6) !important;
 						}
+
 						.b-l-light {
 							border-left: 1px dashed $dark-border-color !important;
 						}
+
 						.ct-grid {
 							stroke: $dark-border-color;
 						}
+
 						.ct-label {
 							color: $dark-small-font-color;
 						}
+
 						.text-muted {
 							color: $dark-all-font-color !important;
 						}
+
 						.btn-outline-light,
 						.btn-outline-dark,
 						.btn-outline-light-2x {
 							color: $white !important;
 							border: 1px solid $dark-card-border;
 						}
+
 						.border-right {
 							border-right: 1px dashed $dark-border-color !important;
 						}
+
 						.flot-chart-placeholder {
 							.flot-text {
 								color: $dark-all-font-color !important;
 							}
+
 							svg {
 								text {
 									fill: $dark-all-font-color;
 								}
 							}
 						}
+
 						.chart-overflow {
 							&#gantt_chart {
 								svg {
@@ -4238,12 +4979,14 @@ body {
 										}
 									}
 								}
+
 								rect {
 									&:nth-child(6) {
 										fill: $dark-body-background;
 									}
 								}
 							}
+
 							&#line-chart,
 							&#column-chart1,
 							&#column-chart2 {
@@ -4251,10 +4994,12 @@ body {
 									fill: $dark-card-background;
 								}
 							}
+
 							svg {
 								>rect {
 									fill: $dark-card-background;
 								}
+
 								>g {
 									>g {
 										>g {
@@ -4263,32 +5008,39 @@ body {
 											}
 										}
 									}
+
 									>text {
 										fill: $dark-all-font-color;
 									}
 								}
 							}
 						}
+
 						.radial-bar {
 							&:after {
 								background-color: $dark-card-background;
 								color: $dark-all-font-color;
 							}
 						}
+
 						.bar-chart-widget {
 							.bottom-content {
 								.num {
 									color: $dark-all-font-color;
+
 									.color-bottom {
 										color: $dark-all-font-color;
 									}
 								}
 							}
 						}
+
 						.b-r-light {
 							border-right: 1px dashed $dark-card-border !important;
 						}
+
 						.chart-container {
+
 							.live-products,
 							.turnover,
 							.monthly,
@@ -4298,10 +5050,12 @@ body {
 										color: $white;
 									}
 								}
+
 								.ct-grid {
 									stroke: $white;
 								}
 							}
+
 							#browser-uses-chart,
 							#website-visiter-chart {
 								svg {
@@ -4311,17 +5065,21 @@ body {
 								}
 							}
 						}
+
 						.status-details {
 							h4 {
 								color: $dark-all-font-color;
+
 								span {
 									color: $dark-all-font-color;
 								}
 							}
+
 							span {
 								color: $dark-small-font-color;
 							}
 						}
+
 						.clipboaard-container {
 							.form-control {
 								background-color: $dark-body-background;
@@ -4329,24 +5087,29 @@ body {
 								border: 1px dashed $dark-border-color;
 							}
 						}
+
 						.img-thumbnail {
 							background-color: $dark-body-background;
 							border: 1px dashed $dark-card-border;
 						}
+
 						.dataTables_wrapper {
 							button {
 								color: $black;
 							}
+
 							&.no-footer {
 								.dataTables_scrollBody {
 									border-bottom: 1px dashed $dark-body-background;
 								}
 							}
+
 							.btn-danger,
 							.btn-success,
 							.btn-primary {
 								color: $white;
 							}
+
 							.dataTables_length {
 								select {
 									background-color: $dark-body-background;
@@ -4354,6 +5117,7 @@ body {
 									border: 1px dashed $dark-border-color;
 								}
 							}
+
 							.dataTables_length,
 							.dataTables_filter,
 							.dataTables_info,
@@ -4361,9 +5125,11 @@ body {
 							.dataTables_paginate {
 								color: $dark-all-font-color;
 							}
+
 							.dataTables_paginate {
 								border: 1px dashed $dark-border-color;
 							}
+
 							.dataTables_filter {
 								input[type="search"] {
 									background-color: $dark-body-background;
@@ -4371,23 +5137,28 @@ body {
 									color: $dark-all-font-color;
 								}
 							}
+
 							table.dataTable.display,
 							table.dataTable.order-column.stripe {
 								tbody {
 									tr {
 										background-color: $dark-card-background;
+
 										&:hover {
 											>.sorting_1 {
 												background-color: $dark-datatable-sorting;
 											}
 										}
 									}
+
 									tr.odd {
 										background-color: $dark-body-background;
+
 										>.sorting_1 {
 											background-color: $dark-body-background;
 										}
 									}
+
 									tr.even {
 										>.sorting_1 {
 											background-color: $dark-card-background;
@@ -4395,24 +5166,30 @@ body {
 									}
 								}
 							}
+
 							table.dataTable {
 								border: none;
+
 								thead {
+
 									th,
 									td {
 										border-bottom: 2px dashed $dark-border-color;
 									}
 								}
+
 								input,
 								select {
 									background-color: $dark-body-background;
 									color: $dark-all-font-color;
 									border: 1px dashed $dark-border-color;
 								}
+
 								tbody {
 									tr {
 										background-color: $dark-card-background;
 									}
+
 									td.select-checkbox,
 									th.select-checkbox {
 										&:before {
@@ -4421,6 +5198,7 @@ body {
 									}
 								}
 							}
+
 							.table-striped {
 								tbody {
 									tr {
@@ -4430,31 +5208,38 @@ body {
 									}
 								}
 							}
+
 							.dataTables_paginate {
 								.paginate_button {
 									color: $dark-all-font-color !important;
+
 									&.current,
 									&:active {
 										border-color: var(--theme-deafult);
 									}
 								}
+
 								.paginate_button.disabled {
 									color: $dark-small-font-color !important;
+
 									&:hover,
 									:active {
 										color: $dark-small-font-color !important;
 									}
 								}
 							}
+
 							table.dataTable.row-border,
 							table.dataTable.display {
 								tbody {
+
 									th,
 									td {
 										border-top: 1px dashed $dark-border-color;
 									}
 								}
 							}
+
 							table.dataTable.display,
 							table.dataTable.order-column.hover {
 								tbody {
@@ -4466,6 +5251,7 @@ body {
 										}
 									}
 								}
+
 								thead {
 									tr.odd {
 										&:hover {
@@ -4476,6 +5262,7 @@ body {
 									}
 								}
 							}
+
 							table.dataTable.hover,
 							table.dataTable.display {
 								tbody {
@@ -4486,20 +5273,25 @@ body {
 									}
 								}
 							}
+
 							table.dataTable.cell-border {
+
 								th,
 								td {
 									border-top: 1px dashed $dark-border-color;
 									border-right: 1px dashed $dark-border-color;
+
 									&:first-child {
 										border-left: 1px dashed $dark-border-color;
 									}
 								}
 							}
+
 							table.dataTable.order-column,
 							table.dataTable.display {
 								tbody {
 									tr {
+
 										>.sorting_1,
 										>.sorting_2,
 										>.sorting_3 {
@@ -4509,6 +5301,7 @@ body {
 								}
 							}
 						}
+
 						#example-style-3_wrapper {
 							#example-style-3 {
 								tfoot {
@@ -4516,19 +5309,23 @@ body {
 								}
 							}
 						}
+
 						.page-link {
 							border: 1px solid $dark-card-border;
 						}
+
 						.page-item.disabled {
 							.page-link {
 								background-color: $dark-card-background;
 								border-color: $dark-border-color;
 							}
 						}
+
 						.page-link {
 							color: $dark-all-font-color;
 							background-color: $dark-card-background;
 						}
+
 						.page-item {
 							&:hover {
 								.page-link {
@@ -4536,34 +5333,42 @@ body {
 								}
 							}
 						}
+
 						.page-item.active {
 							.page-link {
 								background-color: $dark-body-background;
 							}
 						}
+
 						.ecommerce-widget {
 							.icon {
 								color: $dark-body-background;
 							}
+
 							.total-num {
 								color: $dark-all-font-color;
+
 								span {
 									color: $dark-all-font-color;
 								}
 							}
+
 							span {
 								color: $dark-small-font-color;
 							}
 						}
+
 						.flot-chart-container-small {
 							background-color: $dark-card-background;
 							border-top: 1px dashed $dark-border-color;
 						}
+
 						.product-table {
 							#API-2_wrapper {
 								#API-2 {
 									tbody {
 										td {
+
 											span,
 											p {
 												color: $dark-small-font-color;
@@ -4572,18 +5377,23 @@ body {
 									}
 								}
 							}
+
 							h6 {
 								color: $dark-small-font-color;
 							}
 						}
+
 						.border-tab.nav-tabs {
 							border-bottom: none;
+
 							.nav-item {
 								.nav-link {
 									color: $dark-all-font-color;
 								}
 							}
+
 							.nav-link {
+
 								&.active,
 								&:focus,
 								&:hover {
@@ -4591,6 +5401,7 @@ body {
 								}
 							}
 						}
+
 						.br-theme-bars-1to10,
 						.br-theme-bars-movie,
 						.br-theme-bars-pill,
@@ -4599,6 +5410,7 @@ body {
 							.br-widget {
 								a {
 									background-color: $dark-border-color;
+
 									&.br-active,
 									&.br-selected {
 										background-color: var(--theme-deafult);
@@ -4606,12 +5418,14 @@ body {
 								}
 							}
 						}
+
 						.br-theme-bars-square {
 							.br-widget {
 								a {
 									border: 2px solid $dark-border-color;
 									background-color: $dark-card-background;
 									color: $dark-all-font-color;
+
 									&.br-active,
 									&.br-selected {
 										border: 2px solid var(--theme-deafult);
@@ -4620,10 +5434,12 @@ body {
 								}
 							}
 						}
+
 						.br-theme-fontawesome-stars,
 						.br-theme-fontawesome-stars-o {
 							.br-widget {
 								a {
+
 									&.br-selected,
 									&.br-active {
 										&:after {
@@ -4633,24 +5449,29 @@ body {
 								}
 							}
 						}
+
 						.scroll-demo {
 							border: 1px dashed $dark-card-border;
 						}
+
 						.search-form {
 							input {
 								border: 1px dashed $dark-border-color;
 								color: $dark-all-font-color;
 								background-color: $dark-body-background;
 							}
+
 							.form-group {
 								&:before {
 									background: $dark-card-background;
 								}
 							}
 						}
+
 						.cd-timeline-content {
 							background-color: $dark-border-color;
 						}
+
 						.cd-timeline-block {
 							&:nth-child(odd) {
 								.cd-timeline-content {
@@ -4659,6 +5480,7 @@ body {
 									}
 								}
 							}
+
 							&:nth-child(even) {
 								.cd-timeline-content {
 									&::before {
@@ -4667,11 +5489,13 @@ body {
 								}
 							}
 						}
+
 						.breadcrumb {
 							&.bg-white {
 								background-color: $dark-card-background !important;
 							}
 						}
+
 						#donut-color-chart-morris-daily,
 						#donut-color-chart-morris,
 						#browser-uses-chart,
@@ -4681,6 +5505,7 @@ body {
 							}
 						}
 					}
+
 					#viewhtml {
 						.render {
 							background-color: $dark-card-background;
@@ -4688,6 +5513,7 @@ body {
 							border-color: $dark-border-color;
 						}
 					}
+
 					.wizard-4 {
 						ul.anchor {
 							li {
@@ -4697,68 +5523,83 @@ body {
 							}
 						}
 					}
+
 					.gallery-with-description {
 						h4 {
 							color: $dark-all-font-color;
 						}
+
 						a {
 							>div {
 								border: 1px dashed $dark-border-color;
 							}
 						}
+
 						p {
 							color: $dark-small-font-color;
 						}
 					}
+
 					.jsgrid-grid-header {
 						background-color: $dark-card-background;
 						border: 1px dashed $dark-border-color;
 					}
+
 					.jsgrid-header-row,
 					.jsgrid-filter-row {
+
 						>.jsgrid-header-cell,
 						>.jsgrid-cell {
 							background: $dark-card-background;
 							border: 1px dashed $dark-border-color;
+
 							input {
 								background-color: $dark-body-background;
 								border-color: $dark-border-color;
 								color: $dark-all-font-color;
+
 								&:focus {
 									outline: none;
 								}
 							}
 						}
+
 						select {
 							background-color: $dark-body-background;
 							border-color: $dark-border-color;
 							color: $dark-all-font-color;
 						}
 					}
+
 					.jsgrid-row {
 						>.jsgrid-cell {
 							background-color: $dark-card-background;
 						}
 					}
+
 					.jsgrid-alt-row {
 						>.jsgrid-cell {
 							background-color: $dark-body-background;
 						}
 					}
+
 					.jsgrid-cell,
 					.jsgrid-grid-body {
 						border: 1px dashed $dark-border-color;
 					}
+
 					.jsgrid-selected-row {
 						>.jsgrid-cell {
 							background-color: $dark-datatable-sorting;
 						}
 					}
+
 					.jsgrid {
 						.jsgrid-pager {
 							[class*="jsgrid-pager"] {
 								border: 1px dashed $dark-border-color;
 							}
+
 							.jsgrid-pager-page {
 								a {
 									color: $dark-all-font-color;
@@ -4766,31 +5607,38 @@ body {
 							}
 						}
 					}
+
 					.jsgrid-pager-current-page {
 						color: $dark-all-font-color;
 						font-weight: 700;
 					}
+
 					.sub-title {
 						border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
 					}
+
 					.card {
 						.sub-title {
 							color: $dark-all-font-color;
 						}
 					}
+
 					.navs-icon {
 						li {
 							a {
 								color: $dark-all-font-color;
+
 								&:hover {
 									color: var(--theme-deafult);
 								}
 							}
 						}
+
 						.separator {
 							border-bottom: 1px dashed $dark-card-border;
 						}
 					}
+
 					.default-according {
 						li {
 							.text-muted {
@@ -4798,6 +5646,7 @@ body {
 							}
 						}
 					}
+
 					.navs-icon.default-according.style-1 {
 						li {
 							button {
@@ -4807,14 +5656,17 @@ body {
 							}
 						}
 					}
+
 					.nav-list {
 						.nav-list-disc {
 							li {
 								a {
 									color: $dark-all-font-color;
 								}
+
 								&:hover {
 									color: var(--theme-deafult);
+
 									a {
 										color: var(--theme-deafult);
 									}
@@ -4822,17 +5674,21 @@ body {
 							}
 						}
 					}
+
 					.navs-dropdown {
 						.onhover-show-div {
 							background-color: $dark-body-background;
 							box-shadow: 0 0 14px 0 $dark-body-background;
+
 							.navs-icon {
 								li {
 									p {
 										color: $white;
 									}
+
 									a {
 										svg {
+
 											path,
 											line,
 											polyline,
@@ -4841,8 +5697,10 @@ body {
 												color: $dark-all-font-color !important;
 											}
 										}
+
 										&:hover {
 											svg {
+
 												path,
 												line,
 												polyline,
@@ -4857,6 +5715,7 @@ body {
 							}
 						}
 					}
+
 					.onhover-dropdown {
 						&:hover {
 							.onhover-show-div {
@@ -4866,29 +5725,36 @@ body {
 							}
 						}
 					}
+
 					.default-according {
 						.card {
 							.btn-link {
 								color: $dark-all-font-color;
 							}
+
 							.card-body {
 								color: $dark-small-font-color;
 							}
+
 							.card-body {
 								border: none;
 								border-top: none;
 							}
 						}
 					}
+
 					.border {
 						border: 1px dashed $dark-card-border !important;
 					}
+
 					.border-1 {
 						border: 1px dashed $dark-body-background !important;
 					}
+
 					.border-2 {
 						border: 2px dashed $dark-body-background !important;
 					}
+
 					.grid-showcase {
 						span {
 							&.border-2 {
@@ -4896,30 +5762,39 @@ body {
 							}
 						}
 					}
+
 					.border-3 {
 						border: 3px dashed $dark-body-background !important;
 					}
+
 					.border-4 {
 						border: 4px dashed $dark-body-background !important;
 					}
+
 					.border-5 {
 						border: 5px dashed $dark-body-background !important;
 					}
+
 					.border-6 {
 						border: 6px dashed $dark-body-background !important;
 					}
+
 					.border-7 {
 						border: 7px dashed $dark-body-background !important;
 					}
+
 					.border-8 {
 						border: 8px dashed $dark-body-background !important;
 					}
+
 					.border-9 {
 						border: 9px dashed $dark-body-background !important;
 					}
+
 					.border-10 {
 						border: 10px dashed $dark-body-background !important;
 					}
+
 					$border-gradient: primary,
 					secondary,
 					success,
@@ -4936,88 +5811,110 @@ body {
 					$info-color,
 					$light-color,
 					$dark-color;
+
 					@each $var in $border-gradient {
 						$i: index($border-gradient, $var);
+
 						.b-#{$var} {
 							border-color: nth($helper-border-color, $i) !important;
 							background-color: $dark-body-background;
 						}
+
 						.border-t-#{$var} {
 							border: none !important;
 							border-top: 1px solid nth($helper-border-color, $i) !important;
 						}
+
 						.b-t-#{$var} {
 							border-top-color: nth($helper-border-color, $i) !important;
 							background-color: $dark-body-background;
 						}
+
 						.border-b-#{$var} {
 							border: none !important;
 							border-bottom: 1px solid nth($helper-border-color, $i) !important;
 						}
+
 						.b-b-#{$var} {
 							border-bottom-color: nth($helper-border-color, $i) !important;
 							background-color: $dark-body-background;
 						}
+
 						.border-l-#{$var} {
 							border: none !important;
 							border-left: 1px solid nth($helper-border-color, $i) !important;
 						}
+
 						.b-l-#{$var} {
 							border-left-color: nth($helper-border-color, $i) !important;
 							background-color: $dark-body-background;
 						}
+
 						.border-r-#{$var} {
 							border: none !important;
 							border-right: 1px solid nth($helper-border-color, $i) !important;
 						}
+
 						.b-r-#{$var} {
 							border-right-color: nth($helper-border-color, $i) !important;
 							background-color: $dark-body-background;
 						}
+
 						.border-#{$var} {
 							border-color: nth($helper-border-color, $i) !important;
 						}
 					}
 				}
+
 				.footer {
 					p {
 						color: $dark-all-font-color;
 					}
+
 					border-top: none;
 					background-color: $sidebar-color;
 				}
+
 				.custom-select,
 				.custom-file-label {
 					background: $dark-body-background;
 					color: $dark-all-font-color;
 				}
+
 				.footer-fix {
 					background-color: $dark-card-background;
 					border-top: 1px dashed $dark-border-color;
 				}
 			}
+
 			.note {
 				textarea {
 					color: $dark-all-font-color;
 				}
 			}
+
 			.dt-button-info {
 				background-color: $dark-card-background;
 				border: 1px dashed $dark-small-font-color;
+
 				h2 {
 					background-color: $dark-card-background;
 				}
 			}
+
 			.chat-box {
 				.about {
 					.name {
 						color: $dark-all-font-color;
 					}
 				}
+
 				.chat-menu {
 					border-left: 1px dashed $dark-border-color;
+
 					.nav-tabs {
 						border-bottom: 1px dashed $dark-border-color;
+
 						.nav-item {
 							.nav-link {
 								&.active {
@@ -5026,43 +5923,52 @@ body {
 							}
 						}
 					}
+
 					.user-profile {
 						.image {
 							.icon-wrapper {
 								background-color: $dark-card-background;
 								box-shadow: 1px 1px 3px 1px $dark-body-background;
 							}
+
 							.avatar {
 								img {
 									border: 5px dashed $dark-border-color;
 								}
 							}
 						}
+
 						.social-media {
 							a {
 								color: $dark-small-font-color;
 							}
 						}
+
 						.follow {
 							span {
 								color: $dark-small-font-color;
 							}
+
 							.follow-num {
 								color: $dark-all-font-color;
 							}
 						}
 					}
 				}
+
 				.status {
 					color: $dark-small-font-color;
+
 					p {
 						color: $dark-all-font-color !important;
 					}
 				}
+
 				.chat-right-aside {
 					.chat {
 						.chat-header {
 							border-bottom: 1px dashed $dark-border-color;
+
 							.chat-menu-icons {
 								li {
 									a {
@@ -5072,24 +5978,30 @@ body {
 									}
 								}
 							}
+
 							img {
 								box-shadow: 1px 1px 4px 1px $dark-body-background;
 							}
 						}
+
 						.chat-msg-box {
 							.my-message {
 								border: 1px dashed $dark-border-color
 							}
+
 							.message {
 								color: $dark-all-font-color;
 							}
+
 							.other-message {
 								background-color: $dark-body-background;
 							}
 						}
+
 						.chat-message {
 							background-color: $dark-card-background;
 							border-top: 1px dashed $dark-border-color;
+
 							.input-group {
 								.form-control {
 									background-color: $dark-card-background;
@@ -5098,11 +6010,13 @@ body {
 						}
 					}
 				}
+
 				.chat-history {
 					.call-icons {
 						ul {
 							li {
 								border: 1px dashed $dark-border-color;
+
 								a {
 									color: $dark-small-font-color;
 								}
@@ -5111,25 +6025,32 @@ body {
 					}
 				}
 			}
+
 			pre {
 				background-color: $dark-border-color;
 				color: $dark-all-font-color;
 			}
+
 			.scorlled {
 				background-color: $dark-body-background;
 			}
+
 			.input-group-air {
 				box-shadow: 0 3px 20px 0 $dark-border-color;
 			}
+
 			.input-group-text {
 				background-color: $dark-card-background;
 				border: 1px dashed $dark-body-background;
 				color: rgba(255, 255, 255, 0.6);
+
 				i {
 					color: rgba(255, 255, 255, 0.6);
 				}
 			}
+
 			.input-group-dashed {
+
 				.input-group-text,
 				.form-control {
 					background: $dark-body-background;
@@ -5137,34 +6058,42 @@ body {
 					color: $dark-all-font-color;
 				}
 			}
+
 			.semilight-bg-color,
 			.header-bg-color {
 				background-color: $white;
 			}
+
 			.list-group-item {
 				background-color: $dark-card-background;
 				border: 1px dashed rgba(255, 255, 255, 0.3);
 				color: $dark-all-font-color;
+
 				+.list-group-item {
 					border-top-width: 0;
 				}
+
 				&.active {
 					background-color: var(--theme-deafult) !important;
 					border-color: var(--theme-deafult);
 					color: $white;
 				}
+
 				&:hover,
 				&:focus {
 					z-index: 1;
 					text-decoration: none;
 				}
 			}
+
 			.list-group-item-action {
+
 				&:hover:not(.active),
 				&:focus {
 					background-color: $dark-body-background;
 				}
 			}
+
 			.list-group-flush {
 				.list-group-item {
 					border-left: 0;
@@ -5172,80 +6101,101 @@ body {
 					border-radius: 0;
 				}
 			}
+
 			.dark-list {
 				.list-group {
 					.border-left-primary {
 						border-left: 4px solid var(--theme-deafult);
 					}
+
 					.border-left-secondary {
 						border-left: 4px solid var(--theme-secondary);
 					}
+
 					.border-left-warning {
 						border-left: 4px solid $warning-color;
 					}
+
 					.border-left-success {
 						border-left: 4px solid $success-color;
 					}
+
 					.border-left-info {
 						border-left: 4px solid $info-color;
 					}
+
 					[dir="rtl"] & {
 						.border-left-primary {
 							border-left: none;
 						}
+
 						.border-left-secondary {
 							border-left: none;
 						}
+
 						.border-left-warning {
 							border-left: none;
 						}
+
 						.border-left-success {
 							border-left: none;
 						}
+
 						.border-left-info {
 							border-left: none;
 						}
 					}
 				}
 			}
+
 			.list-group-item-primary {
 				color: #004085;
 				background-color: #b8daff;
 			}
+
 			.list-group-item-secondary {
 				color: #383d41;
 				background-color: #d6d8db;
 			}
+
 			.list-group-item-success {
 				color: #155724;
 				background-color: #c3e6cb;
 			}
+
 			.list-group-item-danger {
 				color: #721c24;
 				background-color: #f5c6cb;
 			}
+
 			.list-group-item-warning {
 				color: #856404;
 				background-color: #ffeeba;
 			}
+
 			.list-group-item-info {
 				color: #0c5460;
 				background-color: #bee5eb;
 			}
+
 			.list-group-item-light {
 				color: #818182;
 				background-color: #fdfdfe;
 			}
+
 			.list-group-item-dark {
 				color: #1b1e21;
 				background-color: #c6c8ca;
 			}
+
 			.auth-bg {
 				background-blend-mode: overlay;
 				background-color: rgba(54, 64, 74, 0.9);
+
 				.authentication-box {
 					.card {
 						background-color: $dark-card-background;
+
 						.theme-form {
 							.form-group {
 								input {
@@ -5253,13 +6203,16 @@ body {
 									background-color: $dark-body-background;
 									border: 1px dashed $dark-border-color;
 								}
+
 								label {
 									color: $dark-all-font-color;
 								}
 							}
+
 							.checkbox {
 								label {
 									color: $dark-all-font-color;
+
 									&::before {
 										background-color: $dark-body-background;
 										border: 1px dashed $dark-border-color;
@@ -5268,6 +6221,7 @@ body {
 							}
 						}
 					}
+
 					h3,
 					h4,
 					h6 {
@@ -5275,21 +6229,28 @@ body {
 					}
 				}
 			}
+
 			.auth-bg-video {
 				background-blend-mode: overlay;
 				background-color: rgba(54, 64, 74, 0.7);
+
 				.authentication-box {
+
 					h4,
 					h3 {
 						color: $white;
 					}
+
 					h6 {
 						color: $dark-small-font-color;
 					}
+
 					.card {
 						background-color: $dark-card-background;
+
 						.theme-form {
 							.form-group {
+
 								input[type=text],
 								input[type=password] {
 									background-color: $dark-body-background;
@@ -5297,6 +6258,7 @@ body {
 									color: $dark-all-font-color;
 								}
 							}
+
 							.checkbox {
 								label {
 									&::before {
@@ -5309,12 +6271,14 @@ body {
 					}
 				}
 			}
+
 			.error-wrapper {
 				.maintenance-icons {
 					li {
 						i {
 							color: $dark-border-color;
 						}
+
 						&:nth-child(3) {
 							i {
 								color: $dark-border-color;
@@ -5323,32 +6287,41 @@ body {
 					}
 				}
 			}
+
 			.modal-content {
 				background-color: $dark-card-background;
+
 				.modal-header {
 					border-bottom: 1px dashed $dark-border-color;
+
 					.close {
 						color: $dark-small-font-color;
 					}
 				}
+
 				.modal-footer {
 					border-top: 1px dashed $dark-border-color;
 				}
 			}
+
 			.comingsoon {
 				background-blend-mode: overlay;
 				background-color: rgba(54, 64, 74, 0.9);
+
 				.comingsoon-inner {
 					h5 {
 						color: $dark-all-font-color;
 					}
+
 					.countdown {
 						border-top: 1px dashed $dark-border-color;
 						border-bottom: 1px dashed $dark-border-color;
+
 						.title {
 							color: $dark-all-font-color;
 						}
 					}
+
 					.coming-soon-bottom-link {
 						a {
 							color: $dark-all-font-color;
@@ -5356,55 +6329,69 @@ body {
 					}
 				}
 			}
+
 			.theme-form {
 				.login-divider {
 					border-top: 1px dashed $dark-border-color;
+
 					&:before {
 						background: $dark-border-color;
 						color: $dark-all-font-color;
 					}
 				}
 			}
+
 			.authentication-main {
 				background-color: $dark-border-color;
+
 				.auth-innerright {
 					.reset-password-box {
 						.card {
 							background-color: $dark-card-background;
 						}
+
 						.reset-password-link {
 							color: $dark-small-font-color;
 						}
+
 						.theme-form {
 							.form-group {
 								label {
 									color: $dark-small-font-color;
 								}
+
 								.form-control {
 									background-color: $dark-body-background;
 									color: $dark-all-font-color;
 									border-color: $dark-border-color;
 								}
 							}
+
 							.opt-box {
 								background-color: $dark-border-color;
 							}
 						}
 					}
+
 					.authentication-box {
 						h4 {
 							color: $dark-all-font-color;
 						}
+
 						h6 {
 							color: $dark-small-font-color;
 						}
+
 						h3 {
 							color: $dark-all-font-color;
 						}
+
 						.card {
 							background-color: $dark-card-background;
+
 							.theme-form {
 								.form-group {
+
 									input[type=text],
 									input[type=password] {
 										background-color: $dark-body-background;
@@ -5412,6 +6399,7 @@ body {
 										color: $dark-all-font-color;
 									}
 								}
+
 								.checkbox {
 									label {
 										&::before {
@@ -5425,14 +6413,17 @@ body {
 					}
 				}
 			}
+
 			.vertical-menu-main {
 				background-color: $dark-card-background;
 			}
+
 			.mega-menu {
 				.title {
 					color: $dark-all-font-color;
 					border-bottom: 1px dashed $dark-border-color;
 				}
+
 				.list-unstyled {
 					div {
 						a {
@@ -5443,25 +6434,30 @@ body {
 					}
 				}
 			}
+
 			.default-according {
 				.card {
 					background-color: $dark-card-background;
+
 					.btn-link {
 						background-color: $dark-card-background;
 						border: none;
 						border-bottom: none;
 						color: $white;
 					}
+
 					.text-muted {
 						color: $dark-small-font-color !important;
 					}
 				}
+
 				.bg-primary {
 					.btn-link {
 						background-color: var(--theme-deafult);
 						border: 1px dashed var(--theme-deafult);
 					}
 				}
+
 				.bg-secondary {
 					.btn-link {
 						background-color: var(--theme-secondary);
@@ -5469,15 +6465,18 @@ body {
 					}
 				}
 			}
+
 			.collapse {
 				.card-body {
 					background-color: $dark-card-background;
 				}
 			}
+
 			.balance-widget.card-body {
 				background-color: $dark-card-background;
 				background-blend-mode: overlay;
 			}
+
 			@media screen and (max-width: 1660px) {
 				.chat-box {
 					.chat-history {
@@ -5488,6 +6487,7 @@ body {
 								}
 							}
 						}
+
 						.total-time {
 							h2 {
 								color: $dark-all-font-color;
@@ -5495,11 +6495,13 @@ body {
 						}
 					}
 				}
+
 				.caller-img {
 					img {
 						opacity: 0.7;
 					}
 				}
+
 				.chat-box {
 					.chat-history {
 						.call-content {
@@ -5511,16 +6513,19 @@ body {
 					}
 				}
 			}
+
 			@media only screen and (max-width: 1199px) {
 				.mobile-title {
 					&.d-none {
 						border-bottom: 1px dashed $dark-card-border;
 					}
 				}
+
 				.chat-menu {
 					border-top: 1px dashed $dark-border-color;
 					background-color: $dark-card-background;
 				}
+
 				.error-wrapper {
 					.maintenance-icons {
 						li {
@@ -5531,6 +6536,7 @@ body {
 					}
 				}
 			}
+
 			@media only screen and (max-width: 575.98px) {
 				.user-profile {
 					.hovercard {
@@ -5542,7 +6548,9 @@ body {
 						}
 					}
 				}
+
 				.page-wrapper {
+
 					&.compact-wrapper,
 					&.compact-sidebar {
 						.page-header {
@@ -5556,45 +6564,55 @@ body {
 				}
 			}
 		}
+
 		.lg-backdrop {
 			background-color: $dark-body-background;
 		}
+
 		.lg-outer {
 			.lg-thumb-outer {
 				background-color: $dark-card-background;
 			}
 		}
+
 		.drag {
 			background-color: $dark-card-background;
+
 			form {
 				background: $dark-card-background;
 				box-shadow: 0 0 30px $dark-border-color;
 				border: 1px dotted $dark-border-color;
+
 				input {
 					background-color: $dark-body-background;
 					border: 1px dashed $dark-border-color;
 					color: $dark-all-font-color;
 				}
+
 				.help-block {
 					text-transform: capitalize;
 					color: $dark-small-font-color;
 				}
 			}
 		}
+
 		.draggable {
 			input {
 				background-color: $dark-body-background;
 				color: $dark-all-font-color;
 				border: 1px dashed $dark-border-color;
 			}
+
 			p {
 				color: $dark-small-font-color;
 			}
+
 			select {
 				background-color: $dark-body-background;
 				color: $dark-all-font-color;
 				border: 1px dashed $dark-border-color;
 			}
+
 			.radio,
 			.checkbox {
 				label {
@@ -5605,22 +6623,27 @@ body {
 				}
 			}
 		}
+
 		.select2-container--default {
+
 			.select2-selection--multiple,
 			.select2-selection--single {
 				background-color: $dark-body-background;
 				border: 1px dashed $dark-card-border !important;
 			}
+
 			.select2-search--inline {
 				.select2-search__field {
 					color: $dark-all-font-color;
 				}
 			}
+
 			.select2-selection--single {
 				.select2-selection__rendered {
 					color: $dark-all-font-color;
 				}
 			}
+
 			.select2-search--dropdown {
 				.select2-search__field {
 					background-color: $dark-body-background;
@@ -5628,28 +6651,34 @@ body {
 					color: $dark-all-font-color;
 				}
 			}
+
 			.select2-results__option--highlighted[aria-selected] {
 				background-color: $dark-card-background !important;
 				color: $dark-all-font-color !important;
 			}
 		}
+
 		.select2-dropdown {
 			background-color: $dark-body-background;
 			border: 1px dashed $dark-card-border;
 		}
+
 		.v-onboarding-item {
 			background-color: $dark-body-background;
 		}
-		.tree{
-			.tree-row-item:hover:before{
+
+		.tree {
+			.tree-row-item:hover:before {
 				background-color: $dark-body-background;
 			}
 		}
+
 		.form-wizard-vue {
 			.fw-body-list {
 				.fw-list-progress {
 					background-color: $dark-body-background;
 				}
+
 				li {
 					.fw-list-wrapper-icon {
 						background-color: $dark-body-background;
@@ -5658,97 +6687,119 @@ body {
 				}
 			}
 		}
-		.typeahead{
-			.simple-typeahead{
-				.simple-typeahead-list{
-					div{
+
+		.typeahead {
+			.simple-typeahead {
+				.simple-typeahead-list {
+					div {
 						background-color: $dark-body-background;
 						border-color: $dark-card-border;
-						&:hover{
+
+						&:hover {
 							background-color: $dark-card-background;
 						}
 					}
 				}
 			}
 		}
+
 		.select2-drpdwn {
-			.multiselect__content-wrapper{
+			.multiselect__content-wrapper {
 				border-color: $gray-60;
-				.multiselect__option{
+
+				.multiselect__option {
 					background-color: $dark-body-background;
 					color: $dark-all-font-color;
 				}
 			}
-			.multiselect__single{
+
+			.multiselect__single {
 				background-color: $dark-body-background;
 				color: $dark-all-font-color;
 			}
-			.multiselect__tags{
+
+			.multiselect__tags {
 				background: $dark-body-background;
 				border-color: $gray-60;
 			}
+
 			.form-control-primary {
 				border-color: var(--theme-deafult) !important;
 				color: var(--theme-deafult) !important;
 			}
+
 			.form-control-secondary {
 				border-color: var(--theme-secondary) !important;
 				color: var(--theme-secondary) !important;
 			}
+
 			.form-control-success {
 				border-color: $success-color !important;
 				color: $success-color !important;
 			}
+
 			.form-control-info {
 				border-color: $info-color !important;
 				color: $info-color !important;
 			}
+
 			.form-control-warning {
 				border-color: $warning-color !important;
 				color: $warning-color !important;
 			}
+
 			.form-control-danger {
 				border-color: $danger-color !important;
 				color: $danger-color !important;
 			}
+
 			.form-control-inverse {
 				border-color: $white !important;
 				color: $white !important;
 			}
+
 			.form-control-primary-fill {
 				background-color: var(--theme-deafult) !important;
 				color: $white !important;
 			}
+
 			.form-control-secondary-fill {
 				background-color: var(--theme-secondary) !important;
 				color: $white !important;
 			}
+
 			.form-control-success-fill {
 				background-color: $success-color !important;
 				color: $white !important;
 			}
+
 			.form-control-info-fill {
 				background-color: $info-color !important;
 				color: $white !important;
 			}
+
 			.form-control-warning-fill {
 				background-color: $warning-color !important;
 				color: $white !important;
 			}
+
 			.form-control-danger-fill {
 				background-color: $danger-color !important;
 				color: $white !important;
 			}
+
 			.form-control-inverse-fill {
 				background-color: $white !important;
 				color: $black !important;
 			}
 		}
+
 		.select2-container--default.select2-container--disabled {
 			.select2-selection--single {
 				background-color: $dark-border-color;
 			}
 		}
+
 		.theme-form {
 			.form-group {
 				select.form-control:not([size]):not([multiple]) {
@@ -5756,6 +6807,7 @@ body {
 					color: $dark-all-font-color;
 					border-color: $dark-border-color;
 				}
+
 				input[type=text],
 				input[type=email],
 				input[type=search],
@@ -5774,60 +6826,74 @@ body {
 					border-color: $dark-border-color;
 					background-color: $dark-body-background;
 					color: $dark-all-font-color;
+
 					&::-webkit-input-placeholder {
 						color: $dark-small-font-color;
 					}
 				}
+
 				.form-control {
 					background-color: $dark-body-background;
 					color: $dark-all-font-color;
 				}
+
 				textarea {
 					border-color: $dark-border-color;
 				}
 			}
+
 			.form-divider {
 				border-top: 1px dashed $dark-border-color;
+
 				&::before {
 					background: $dark-card-background;
 					color: $dark-all-font-color;
 				}
 			}
 		}
+
 		.CodeMirror {
 			background: $dark-card-background;
 			border: 1px solid $dark-small-font-color;
 			color: $dark-all-font-color;
+
 			.CodeMirror-code {
 				pre {
 					background: $dark-card-background;
 				}
 			}
 		}
+
 		.editor-toolbar {
 			border-top: 1px solid $dark-small-font-color;
 			border-left: 1px solid $dark-small-font-color;
 			border-right: 1px solid $dark-small-font-color;
+
 			a {
 				color: $dark-all-font-color !important;
+
 				&:hover,
 				&.active {
 					background: $dark-border-color;
 				}
 			}
+
 			i.separator {
 				border-left: 1px dashed $dark-small-font-color;
 				border-right: 1px dashed $dark-small-font-color;
 			}
+
 			&.fullscreen {
 				&::before {
 					background: linear-gradient(to right, $dark-body-background 0, rgba(0, 0, 0, 0) 100%);
 				}
+
 				&::after {
 					background: linear-gradient(to right, rgba(0, 0, 0, 0) 0, $dark-body-background 100%);
 				}
 			}
 		}
+
 		.editor-toolbar.disabled-for-preview {
 			a {
 				&:not(.no-disable) {
@@ -5835,56 +6901,70 @@ body {
 				}
 			}
 		}
+
 		.editor-preview {
 			background-color: $dark-card-background;
 		}
+
 		.editor-toolbar.fullscreen,
 		.editor-preview-side {
 			background: $dark-card-background;
 			border: 1px dashed $dark-small-font-color;
 		}
+
 		.u-step {
 			background: $dark-border-color;
+
 			&.active,
 			&.current {
 				background: var(--theme-deafult);
 				color: $white;
 			}
 		}
+
 		.u-step-title,
 		.u-pearl-title {
 			color: $dark-all-font-color;
 		}
+
 		.u-step-number {
 			background-color: $dark-card-background;
 		}
+
 		.u-pearl {
 			&:before {
 				background-color: $dark-border-color;
 			}
 		}
+
 		.u-pearl-number,
 		.u-pearl-icon {
 			background: $dark-body-background;
 			border: 2px dashed $dark-body-background;
 		}
+
 		.u-pearl.disabled {
+
 			.u-pearl-icon,
 			.u-pearl-number {
 				background: $dark-border-color;
 				border: 2px dashed $dark-border-color;
 			}
+
 			&:after {
 				background-color: #334053;
 			}
 		}
+
 		.u-pearl.error {
 			&:after {
 				background-color: $dark-body-background;
 			}
 		}
+
 		.note-editor.note-frame {
 			border-color: $dark-border-color;
+
 			.note-editing-area {
 				.note-editable {
 					background-color: $dark-card-background;
@@ -5892,37 +6972,46 @@ body {
 				}
 			}
 		}
+
 		.swal-modal {
 			background-color: $dark-card-background;
+
 			.swal-title {
 				color: $dark-all-font-color;
 			}
+
 			.swal-text {
 				color: $dark-small-font-color;
 			}
+
 			.swal-content__input {
 				background-color: $dark-body-background;
 				color: $dark-all-font-color;
 			}
 		}
+
 		.search-page {
 			.info-block {
 				border: 1px dashed rgba($white, 0.4);
 			}
 		}
+
 		.nav-tabs {
 			.nav-link {
 				color: $dark-all-font-color;
+
 				&.active {
 					background-color: $dark-body-background;
 					color: $dark-all-font-color;
 					border-color: $dark-card-border;
 				}
+
 				&:hover,
 				&:focus {
 					border-color: $dark-card-border $dark-card-inbox;
 				}
 			}
+
 			.nav-item.show {
 				.nav-link {
 					background-color: $dark-card-background;
@@ -5931,26 +7020,31 @@ body {
 				}
 			}
 		}
+
 		.nav-primary {
 			.nav-link {
 				&.active {
 					background-color: var(--theme-deafult);
 				}
 			}
+
 			.nav-item.show {
 				.nav-link {
 					background-color: var(--theme-deafult);
 				}
 			}
 		}
+
 		.custom-tab {
 			&.nav-tabs {
 				border-bottom: none;
 			}
 		}
+
 		.nav-tabs.nav-bottom {
 			.nav-item {
 				.nav-link {
+
 					&.active,
 					&.focus,
 					&.hover {
@@ -5959,34 +7053,41 @@ body {
 				}
 			}
 		}
+
 		.border-tab {
 			.nav-link {
 				&.active {
 					background-color: transparent;
 				}
 			}
+
 			.show {
 				>.nav-link {
 					background-color: transparent;
 				}
 			}
 		}
+
 		.border-tab.nav-left,
 		.border-tab.nav-right {
 			.nav-link {
 				color: $dark-all-font-color;
+
 				&.active {
 					color: var(--theme-deafult);
 				}
 			}
+
 			.show {
 				>.nav-link {
 					color: var(--theme-deafult);
 				}
 			}
 		}
+
 		.border-tab.nav-left.nav-secondary {
 			.nav-link {
+
 				&.active,
 				&:focus,
 				&:hover {
@@ -5994,89 +7095,110 @@ body {
 					color: var(--theme-secondary) !important;
 				}
 			}
+
 			.show>.nav-link {
 				border-left-color: var(--theme-secondary);
 				color: var(--theme-secondary) !important;
 			}
+
 			.nav-item.show {
 				color: var(--theme-secondary) !important;
 				border-left-color: var(--theme-secondary);
 			}
 		}
+
 		.border-tab.nav-left.nav-success {
 			.nav-link {
+
 				&.active,
 				&:focus,
 				&:hover {
 					color: $success-color !important;
 				}
 			}
+
 			.show>.nav-link {
 				border-left-color: $success-color;
 				color: $success-color !important;
 			}
+
 			.nav-item.show {
 				color: $success-color !important;
 				border-left-color: $success-color;
 			}
 		}
+
 		.border-tab.nav-right.nav-info {
 			.nav-link {
+
 				&.active,
 				&:focus,
 				&:hover {
 					color: $info-color !important;
 				}
 			}
+
 			.show>.nav-link {
 				border-left-color: $info-color;
 				color: $info-color !important;
 			}
+
 			.nav-item.show {
 				color: $info-color !important;
 				border-left-color: $info-color;
 			}
 		}
+
 		.border-tab.nav-secondary {
 			.nav-link {
+
 				&.active,
 				&:focus,
 				&:hover {
 					color: var(--theme-secondary) !important;
 				}
 			}
+
 			.nav-item {
 				&.show {
 					color: var(--theme-secondary) !important;
 				}
 			}
 		}
+
 		.border-tab.nav-success {
 			.nav-link {
+
 				&.active,
 				&:focus,
 				&:hover {
 					color: $success-color !important;
 				}
 			}
+
 			.nav-item {
 				&.show {
 					color: $success-color !important;
 				}
 			}
 		}
+
 		.dropdown-divider {
 			border-top: 1px dashed $dark-border-color;
 		}
+
 		.icon-hover-bottom {
 			background-color: $dark-card-background;
 			box-shadow: 0px 0px 1px 1px $dark-border-color;
+
 			.icon-title {
 				color: $dark-all-font-color;
 			}
+
 			span {
 				color: $dark-small-font-color;
 			}
+
 			.form-group {
 				input {
 					background-color: $dark-body-background;
@@ -6084,33 +7206,41 @@ body {
 					border: 1px dashed $dark-border-color;
 				}
 			}
+
 			.icon-first {
 				i {
 					color: $dark-small-font-color;
 				}
 			}
 		}
+
 		#cd-timeline {
 			&::before {
 				background: $dark-border-color;
 			}
 		}
+
 		.txt-dark {
 			color: rgba($white, 0.7);
 		}
+
 		.timeliny {
 			border-top: 1px dashed $dark-border-color;
 			border-bottom: 1px dashed $dark-border-color;
+
 			&::before {
 				background-color: $white;
 			}
+
 			.timeliny-dot {
 				background-color: $dark-card-background;
 				border: 1px dashed $white;
+
 				&::before {
 					color: $dark-all-font-color;
 				}
 			}
+
 			.timeliny-timeline {
 				.timeliny-timeblock {
 					&.active {
@@ -6118,6 +7248,7 @@ body {
 							&::before {
 								color: $dark-all-font-color;
 							}
+
 							&::after {
 								background-color: $dark-border-color;
 								color: $dark-all-font-color;
@@ -6125,16 +7256,19 @@ body {
 							}
 						}
 					}
+
 					&:not(.inactive):not(.active) {
 						.timeliny-dot {
 							&:hover {
 								background-color: $white;
+
 								&::before {
 									color: $dark-all-font-color;
 								}
 							}
 						}
 					}
+
 					.timeliny-dot {
 						&:hover {
 							&::after {
@@ -6147,6 +7281,7 @@ body {
 				}
 			}
 		}
+
 		.todo {
 			.todo-list-wrapper {
 				#todo-list {
@@ -6160,6 +7295,7 @@ body {
 				}
 			}
 		}
+
 		.todo {
 			.todo-list-wrapper {
 				#todo-list {
@@ -6167,14 +7303,17 @@ body {
 						.task-container {
 							background: $dark-card-background;
 							border-bottom: 1px dashed $dark-border-color;
+
 							.task-label {
 								color: $dark-all-font-color;
 							}
+
 							&:hover {
 								h4 {
 									color: $white;
 								}
 							}
+
 							.task-action-btn {
 								.action-box {
 									&:hover:not(.active) {
@@ -6184,16 +7323,19 @@ body {
 								}
 							}
 						}
+
 						&:last-child {
 							.task-container {
 								border-bottom: none;
 							}
 						}
+
 						&.completed {
 							.task-container {
 								.task-label {
 									color: var(--theme-deafult);
 								}
+
 								.complete-btn {
 									&:hover {
 										border: 1px dashed $success-color !important;
@@ -6203,6 +7345,7 @@ body {
 						}
 					}
 				}
+
 				.todo-list-footer {
 					.new-task-wrapper {
 						textarea {
@@ -6214,15 +7357,18 @@ body {
 				}
 			}
 		}
+
 		.user-profile {
 			.ttl-info {
 				h6 {
 					color: $dark-small-font-color;
 				}
+
 				span {
 					color: $dark-all-font-color;
 				}
 			}
+
 			.hovercard {
 				.info {
 					.title {
@@ -6231,102 +7377,126 @@ body {
 						}
 					}
 				}
+
 				.user-image {
 					.avatar {
 						img {
 							border: 10px solid $dark-card-background;
 						}
 					}
+
 					.icon-wrapper {
 						background-color: $dark-card-background;
 					}
 				}
+
 				.tabs-scoial {
 					border-bottom: none !important;
 				}
 			}
+
 			.follow {
 				.follow-num {
 					color: $dark-all-font-color;
 				}
 			}
+
 			.profile-img-style {
 				.user-name {
 					color: $dark-all-font-color;
 				}
+
 				p {
 					color: $dark-small-font-color;
 				}
 			}
 		}
+
 		.introjs-helperLayer {
 			background-color: rgba(54, 64, 74, 0.9);
 			border: rgba(255, 255, 255, 0.5);
 		}
+
 		.jstree-default {
+
 			.jstree-node,
 			.jstree-icon {
 				color: #455869 !important;
 			}
+
 			.jstree-anchor {
 				color: $dark-small-font-color;
 			}
+
 			.jstree-clicked {
 				color: $white;
 				background-color: $transparent-color;
 			}
+
 			.jstree-hovered {
 				background-color: $dark-body-background;
 				border: 1px dashed $dark-border-color;
 			}
 		}
+
 		span.twitter-typeahead {
 			.tt-menu {
 				background-color: $dark-body-background;
 				color: $dark-all-font-color;
 			}
+
 			.tt-suggestion {
 				color: $dark-all-font-color;
 				background-color: $dark-body-background;
 				border-top: 1px dashed $dark-card-border;
+
 				&:hover,
 				&:focus {
 					background-color: $dark-card-background;
 				}
 			}
 		}
+
 		.typography {
 			small {
 				color: $dark-all-font-color;
 			}
 		}
+
 		.code-box-copy {
 			pre {
 				background-color: $dark-body-background;
+
 				code {
 					background-color: $dark-body-background;
 				}
 			}
+
 			pre[class*="language-"] {
 				border: 1px dashed $dark-border-color;
 			}
+
 			.code-box-copy__btn {
 				background-color: $dark-body-background;
 				border: 1px dashed $dark-border-color;
 				color: $white;
 			}
+
 			code[class*=language-],
 			pre[class*=language-] {
 				text-shadow: 0px 1px $black;
+
 				::selection {
 					text-shadow: none;
 					background: $dark-card-background;
 				}
 			}
 		}
+
 		.table {
 			&.light-card {
 				background-color: $white;
+
 				thead {
 					tr {
 						th {
@@ -6335,14 +7505,19 @@ body {
 						}
 					}
 				}
+
 				tbody {
 					tr {
-						th , td{
+
+						th,
+						td {
 							color: $theme-body-font-color !important;
 							border-color: $semi-dark !important;
+
 							&.font-danger {
 								color: $danger-color !important;
 							}
+
 							&.font-success {
 								color: $success-color !important;
 							}
@@ -6351,58 +7526,75 @@ body {
 				}
 			}
 		}
+
 		table.fixedHeader-floating {
 			background-color: $dark-body-background;
 		}
-		.form-floating > .form-control:not(:placeholder-shown) ~ label {
+
+		.form-floating>.form-control:not(:placeholder-shown)~label {
 			color: $dark-all-font-color;
+
 			&::after {
 				background-color: $dark-card-background;
 			}
 		}
-		.form-floating > .form-select ~ label {
+
+		.form-floating>.form-select~label {
 			color: $dark-all-font-color;
+
 			&::after {
 				background-color: $dark-card-background;
 			}
 		}
+
 		.dp__selection_preview {
 			color: $dark-all-font-color;
 		}
+
 		.vue-form-wizard {
 			.wizard-icon-circle {
 				background-color: $dark-body-background;
 			}
 		}
-		.form-floating{
-			input, textarea{
-				&::placeholder{
+
+		.form-floating {
+
+			input,
+			textarea {
+				&::placeholder {
 					opacity: 0;
 				}
 			}
-			label{
+
+			label {
 				color: $dark-all-font-color !important;
-				&::after{
+
+				&::after {
 					background-color: $dark-body-background !important;
 				}
 			}
 		}
+
 		.note {
 			textarea {
 				color: $dark-all-font-color;
 			}
 		}
+
 		.dt-button-info {
 			background-color: $dark-card-background;
 			border: 1px dashed $dark-border-color;
+
 			h2 {
 				background-color: $dark-card-background;
 				border-bottom: 1px dashed $dark-border-color;
 			}
 		}
+
 		pre {
 			background-color: $dark-body-background;
 		}
+
 		#keytable_wrapper,
 		#column-selector_wrapper,
 		#auto-fill_wrapper,
@@ -6431,7 +7623,9 @@ body {
 				border: none;
 			}
 		}
+
 		#example-style-8_wrapper {
+
 			table.dataTable.stripe,
 			table.dataTable.display {
 				tbody {
@@ -6441,32 +7635,41 @@ body {
 				}
 			}
 		}
+
 		.error-wrapper {
 			background-color: rgba($dark-card-background, 0.8);
+
 			.sub-content {
 				color: $dark-all-font-color;
 			}
 		}
+
 		.b-light {
 			border: 1px dashed $dark-border-color !important;
 		}
+
 		.ProfileCard-avatar {
 			svg {
 				stroke: $dark-all-font-color;
 			}
 		}
+
 		.modal-content {
 			background-color: $dark-card-background;
+
 			.modal-header {
 				border-bottom: 1px dashed $dark-card-border;
+
 				.close {
 					color: $dark-all-font-color;
 					font-weight: 400;
 				}
 			}
+
 			.modal-footer {
 				border-top: 1px dashed $dark-border-color;
 			}
+
 			.ui-front {
 				.form-control {
 					background-color: $dark-card-background;
@@ -6475,17 +7678,21 @@ body {
 				}
 			}
 		}
+
 		.modal {
 			.theme-close {
 				color: $light-all-font-color;
 			}
 		}
+
 		.token.atrule,
 		.token.attr-value,
 		.token.keyword {
 			color: $info-color;
 		}
+
 		.token {
+
 			&.boolean,
 			&.constant,
 			&.deleted,
@@ -6496,11 +7703,13 @@ body {
 				color: $danger-color;
 			}
 		}
+
 		.loader-box {
 			&.card-loader {
 				background-color: $dark-card-background;
 			}
 		}
+
 		.my-gallery {
 			&.gallery-with-description {
 				img {
@@ -6509,12 +7718,15 @@ body {
 				}
 			}
 		}
+
 		@each $var in $alert-name {
 			$i: index($alert-name, $var);
+
 			.alert-#{$var}.inverse {
 				color: $dark-all-font-color;
 			}
 		}
+
 		.alert-theme {
 			span {
 				+span {
@@ -6525,29 +7737,35 @@ body {
 					}
 				}
 			}
+
 			i {
 				color: $white;
 				padding: 20px;
 				margin-right: 20px !important;
 			}
 		}
+
 		.user-card {
 			.user-deatils {
 				h6 {
 					color: $dark-small-font-color;
 				}
 			}
+
 			.card-footer {
 				>div {
 					&:first-child {
 						border-right: 1px dashed $dark-border-color;
 					}
 				}
+
 				.user-footer {
 					h6 {
 						color: $dark-small-font-color;
 					}
+
 					svg {
+
 						path,
 						rect {
 							color: $dark-small-font-color;
@@ -6556,6 +7774,7 @@ body {
 				}
 			}
 		}
+
 		.order-history {
 			table {
 				.qty-box {
@@ -6563,10 +7782,12 @@ body {
 						background-color: $dark-body-background !important;
 						border: none !important;
 					}
+
 					.input-group {
 						border-color: $dark-card-border;
 					}
 				}
+
 				thead {
 					tr {
 						th {
@@ -6574,46 +7795,56 @@ body {
 						}
 					}
 				}
+
 				tr {
+
 					td,
 					th {
 						border-top: none !important;
 					}
 				}
 			}
+
 			.title-orders {
 				background-color: $dark-body-background;
 			}
 		}
+
 		.navigation-option {
 			ul {
 				li {
 					a {
 						color: $dark-all-font-color;
 					}
+
 					&:hover {
 						background-color: $dark-body-background;
 					}
 				}
 			}
 		}
+
 		.product-box {
 			.product-details {
 				h6 {
 					color: $dark-all-font-color;
 				}
+
 				>a {
 					color: $dark-all-font-color;
 				}
+
 				span {
 					color: $dark-small-font-color;
 				}
 			}
+
 			.product-img {
 				.product-hover {
 					ul {
 						li {
 							background-color: $dark-card-background;
+
 							&:hover {
 								background-color: $black;
 								color: $white;
@@ -6623,6 +7854,7 @@ body {
 				}
 			}
 		}
+
 		.browse {
 			.browse-articles {
 				ul {
@@ -6630,6 +7862,7 @@ body {
 						a {
 							color: $dark-all-font-color;
 						}
+
 						&:hover {
 							background-color: $dark-body-background;
 						}
@@ -6637,6 +7870,7 @@ body {
 				}
 			}
 		}
+
 		@each $btn-name,
 		$btn-color in (primary, var(--theme-deafult)),
 		(secondary, $secondary-color),
@@ -6652,15 +7886,18 @@ body {
 						&::before {
 							border-color: $btn-color !important;
 						}
+
 						&::after {
 							background-color: $btn-color;
 						}
 					}
+
 					&:checked {
 						&+label {
 							&::before {
 								border-color: $btn-color !important;
 							}
+
 							&::after {
 								background-color: $btn-color;
 							}
@@ -6669,6 +7906,7 @@ body {
 				}
 			}
 		}
+
 		@each $btn-name,
 		$btn-color in (primary, var(--theme-deafult)),
 		(secondary, $secondary-color),
@@ -6686,6 +7924,7 @@ body {
 				}
 			}
 		}
+
 		@each $btn-name,
 		$btn-color in (primary, var(--theme-deafult)),
 		(secondary, $secondary-color),
@@ -6703,6 +7942,7 @@ body {
 						color: $white !important;
 					}
 				}
+
 				input[type="checkbox"] {
 					&:checked {
 						&+label {
@@ -6711,6 +7951,7 @@ body {
 								border-color: $btn-color !important;
 								color: $white !important;
 							}
+
 							&::after {
 								color: $white !important;
 							}
@@ -6719,6 +7960,7 @@ body {
 				}
 			}
 		}
+
 		.bootstrap-datetimepicker-widget {
 			ul {
 				li {
@@ -6726,17 +7968,21 @@ body {
 					border-bottom: 1px dashed $dark-border-color;
 				}
 			}
+
 			tr {
+
 				th,
 				td {
 					&:hover {
 						background-color: $dark-card-background;
 					}
+
 					span {
 						&:hover {
 							background-color: $dark-card-background;
 						}
 					}
+
 					&.prev,
 					&.next {
 						&:hover {
@@ -6744,6 +7990,7 @@ body {
 						}
 					}
 				}
+
 				&:first-child {
 					th {
 						&:hover {
@@ -6753,11 +8000,14 @@ body {
 				}
 			}
 		}
+
 		.btn-transparent {
 			color: $dark-all-font-color;
 		}
+
 		#cal-basic {
 			.fc-toolbar {
+
 				.fc-left,
 				.fc-right {
 					.fc-next-button {
@@ -6767,6 +8017,7 @@ body {
 							}
 						}
 					}
+
 					.fc-prev-button {
 						.fc-icon-left-single-arrow {
 							&:after {
@@ -6775,6 +8026,7 @@ body {
 						}
 					}
 				}
+
 				.fc-left {
 					.fc-button-group {
 						.fc-month-button {
@@ -6784,36 +8036,45 @@ body {
 				}
 			}
 		}
+
 		.fc-button-group {
+
 			.fc-basicWeek-button,
 			.fc-basicDay-button,
 			.fc-agendaWeek-button,
 			.fc-agendaDay-button {
 				color: $black !important;
 			}
+
 			.fc-month-button {
 				color: $white !important;
 			}
 		}
+
 		.btn-light {
 			&:not([disabled]):not(.disabled).active.active {
 				background-color: $dark-body-background !important;
 			}
+
 			&.disabled,
 			&:disabled {
 				color: rgba($theme-body-font-color, 0.5) !important;
 			}
 		}
+
 		#cal-agenda-view {
 			.fc-toolbar {
 				.fc-right {
 					.fc-button-group {
+
 						.fc-month-button,
 						.btn-light {
 							color: $black !important;
 						}
+
 						.fc-agendaWeek-button {
 							color: $white !important;
+
 							&:hover {
 								color: $black !important;
 							}
@@ -6822,18 +8083,22 @@ body {
 				}
 			}
 		}
+
 		.basic-calendar,
 		#cal-bg-events,
 		#cal-event-colors {
 			.fc-toolbar {
 				.fc-right {
 					.fc-button-group {
+
 						.fc-basicWeek-button,
 						.btn-light {
 							color: $black !important;
 						}
+
 						.fc-month-button {
 							color: $white !important;
+
 							&:hover {
 								color: $black !important;
 							}
@@ -6842,18 +8107,21 @@ body {
 				}
 			}
 		}
+
 		.categories {
 			ul {
 				li {
 					a {
 						color: $dark-small-font-color;
 					}
+
 					&:hover {
 						background-color: $dark-body-background;
 					}
 				}
 			}
 		}
+
 		.socialprofile {
 			.likes-profile {
 				h5 {
@@ -6862,10 +8130,12 @@ body {
 					}
 				}
 			}
+
 			span {
 				color: $dark-small-font-color;
 			}
 		}
+
 		.social-status {
 			.d-flex {
 				.flex-grow-1 {
@@ -6874,6 +8144,7 @@ body {
 							color: $dark-small-font-color;
 						}
 					}
+
 					p,
 					.light-span {
 						color: $dark-small-font-color;
@@ -6881,40 +8152,48 @@ body {
 				}
 			}
 		}
+
 		.filter-cards-view,
 		.timeline-content {
 			p {
 				color: $dark-small-font-color;
 			}
+
 			.comment-number {
 				i {
 					color: $dark-small-font-color;
 				}
 			}
+
 			.comments-box {
 				.input-group {
 					.form-control {
 						border: none !important;
 					}
+
 					.input-group-append {
 						background-color: $dark-body-background;
 					}
 				}
 			}
 		}
+
 		.social-chat {
 			.flex-grow-1 {
 				border: 1px dashed $dark-border-color;
+
 				&:after {
 					border-right: 7px dashed $dark-card-background;
 				}
 			}
+
 			span {
 				span {
 					color: $dark-small-font-color;
 				}
 			}
 		}
+
 		.details-about {
 			.your-details {
 				p {
@@ -6922,6 +8201,7 @@ body {
 				}
 			}
 		}
+
 		.activity-log {
 			.my-activity {
 				p {
@@ -6929,6 +8209,7 @@ body {
 				}
 			}
 		}
+
 		.bookmark {
 			ul {
 				li {
@@ -6938,12 +8219,14 @@ body {
 				}
 			}
 		}
+
 		//index page
 		@media only screen and (max-width: 991.98px) {
 			.page-wrapper.compact-wrapper .page-header .header-wrapper .toggle-sidebar {
 				border-right: none;
 			}
 		}
+
 		@media only screen and (max-width: 767.98px) {
 			.page-wrapper {
 				&.material-icon {
@@ -6952,23 +8235,28 @@ body {
 					}
 				}
 			}
+
 			.feature-products {
 				.filter-toggle {
 					background-color: $dark-card-background;
 				}
 			}
 		}
+
 		.apexcharts-tooltip.light {
 			border-color: $dark-card-border;
 			background-color: $dark-body-background;
+
 			.apexcharts-tooltip-title {
 				border-color: $dark-card-border;
 			}
+
 			.apexcharts-tooltip-text-label,
 			.apexcharts-tooltip-text-value {
 				color: $white;
 			}
 		}
+
 		// Alert dark mode
 		.dark-alert {
 			.alert {
@@ -6977,6 +8265,7 @@ body {
 				}
 			}
 		}
+
 		.dark-txt {
 			p {
 				strong {
@@ -6984,17 +8273,21 @@ body {
 				}
 			}
 		}
+
 		.live-dark {
 			.btn-close {
 				filter: initial;
 			}
 		}
+
 		.alert-light {
 			color: $dark-body-background !important;
 		}
+
 		// dropdown dark mode
 		.dark-input-type {
 			.input-group {
+
 				// background-color: $dark-card-background;
 				// color: $dark-all-font-color;
 				.input-group-text {
@@ -7003,6 +8296,7 @@ body {
 				}
 			}
 		}
+
 		.heading-dropdown {
 			.dropdown-menu {
 				>li {
@@ -7014,11 +8308,13 @@ body {
 				}
 			}
 		}
+
 		.dropdown-menu {
 			.input-group {
 				background-color: $light-sidebar-bg;
 			}
 		}
+
 		.heading-dropdown {
 			.dropdown-menu {
 				a {
@@ -7028,6 +8324,7 @@ body {
 				}
 			}
 		}
+
 		// Accordion dark mode
 		.dark-accordion {
 			.accordion-item {
@@ -7035,33 +8332,41 @@ body {
 					p {
 						color: rgba($white, 0.7);
 					}
+
 					.accordion-body {
 						background-color: $dark-card-background;
+
 						h6 {
 							border: 0;
 						}
 					}
 				}
+
 				&:last-of-type {
 					.accordion-button.collapsed {
 						background-color: $dark-card-background;
 					}
 				}
+
 				border-color: $dark-card-border;
 				background-color: $dark-body-background;
 			}
+
 			.collapse-wrapper {
 				color: $dark-body-background;
 			}
+
 			&.card {
 				border-radius: unset;
 			}
 		}
+
 		.accordions-content {
 			li {
 				color: rgba($white, 0.7);
 			}
 		}
+
 		// List dark mode
 		.dark-list {
 			.list-group {
@@ -7069,22 +8374,26 @@ body {
 					+.list-group-item {
 						border-top-width: 1px;
 					}
+
 					.form-check-input {
 						border: 1px dashed $dark-all-font-color;
 						background-color: transparent;
 					}
 				}
 			}
+
 			.list-light-dark {
 				background-color: $dark-body-background;
 			}
 		}
+
 		// Typography dark mode
 		.card-wrapper {
 			.sub-title {
 				border-bottom: unset !important;
 			}
 		}
+
 		.dark-blockquote {
 			.blockquote {
 				p {
@@ -7092,19 +8401,23 @@ body {
 				}
 			}
 		}
+
 		// Modal dark mode
 		.dark-sign-up {
 			h3 {
 				color: $dark-card-background;
 			}
+
 			p {
 				color: $dark-card-background;
 			}
+
 			.modal-body {
 				form {
 					.form-label {
 						color: $bg-dark-color;
 					}
+
 					.form-check {
 						.form-check-label {
 							color: $bg-dark-color;
@@ -7113,6 +8426,7 @@ body {
 				}
 			}
 		}
+
 		.modal-dialog {
 			.modal-content {
 				.dark-modal {
@@ -7120,14 +8434,17 @@ body {
 						svg {
 							color: $dark-all-font-color;
 						}
+
 						h6 {
 							color: $dark-all-font-color;
 						}
 					}
+
 					.large-modal-body {
 						svg {
 							color: $dark-all-font-color;
 						}
+
 						p {
 							color: $dark-all-font-color;
 						}
@@ -7135,13 +8452,16 @@ body {
 				}
 			}
 		}
+
 		.modal-toggle-wrapper {
 			.dark-toggle-btn {
 				color: $dark-all-font-color;
 			}
 		}
+
 		.social-profile {
 			background-attachment: fixed;
+
 			.social-details {
 				h5 {
 					a {
@@ -7150,35 +8470,43 @@ body {
 				}
 			}
 		}
+
 		// helper-classes
 		.dark-helper {
 			background-color: rgba($dark-body-background, 0.4);
+
 			h6,
 			span {
 				color: $dark-all-font-color;
 			}
+
 			.text-muted {
 				color: $dark-card-background !important;
 			}
 		}
+
 		.font-dark {
 			color: $dark-all-font-color !important;
 		}
+
 		// treeview
 		.treejs {
 			.treejs-node__disabled {
 				color: $light-all-font-color;
 			}
+
 			.treejs-switcher:before {
 				border-top: 4px dashed $dark-all-font-color
 			}
 		}
+
 		// range-slider 
 		.irs-min,
 		.irs-max {
 			color: $dark-small-font-color;
 			background-color: $dark-body-background;
 		}
+
 		// Ribbons 
 		.ribbon-wrapper,
 		.ribbon-wrapper-bottom,
@@ -7189,6 +8517,7 @@ body {
 				background-color: $dark-body-background;
 			}
 		}
+
 		// Paginations
 		.pagination {
 			.page-item {
@@ -7199,6 +8528,7 @@ body {
 				}
 			}
 		}
+
 		// Timeline
 		.dark-timeline {
 			.date-content {
@@ -7206,11 +8536,13 @@ body {
 				background-color: $dark-body-background !important;
 			}
 		}
+
 		.income-wrapper {
 			ul {
 				li {
 					+li {
 						border-left: 1px dashed $dark-card-border;
+
 						@media (max-width:1735px) {
 							border-left: unset;
 						}
@@ -7218,12 +8550,14 @@ body {
 				}
 			}
 		}
+
 		// grid 
 		.grid-showcase {
 			span {
 				background-color: $dark-body-background;
 			}
 		}
+
 		// forms
 		.custom-input #validationCustom03.form-control,
 		.custom-input #validationCustom03 .form-select,
@@ -7233,12 +8567,15 @@ body {
 		.custom-input #validationCustomUsername .form-select {
 			border-color: $dark-body-background;
 		}
+
 		.form-control[type=file]:not(:disabled):not([readonly]) {
 			color: $light-all-font-color;
 			background-color: $dark-body-background;
 			border-color: $dark-body-background;
 		}
+
 		.custom-input {
+
 			.form-control,
 			.form-select {
 				background-color: $dark-body-background;
@@ -7246,9 +8583,11 @@ body {
 				color: $dark-all-font-color;
 			}
 		}
+
 		.vertical-main-wizard {
 			.header-vertical-wizard {
 				.nav-link {
+
 					&:active,
 					&.active {
 						.vertical-wizard {
@@ -7262,10 +8601,12 @@ body {
 				}
 			}
 		}
+
 		// Advance Init table
 		td.highlight {
 			background-color: $dark-datatable-odd !important;
 		}
+
 		// Base-input 
 		.card-wrapper,
 		.dark-field {
@@ -7275,10 +8616,12 @@ body {
 				color: rgba($white, 0.5);
 			}
 		}
+
 		.form-control-sm {
 			background-color: $dark-card-background;
 			border-color: rgba($white, 0.1);
 		}
+
 		.radio,
 		.checkbox {
 			label {
@@ -7287,17 +8630,20 @@ body {
 				}
 			}
 		}
+
 		.basic-wizard {
 			.stepper-horizontal {
 				.step {
 					.step-circle {
 						background: $dark-body-background;
 					}
+
 					.step-bar-left {
 						background-color: $dark-body-background;
 						border: solid $dark-body-background;
 					}
 				}
+
 				.step.editing {
 					.step-circle {
 						background: $dark-body-background;
@@ -7305,6 +8651,7 @@ body {
 				}
 			}
 		}
+
 		.vertical-main-wizard {
 			.nav-link {
 				&.active {
@@ -7312,6 +8659,7 @@ body {
 				}
 			}
 		}
+
 		.vertical-main-wizard {
 			.nav-link {
 				.vertical-wizard {
@@ -7322,61 +8670,75 @@ body {
 				}
 			}
 		}
+
 		.flatpickr-day {
 			color: rgba($white, 0.6);
 		}
+
 		.vertical-scroll {
 			.list-group-item {
 				border: none;
 				border-bottom: 1px dashed $dark-card-border;
+
 				&:last-child {
 					border-bottom: none;
 				}
 			}
 		}
+
 		.main-upgrade .variation-box .selection-box input[type=checkbox]:checked~div {
 			background-color: rgba($primary-color, 0.3);
 			border-radius: 15px;
 			color: rgba($white, 0.8);
 		}
+
 		.pre-post-touchspin.bg-touchspin button[type=button] {
 			border-color: rgba($white, 0.3);
 		}
+
 		.switch-outline .switch-state.bg-dark {
 			border: 1px dashed rgba($white, 0.3);
 		}
+
 		.selected-box {
 			background-color: $dark-body-background;
 			color: rgba($white, 0.6);
 		}
+
 		.tagify__dropdown__wrapper {
 			background-color: $dark-body-background;
 		}
+
 		.pre-post-touchspin {
 			.input-touchspin {
 				border-color: rgba($white, 0.3);
 			}
 		}
+
 		.touchspin-wrapper .btn-touchspin.spin-border-dark {
 			border-color: rgba($white, 0.3);
 			color: rgba($white, 0.6);
 		}
+
 		.dark-inputs {
 			.form-control {
 				&.btn-square {
 					background-color: $dark-body-background;
 					border-color: $dark-body-background;
 				}
+
 				&.btn-pill {
 					background-color: $dark-body-background;
 					border-color: $dark-body-background;
 				}
+
 				&.input-air-primary {
 					background-color: $dark-body-background;
 					border-color: $dark-body-background;
 				}
 			}
 		}
+
 		.horizontal-wizard-wrapper {
 			.main-horizontal-header {
 				.horizontal-options {
@@ -7390,6 +8752,7 @@ body {
 				}
 			}
 		}
+
 		// Touchspin
 		.touchspin-wrapper,
 		.pre-post-touchspin {
@@ -7400,6 +8763,7 @@ body {
 				}
 			}
 		}
+
 		// unique checkbox checked
 		.variation-box {
 			.selection-box {
@@ -7410,19 +8774,24 @@ body {
 				}
 			}
 		}
+
 		// datepicker
 		.flatpickr-calendar {
 			box-shadow: unset;
+
 			&.animate {
 				background-color: $dark-body-background;
 			}
 		}
+
 		.flatpickr-time {
 			border: 1px dashed $dark-card-inbox;
+
 			input {
 				background: $dark-datatable-sorting-even;
 			}
 		}
+
 		.main-inline-calender {
 			&.input-group {
 				.flatpickr-rContainer {
@@ -7439,40 +8808,49 @@ body {
 				}
 			}
 		}
+
 		// Select2 
 		.tagify__dropdown__item--active {
 			background-color: $dark-body-background;
 		}
+
 		.tagify__input {
 			color: $dark-small-font-color;
+
 			&::before {
 				color: $dark-small-font-color;
 			}
 		}
+
 		.tagify {
 			border-color: $dark-card-border;
 			--tags-focus-border-color: #374558;
 		}
+
 		.international-num {
 			input {
 				border-color: $dark-card-border;
 				background-color: $dark-card-background;
 			}
+
 			.results {
 				ul {
 					border: 1px dashed $dark-card-border;
 				}
 			}
 		}
+
 		.iti__country-list {
 			background-color: $dark-card-background;
 		}
+
 		.select-box {
 			.selection-option {
 				&:hover {
 					background-color: $dark-datatable-sorting-even;
 				}
 			}
+
 			.options-container.active {
 				~ {
 					.search-box {
@@ -7483,6 +8861,7 @@ body {
 				}
 			}
 		}
+
 		// Tables
 		.table-hover {
 			>tbody {
@@ -7491,6 +8870,7 @@ body {
 				}
 			}
 		}
+
 		// Authentication
 		.main-qr-code {
 			.modal-toggle-wrapper {
@@ -7499,15 +8879,18 @@ body {
 						.alert {
 							background-color: $dark-body-background;
 							border-color: $dark-card-inbox;
+
 							i {
 								color: $dark-all-font-color;
 							}
+
 							div {
 								color: $dark-all-font-color;
 							}
 						}
 					}
 				}
+
 				form {
 					.form-control {
 						background-color: $dark-body-background;
@@ -7516,6 +8899,7 @@ body {
 				}
 			}
 		}
+
 		.authentication-options {
 			.radio-wrapper {
 				li {
@@ -7529,6 +8913,7 @@ body {
 				}
 			}
 		}
+
 		// Typeahead
 		.typeahead-wrapper {
 			.theme-form {
@@ -7538,6 +8923,7 @@ body {
 				}
 			}
 		}
+
 		// Letter_box
 		.compose-modal {
 			form {
@@ -7548,15 +8934,18 @@ body {
 				}
 			}
 		}
+
 		.toolbar-box {
 			.ql-snow {
 				.ql-stroke {
 					stroke: $dark-small-font-color;
 				}
+
 				.ql-tooltip {
 					background-color: $dark-body-background;
 					box-shadow: unset;
 					border: 0;
+
 					&.ql-editing {
 						input[type=text] {
 							background-color: $dark-card-background;
@@ -7565,14 +8954,17 @@ body {
 						}
 					}
 				}
+
 				a {
 					color: $light-all-font-color;
 				}
 			}
+
 			.ql-editor.ql-blank::before {
 				color: $light-all-font-color;
 			}
 		}
+
 		.email-body {
 			.mail-header-wrapper {
 				.mail-body {
@@ -7583,12 +8975,14 @@ body {
 							color: $light-all-font-color;
 						}
 					}
+
 					.dropdown-menu {
 						.dropdown-item {
 							background: $dark-body-background;
 							opacity: 1;
 							border: 0;
 							color: $light-all-font-color;
+
 							&:hover {
 								background-color: $dark-card-background;
 							}
@@ -7597,11 +8991,13 @@ body {
 				}
 			}
 		}
+
 		.inbox-options {
 			.light-square {
 				&.btn-group {
 					.dropdown-menu {
 						background: $dark-editor-document;
+
 						.dropdown-item {
 							&:hover {
 								background-color: $light-all-font-color;
@@ -7612,10 +9008,13 @@ body {
 				}
 			}
 		}
+
 		.inbox-security {
 			background-color: $dark-body-background;
 		}
+
 		.mail-pagination {
+
 			.pagination-number,
 			.pagination-button {
 				background-color: $dark-body-background;
@@ -7623,32 +9022,38 @@ body {
 			}
 		}
 	}
+
 	&.dark-sidebar {
 		.toggle-sidebar {
 			svg {
 				stroke: var(--theme-deafult);
 			}
 		}
+
 		.page-wrapper {
 			.sidebar-main-title {
 				p {
 					color: $dark-all-font-color;
 				}
 			}
+
 			&.horizontal-wrapper {
 				.logo-wrapper {
 					.for-light {
 						display: block;
 					}
+
 					.for-dark {
 						display: none;
 					}
 				}
 			}
+
 			&.compact-wrapper {
 				.page-body-wrapper {
 					div.sidebar-wrapper {
 						background-color: $dark-card-background;
+
 						.sidebar-main {
 							.sidebar-links {
 								li {
@@ -7656,11 +9061,13 @@ body {
 										span {
 											color: $dark-all-font-color;
 										}
+
 										svg {
 											stroke: $dark-all-font-color;
 										}
 									}
 								}
+
 								.simplebar-wrapper {
 									.simplebar-mask {
 										.simplebar-content-wrapper {
@@ -7669,12 +9076,14 @@ body {
 													.sidebar-link {
 														&.active {
 															background-color: rgba($primary-color, 0.2);
+
 															svg {
 																color: var(--theme-deafult);
 																stroke: var(--theme-deafult);
 															}
 														}
 													}
+
 													.mega-menu-container {
 														.mega-box {
 															.link-section {
@@ -7683,6 +9092,7 @@ body {
 																		color: $dark-all-font-color;
 																	}
 																}
+
 																.submenu-content {
 																	&.opensubmegamenu {
 																		li {
@@ -7695,10 +9105,12 @@ body {
 																}
 															}
 														}
+
 														&::after {
 															background-color: $light-all-font-color;
 														}
 													}
+
 													.sidebar-submenu {
 														li {
 															a {
@@ -7711,6 +9123,7 @@ body {
 										}
 									}
 								}
+
 								.sidebar-list {
 									ul.sidebar-submenu {
 										li {
@@ -7718,6 +9131,7 @@ body {
 												span {
 													color: $dark-all-font-color;
 												}
+
 												&.active {
 													color: var(--theme-deafult);
 												}
@@ -7728,6 +9142,7 @@ body {
 							}
 						}
 					}
+
 					.according-menu {
 						i {
 							color: $dark-all-font-color;
@@ -7735,15 +9150,19 @@ body {
 					}
 				}
 			}
+
 			.radius-wrapper {
 				background-color: $dark-body-background;
 			}
+
 			&.horizontal-wrapper {
 				.page-body-wrapper {
 					.sidebar-wrapper {
 						background: $dark-card-background;
+
 						.sidebar-main {
 							background-color: $dark-card-background;
+
 							.sidebar-links {
 								.simplebar-wrapper {
 									.simplebar-mask {
@@ -7753,23 +9172,29 @@ body {
 													>a {
 														color: $dark-all-font-color;
 													}
+
 													.sidebar-submenu {
 														background: $dark-card-background;
+
 														li {
 															a {
 																color: $dark-all-font-color;
+
 																&.active,
 																&:hover {
 																	color: var(--theme-deafult);
 																}
 															}
+
 															.nav-sub-childmenu {
 																background: $dark-card-background;
 															}
 														}
 													}
+
 													.mega-menu-container {
 														background: $dark-card-background;
+
 														.mega-box {
 															.link-section {
 																.submenu-content {
@@ -7788,6 +9213,7 @@ body {
 									}
 								}
 							}
+
 							.left-arrow,
 							.right-arrow {
 								background-color: $dark-card-background;
@@ -7797,6 +9223,7 @@ body {
 					}
 				}
 			}
+
 			&.compact-sidebar {
 				.page-body-wrapper {
 					div {
@@ -7804,23 +9231,28 @@ body {
 							>div {
 								background: $dark-card-background;
 							}
+
 							.sidebar-main {
 								.sidebar-links {
 									li {
 										.sidebar-title {
 											border-bottom: 1px dashed $dark-card-border;
 										}
+
 										a {
 											span {
 												color: $dark-all-font-color;
 											}
+
 											svg {
 												stroke: $dark-all-font-color;
 											}
 										}
+
 										.sidebar-submenu,
 										.mega-menu-container {
 											background-color: $dark-card-background;
+
 											li {
 												a {
 													border-bottom: 1px dashed $dark-card-border;
@@ -7828,6 +9260,7 @@ body {
 											}
 										}
 									}
+
 									.simplebar-wrapper {
 										.simplebar-mask {
 											.simplebar-content-wrapper {
@@ -7836,15 +9269,18 @@ body {
 														.sidebar-link {
 															&.active {
 																background-color: rgba($primary-color, 0.2);
+
 																span {
 																	color: var(--theme-deafult);
 																}
+
 																svg {
 																	color: var(--theme-deafult);
 																	stroke: var(--theme-deafult);
 																}
 															}
 														}
+
 														.mega-menu-container {
 															.mega-box {
 																.link-section {
@@ -7853,6 +9289,7 @@ body {
 																			color: $dark-all-font-color;
 																		}
 																	}
+
 																	.submenu-content {
 																		&.opensubmegamenu {
 																			li {
@@ -7865,10 +9302,12 @@ body {
 																	}
 																}
 															}
+
 															&::after {
 																background-color: $light-all-font-color;
 															}
 														}
+
 														.sidebar-submenu {
 															li {
 																a {
@@ -7881,6 +9320,7 @@ body {
 											}
 										}
 									}
+
 									.sidebar-list {
 										ul.sidebar-submenu {
 											li {
@@ -7888,6 +9328,7 @@ body {
 													span {
 														color: $dark-all-font-color;
 													}
+
 													&.active {
 														color: var(--theme-deafult);
 													}
@@ -7899,6 +9340,7 @@ body {
 							}
 						}
 					}
+
 					.according-menu {
 						i {
 							color: $dark-all-font-color;
@@ -7908,19 +9350,23 @@ body {
 			}
 		}
 	}
+
 	.for-dark {
 		display: none;
 	}
+
 	&[class*='dark-'] {
 		.for-dark {
 			display: block;
 			// margin: 0 auto;
 		}
+
 		.for-light {
 			display: none;
 		}
 	}
 }
+
 // =======================  Dark Body only  ======================= //
 /**=====================
 	4.1. Dark CSS ends

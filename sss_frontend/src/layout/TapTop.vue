@@ -6,7 +6,7 @@
 <script lang="ts" setup>
 import { ref, onMounted } from "vue"
 
-let display = ref<boolean>(false)
+const display = ref<boolean>(false)
 
 onMounted(() => {
     window.addEventListener('scroll', handleScroll);

@@ -1,6 +1,7 @@
 import { defineStore } from "pinia";
-import { ref, onMounted } from "vue";
+import { ref, onMounted, watch } from "vue";
 import { menu } from "@/core/data/menu";
+import { useRoute } from 'vue-router'
 
 interface searchdatas {
     icon1: string,
@@ -15,6 +16,11 @@ interface search {
     title: string,
     bookmark: string
 }
+interface MenuItem {
+    title: string;
+
+}
+
 export const useMenuStore = defineStore("menu", () => {
 
     let data = ref(menu)
@@ -33,26 +39,27 @@ export const useMenuStore = defineStore("menu", () => {
     let margin = ref<number>(0)
     let menuWidth = ref<number>(0)
     let searchKey = ref('')
-    let perentName = ref<string>('')
+    let perentName = ref<string | undefined>('')
     let subName = ref<string>('')
-    let childName = ref<string>('')
+    let childName = ref<string | undefined>('')
     let bodyToggle = ref(false)
     let perentToggle = ref<boolean>(false)
     let subToggle = ref<boolean>(false)
     let childToggle = ref<boolean>(false)
 
-    interface term {
-        [key: string]: any;
-    }
-    interface terms {
-        [key: string]: any;
-    }
+    let active = ref<boolean>(false)
+
+
     onMounted(() => {
         if (window.innerWidth < 991) {
             togglesidebar.value = false
         }
     })
+    function openActives() {
+        active.value = !active.value
+    }
     function togglePinned(item: any) {
+
         item.isPinned = !item.isPinned;
     };
     function toggle_sidebar() {
@@ -82,7 +89,9 @@ export const useMenuStore = defineStore("menu", () => {
         const items: any = [];
 
         const searchval = term.toLowerCase()
+
         data.value.filter((menuItems: any) => {
+
             if (menuItems.title?.toLowerCase().includes(term) && menuItems.type === 'link') {
                 items.push(menuItems);
             }
@@ -108,7 +117,9 @@ export const useMenuStore = defineStore("menu", () => {
         const items: any = [];
 
         const searchval = terms.toLowerCase()
+
         data.value.filter((menuItems: any) => {
+
             if (menuItems.title?.toLowerCase().includes(terms) && menuItems.type === 'link') {
                 items.push(menuItems);
             }
@@ -131,35 +142,39 @@ export const useMenuStore = defineStore("menu", () => {
         })
     }
 
-    function setNavActive(item: any) {
-        if (!item.active) {
 
-            data.value.forEach((a: any) => {
-                if (data.value.includes(item))
-                    a.active = false;
-                if (!a.children) return false;
-                a.children.forEach((b: any) => {
-                    if (a.children.includes(item)) {
-                        b.active = false;
+    onMounted(() => {
+        data.value.filter((menuItem) => {
+            if (menuItem.path) {
+                if (menuItem.path == useRoute().path) {
+                    perentName.value = menuItem.title
+                }
+            }
+            else {
+                menuItem.children?.filter((subItem) => {
+                    if (subItem.path) {
+                        if (subItem.path == useRoute().path) {
+                            perentName.value = menuItem.title
+                            childName.value = subItem.title
+                        }
                     }
-                });
-            });
-        }
-        item.active = !item.active;
-        if (item.active) {
-            bodyToggle.value = true
-        }
-        else {
-            bodyToggle.value = false
-        }
-    }
-
+                    subItem.children?.filter((childItem) => {
+                        if (childItem.path) {
+                            if (childItem.path == useRoute().path) {
+                                perentName.value = menuItem.title
+                                childName.value = subItem.title
+                            }
+                        }
+                    })
+                })
+            }
+        })
+    })
     return {
         data,
         togglesidebar,
         activeoverlay,
         toggle_sidebar,
-        setNavActive,
         customizer,
         searchTerm,
         togglePinned,
@@ -184,6 +199,8 @@ export const useMenuStore = defineStore("menu", () => {
         childName,
         perentToggle,
         subToggle,
-        childToggle
+        childToggle,
+        openActives,
+        active,
     };
 });

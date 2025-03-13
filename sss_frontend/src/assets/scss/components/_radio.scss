@@ -11,9 +11,11 @@
         }
     }
 }
+
 .radio input[type=radio] {
-    display: block;
+    display: block !important;
 }
+
 .checkbox_animated {
     cursor: pointer;
     position: relative;
