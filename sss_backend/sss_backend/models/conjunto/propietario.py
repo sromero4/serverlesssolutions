@@ -1,6 +1,8 @@
 from django.db import models
 
-
+from .apartamento import *
+from .persona import * 
+from .torre import *
 class Propietario(models.Model):
     prop_codigo = models.BigAutoField(primary_key=True)
     tor_codigo = models.ForeignKey('Torre', models.DO_NOTHING, db_column='tor_codigo', blank=True, null=True)
@@ -10,4 +12,5 @@ class Propietario(models.Model):
 
     class Meta:
         managed = False
+        app_label = 'conjunto'
         db_table = 'propietario'

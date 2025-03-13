@@ -1,6 +1,6 @@
 from django.db import models
 
-
+from .perfil import *
 class Usuario(models.Model):
     usu_codigo = models.BigAutoField(primary_key=True)
     usu_nombre = models.CharField(max_length=100, blank=True, null=True)
@@ -17,4 +17,5 @@ class Usuario(models.Model):
 
     class Meta:
         managed = False
+        app_label = 'conjunto'
         db_table = 'usuario'

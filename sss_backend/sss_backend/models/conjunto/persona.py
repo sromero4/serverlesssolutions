@@ -11,4 +11,5 @@ class Persona(models.Model):
 
     class Meta:
         managed = False
+        app_label = 'conjunto'
         db_table = 'persona'
