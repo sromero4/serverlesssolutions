@@ -9,10 +9,10 @@
                                     src="@/assets/images/logo/logo_dark.png" alt="looginpage"></router-link></div>
                         <div class="login-main">
                             <form class="theme-form" @submit.prevent="">
-                                <h4>Sign in to account</h4>
-                                <p>Enter your email & password to login</p>
+                                <h4>Inicio de Sesion</h4>
+                                <p>Ingrese su correo y contrasena para inciar sesion</p>
                                 <div class="form-group">
-                                    <label class="col-form-label">Email Address</label>
+                                    <label class="col-form-label">Correo Electronico</label>
                                     <input v-model="email" class="form-control" type="email" placeholder="Test@gmail.com">
                                 </div>
                                 <div class="form-group">
@@ -34,7 +34,7 @@
                                             in</button>
                                     </div>
                                 </div>
-                                <h6 class="text-muted mt-4 or">Or Sign in with</h6>
+                                <!-- <h6 class="text-muted mt-4 or">Or Sign in with</h6>
                                 <div class="social mt-4">
                                     <div class="btn-showcase"><a class="btn btn-light" href="https://www.linkedin.com/login"
                                             target="_blank"><vue-feather class="txt-linkedin" type="linkedin"></vue-feather>
@@ -44,11 +44,23 @@
                                                 type="twitter"></vue-feather>twitter</a><a class="btn btn-light"
                                             href="https://www.facebook.com/" target="_blank"><vue-feather class="txt-fb"
                                                 type="facebook"></vue-feather>facebook</a></div>
-                                </div>
+                                </div> -->
                                 <p class="mt-4 mb-0 text-center">Don't have account?<router-link class="ms-2"
                                         to="/auth/register">Create Account</router-link></p>
                             </form>
                         </div>
+                        <!-- <div v-if="loading">Cargando...</div>
+                        <div v-else-if="error">Error: {{ error.message }}</div>
+                        <div v-else-if="data && data.allApartamento">
+                            <ul>
+                                <li v-for="item in data.allApartamento" :key="item.aptoCodigo">
+                                {{ item.aptoNombre }}
+                                </li>
+                            </ul>
+                        </div>
+                        <div v-else>
+                            No hay datos disponibles.
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -57,16 +69,29 @@
     </div>
 </template>
 <script lang="ts" setup>
-import { ref } from "vue"
 import { toast } from 'vue3-toastify';
 import 'vue3-toastify/dist/index.css';
-import { useRouter } from 'vue-router'
+import { useRouter } from 'vue-router';
+// import { useQuery, gql } from "@vue/apollo-composable";
+import { ref } from "vue";
 
 
 let router = useRouter()
 let type = ref<string>('password')
 let email = ref<string>("test@admin.com")
 let password = ref<string>("test@123456")
+// const GET_ITEMS = gql`
+//     query QUERY {
+//         allApartamento {
+//             edges {
+//                 node {
+//                     aptoCodigo
+//                     aptoNombre
+//                 }
+//             }
+//         }
+//     }
+// `;
 
 function showPassword() {
     if (type.value === 'password') {
@@ -86,6 +111,20 @@ function doLogin() {
     else {
         toast.error('Opps... Invalid email and password ', { position: 'top-right', autoClose: 2000 });
     }
-
+    
 }
+// function prueba() {
+//     const { result: data, loading, error } = useQuery(GET_ITEMS);
+
+//     watch(data, (newData) => {
+//     console.log("Datos de la consulta GraphQL:", newData);
+//     });
+//     return { loading, error, data };
+// }
+
+// onMounted(() => {
+//     prueba()
+// })
+
+
 </script>

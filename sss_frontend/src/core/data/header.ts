@@ -81,24 +81,24 @@ export const cart = [
     }
 ]
 export const profile = [
-    {
-        icon: "user",
-        title: "Account",
-        path: "/users/profile"
-    },
-    {
-        icon: "mail",
-        title: "Inbox",
-        path: "/app/letter_box"
-    },
-    {
-        icon: "file-text",
-        title: "Taskboard",
-        path: "/app/task"
-    },
-    {
-        icon: "settings",
-        title: "Settings",
-        path: "/users/edit"
-    }
+    // {
+    //     icon: "user",
+    //     title: "Account",
+    //     path: "/users/profile"
+    // },
+    // {
+    //     icon: "mail",
+    //     title: "Inbox",
+    //     path: "/app/letter_box"
+    // },
+    // {
+    //     icon: "file-text",
+    //     title: "Taskboard",
+    //     path: "/app/task"
+    // },
+    // {
+    //     icon: "settings",
+    //     title: "Settings",
+    //     path: "/users/edit"
+    // }
 ]

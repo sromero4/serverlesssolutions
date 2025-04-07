@@ -33,6 +33,9 @@ import { plugin } from 'vue3-timeline'
 import PerfectScrollbar from 'vue3-perfect-scrollbar'
 import VueTour from 'v3-tour'
 
+import { DefaultApolloClient } from '@vue/apollo-composable';
+import { ApolloClient, InMemoryCache, HttpLink } from '@apollo/client/core';
+
 import English from "@/core/locales/en.json"
 import Russian from "@/core/locales/ru.json"
 import Arabic from "@/core/locales/ar.json"
@@ -62,6 +65,11 @@ const i18n = createI18n({
     }
 })
 
+const apolloClient = new ApolloClient({
+    link: new HttpLink({ uri: 'http://localhost:8000/graphql_conjunto/' }),
+    cache: new InMemoryCache(),
+  });
+
 createApp(App)
     .use(router)
     .use(createPinia())
@@ -83,4 +91,5 @@ createApp(App)
     .component(VueFeather.name, VueFeather)
     .component('Datepicker', Datepicker)
     .component('multiselect', Multiselect)
-    .mount('#app')
+    .provide(DefaultApolloClient, apolloClient)
+    .mount('#app');

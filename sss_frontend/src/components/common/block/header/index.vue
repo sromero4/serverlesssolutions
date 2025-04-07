@@ -18,10 +18,10 @@
                     <li class="onhover-dropdown">
                         <NotificationBox />
                     </li>
-                    <li class="onhover-dropdown">
+                    <!-- <li class="onhover-dropdown">
                         <BookmarkSearch />
-                    </li>
-                    <li>
+                    </li> -->
+                    <!-- <li>
                         <ModeView />
                     </li>
                     <li class="language-nav">
@@ -32,7 +32,7 @@
                     </li>
                     <li class="cart-nav onhover-dropdown">
                         <CartBox />
-                    </li>
+                    </li> -->
                     <li class="profile-nav onhover-dropdown px-0 py-0">
                         <ProfileView />
                     </li>

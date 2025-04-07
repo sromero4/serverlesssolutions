@@ -1,17 +1,17 @@
 <template>
     <div class="container-fluid default-dashboard">
         <div class="row widget-grid">
-            <WelcomeView />
+            <!-- <WelcomeView />
             <OpeningLeaflets doller="$" col="col-xl-3 col-md-6 proorder-xl-2 proorder-md-2" />
-            <ShiftsOverview />
+            <ShiftsOverview /> -->
             <ProjectData />
-            <CustomerTransaction />
+            <!-- <CustomerTransaction />
             <NotificationsData />
             <AppointmentsData col="col-xxl-5 col-xl-6 box-col-6 proorder-xl-7 proorder-md-8"
                 bodyclass="appointments relative" />
             <ActiveMembers />
             <SalesStatistic />
-            <SaleProduct />
+            <SaleProduct /> -->
         </div>
     </div>
 </template>

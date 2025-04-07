@@ -1,9 +1,9 @@
 <template>
-    <Card1 colClass="col-xl-7 proorder-xl-5 box-col-7 proorder-md-5" dropdown="true" headerTitle="true" title="Projects"
+    <Card1 dropdown="true" headerTitle="true" title="Habitantes"
         cardhaderClass="card-no-border" cardbodyClass="pt-0 projects px-0">
         <div class="table-responsive theme-scrollbar">
             <div id="recent-order_wrapper" class="dataTables_wrapper no-footer">
-                <div id="recent-order_filter" class="dataTables_filter"><label>Search:<input type="search" placeholder=""
+                <div id="recent-order_filter" class="dataTables_filter"><label>Buscar:<input type="search" placeholder=""
                             v-model="filterQuery"></label></div>
                 <table class="table display dataTable no-footer" id="information" style="width:100%">
                     <thead>
@@ -14,12 +14,10 @@
                                     <label class="form-check-label"></label>
                                 </div>
                             </th>
-                            <th>Files Name</th>
-                            <th>File Type</th>
-                            <th>Date</th>
-                            <th>Sizes</th>
-                            <th>Author </th>
-                            <th>Actions</th>
+                            <th>Torre y apto </th>
+                            <th>Nombre Propietario</th>
+                            <th>Contacto</th>
+                            <th>Placa</th>
                         </tr>
                     </thead>
                     <tbody v-if="!get_rows().length">
@@ -37,33 +35,19 @@
                             </td>
                             <td>
                                 <div class="d-flex align-items-center">
-                                    <div class="flex-shrink-0"><img :src="getImages(row.img)" alt=""></div>
-                                    <div class="flex-grow-1 ms-2"><router-link to="/ecommerce/details/1">
-                                            <h6>{{ row.title }}</h6>
-                                        </router-link></div>
+                                    <h6>{{ row.apto }}</h6>
                                 </div>
                             </td>
                             <td class="project-dot">
                                 <div class="d-flex">
                                     <div class="flex-shrink-0"><span :class="row.bgclass"></span></div>
                                     <div class="flex-grow-1">
-                                        <h6>{{ row.file }}</h6>
+                                        <h6>{{ row.nombre_propietario }}</h6>
                                     </div>
                                 </div>
                             </td>
-                            <td> {{ row.date }}</td>
-                            <td> {{ row.size }}</td>
-                            <td>{{ row.author }}</td>
-                            <td class="text-center">
-                                <div class="dropdown icon-dropdown">
-                                    <button class="btn dropdown-toggle" id="userdropdown" type="button"
-                                        data-bs-toggle="dropdown" aria-expanded="false"><i
-                                            class="icon-more-alt"></i></button>
-                                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="userdropdown"><a
-                                            class="dropdown-item" href="#">Weekly</a><a class="dropdown-item"
-                                            href="#">Monthly</a><a class="dropdown-item" href="#">Yearly</a></div>
-                                </div>
-                            </td>
+                            <td> {{ row.contacto }}</td>
+                            <td>{{ row.placa }}</td>
                         </tr>
                     </tbody>
                 </table>
@@ -82,24 +66,23 @@
 </template>
 <script lang="ts" setup>
 import { ref, defineAsyncComponent, onMounted, watch } from 'vue'
-import { project } from "@/core/data/dashboards"
+import { project, napoli } from "@/core/data/dashboards"
 import { getImages } from "@/composables/common/getImages"
 const Card1 = defineAsyncComponent(() => import("@/components/common/card/CardData1.vue"))
-let elementsPerPage = ref<number>(4)
+let elementsPerPage = ref<number>(20)
 let currentPage = ref<number>(1)
 let filterQuery = ref<string>("")
 let allData = ref<any>([])
 watch(filterQuery, (search: string) => {
 
-    var filteredData = project.filter((row) => {
+    var filteredData = napoli.filter((row) => {
         return (
-            row.title.toLowerCase().includes(search.toLowerCase()) ||
-            row.date.toLowerCase().includes(search.toLowerCase()) ||
-            row.file.toLowerCase().includes(search.toLowerCase()) ||
-            row.author.toLowerCase().includes(search.toLowerCase())
+            row.nombre_propietario.toLowerCase().includes(search.toLowerCase()) ||
+            row.apto.toLowerCase().includes(search.toLowerCase()) ||
+            row.placa.toLowerCase().includes(search.toLowerCase())
         );
     });
-    search == "" ? allData.value = project : allData.value = filteredData
+    search == "" ? allData.value = napoli : allData.value = filteredData
 })
 function get_rows() {
     var start = (currentPage.value - 1) * elementsPerPage.value;
@@ -124,6 +107,6 @@ function prev() {
 }
 
 onMounted(() => {
-    allData.value = project;
+    allData.value = napoli;
 })
 </script>
