@@ -1,6 +1,14 @@
 <template>
     <Card1 dropdown="true" headerTitle="true" title="Habitantes"
         cardhaderClass="card-no-border" cardbodyClass="pt-0 projects px-0">
+        <ul class="pagination mx-2 mt-2 justify-content-end">
+            <li class="page-item"><a class="page-link" @click="prev()">Anterior</a></li>
+            <li class="page-item" v-for="i in num_pages()" :key="i" v-bind:class="[i == currentPage ? 'active' : '']"
+                v-on:click="change_page(i)">
+                <a class="page-link">{{ i }}</a>
+            </li>
+            <li class="page-item"><a class="page-link" @click="change()">Siguiente</a></li>
+        </ul>
         <div class="table-responsive theme-scrollbar">
             <div id="recent-order_wrapper" class="dataTables_wrapper no-footer">
                 <div id="recent-order_filter" class="dataTables_filter"><label>Buscar:<input type="search" placeholder=""
@@ -22,7 +30,7 @@
                     </thead>
                     <tbody v-if="!get_rows().length">
                         <tr class="odd">
-                            <td valign="top" colspan="6" class="dataTables_empty">No matching records found</td>
+                            <td valign="top" colspan="6" class="dataTables_empty">No se encuentran datos</td>
                         </tr>
                     </tbody>
                     <tbody v-if="get_rows().length">
@@ -54,14 +62,6 @@
 
             </div>
         </div>
-        <ul class="pagination mx-2 mt-2 justify-content-end">
-            <li class="page-item"><a class="page-link" @click="prev()">Previous</a></li>
-            <li class="page-item" v-for="i in num_pages()" :key="i" v-bind:class="[i == currentPage ? 'active' : '']"
-                v-on:click="change_page(i)">
-                <a class="page-link">{{ i }}</a>
-            </li>
-            <li class="page-item"><a class="page-link" @click="change()">Next</a></li>
-        </ul>
     </Card1>
 </template>
 <script lang="ts" setup>

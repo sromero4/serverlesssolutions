@@ -1,7 +1,7 @@
 <template>
     <LogoView />
 
-    <BreadCrumbs />
+    <!-- <BreadCrumbs /> -->
     <div class="header-wrapper col m-0">
         <div class="row">
             <SearchBar />
@@ -57,7 +57,7 @@ const CartBox = defineAsyncComponent(() => import("@/components/common/block/hea
 const ProfileView = defineAsyncComponent(() => import("@/components/common/block/header/ProfileView.vue"))
 const LanguageView = defineAsyncComponent(() => import("@/components/common/block/header/LanguageView.vue"))
 const SearchData = defineAsyncComponent(() => import("@/components/common/block/header/SearchData.vue"))
-const BreadCrumbs = defineAsyncComponent(() => import("@/layout/BreadCrumbs.vue"))
+// const BreadCrumbs = defineAsyncComponent(() => import("@/layout/BreadCrumbs.vue"))
 let store = useMenuStore();
 const emit = defineEmits(['click']);
 

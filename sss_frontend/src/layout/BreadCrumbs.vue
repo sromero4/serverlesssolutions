@@ -1,5 +1,5 @@
 <template>
-    <div class="col-4 col-xl-4 page-title" v-if="useRoute().path == '/'">
+    <div class="col-4 col-xl-4 page-title" v-if="useRoute().path == '/'" style="display: none;">
         <h4 class="f-w-700">Default dashboard</h4>
         <nav>
             <ol class="breadcrumb justify-content-sm-start align-items-center mb-0">
@@ -9,7 +9,7 @@
             </ol>
         </nav>
     </div>
-    <div class="col-4 col-xl-4 page-title" v-else>
+    <div class="col-4 col-xl-4 page-title" v-else  style="display: none;">
         <h4 class="f-w-700 text-capitalize">{{ route.path.replaceAll("_", " ").split('/').slice(1)[1] }}</h4>
         <nav>
             <ol class="breadcrumb justify-content-sm-start align-items-center mb-0">

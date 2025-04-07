@@ -1,6 +1,6 @@
 <template>
     <div class="customizer-links" :class="{ open: store.customizer }">
-        <div class="nav flex-column nac-pills" id="c-pills-tab" role="tablist" aria-orientation="vertical">
+        <div class="nav flex-column nac-pills" id="c-pills-tab" role="tablist" aria-orientation="vertical" style="display: none;">
             <CustomizerSetting />
             <CustomizerSupport />
             <DocumentSection />

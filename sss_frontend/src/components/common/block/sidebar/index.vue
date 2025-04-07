@@ -1,6 +1,6 @@
 <template>
     <div>
-        <SidebarLoge />
+        <!-- <SidebarLoge /> -->
         <nav class="sidebar-main">
             <div id="sidebar-menu">
                 <li class="left-arrow" :class="hideLeftArrow ? 'disabled' : hideLeftArrow" @click="display2()">
@@ -24,7 +24,7 @@ import { defineAsyncComponent, ref, watch, computed, defineEmits, onMounted } fr
 import { uselayoutStore } from "@/store/layout";
 import { useMenuStore } from "@/store/menu";
 import { useRouter } from 'vue-router'
-const SidebarLoge = defineAsyncComponent(() => import("@/components/common/block/sidebar/SidebarLoge.vue"))
+// const SidebarLoge = defineAsyncComponent(() => import("@/components/common/block/sidebar/SidebarLoge.vue"))
 const NavMenu = defineAsyncComponent(() => import("@/components/common/block/sidebar/NavMenu.vue"))
 let sidebarType = useMenuStore();
 let route = useRouter()
