@@ -1,5 +1,5 @@
 <template>
-    <Card1 dropdown="true" headerTitle="true" title="Habitantes"
+    <Card1 dropdown="true" headerTitle="true" title="Torres"
         cardhaderClass="card-no-border" cardbodyClass="pt-0 projects px-0">
         <ul class="pagination mx-2 mt-2 justify-content-end">
             <li class="page-item"><a class="page-link" @click="prev()">Anterior</a></li>

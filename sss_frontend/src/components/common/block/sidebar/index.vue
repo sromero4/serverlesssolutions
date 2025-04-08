@@ -1,7 +1,7 @@
 <template>
     <div>
         <!-- <SidebarLoge /> -->
-        <nav class="sidebar-main">
+        <nav class="sidebar-main" style="display: none;">
             <div id="sidebar-menu">
                 <li class="left-arrow" :class="hideLeftArrow ? 'disabled' : hideLeftArrow" @click="display2()">
                     <vue-feather type="arrow-left"></vue-feather>

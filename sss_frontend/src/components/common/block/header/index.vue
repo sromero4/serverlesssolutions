@@ -1,5 +1,5 @@
 <template>
-    <LogoView />
+    <!-- <LogoView /> -->
 
     <!-- <BreadCrumbs /> -->
     <div class="header-wrapper col m-0">
