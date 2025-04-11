@@ -32,10 +32,10 @@
                     </li>
                     <li class="cart-nav onhover-dropdown">
                         <CartBox />
-                    </li> -->
+                    </li> 
                     <li class="profile-nav onhover-dropdown px-0 py-0">
                         <ProfileView />
-                    </li>
+                    </li> -->
                 </ul>
             </div>
         </div>
