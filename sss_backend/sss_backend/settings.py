@@ -47,14 +47,27 @@ DJANGO_APPS = [
 LOCAL_APPS_CONJUNTO = [
     'Apps.conjunto.apartamento',
     'Apps.conjunto.habitante',
-    'Apps.conjunto.perfil',
+    'Apps.conjunto.perfil.apps.PerfilConjuntoConfig',
     'Apps.conjunto.persona',
     'Apps.conjunto.propietario',
     'Apps.conjunto.torre',
-    'Apps.conjunto.usuario',
+    'Apps.conjunto.usuario.apps.UsuarioConjuntoConfig',
 ]
 
 LOCAL_APPS_RESTAURANT = [
+    'Apps.restaurant.estado',
+    'Apps.restaurant.gasto',
+    'Apps.restaurant.ingrediente',
+    'Apps.restaurant.inventario',
+    'Apps.restaurant.inventarioingrediente',
+    'Apps.restaurant.jornada',
+    'Apps.restaurant.pedido',
+    'Apps.restaurant.pedidoproducto',
+    'Apps.restaurant.perfil.apps.PerfilRestaurantConfig',
+    'Apps.restaurant.producto',
+    'Apps.restaurant.tipocantidad',
+    'Apps.restaurant.tipoproducto',
+    'Apps.restaurant.usuario.apps.UsuarioRestaurantConfig',
 ]
 
 INSTALLED_APPS = THIRD_PARTY_APPS + DJANGO_APPS + LOCAL_APPS_CONJUNTO + LOCAL_APPS_RESTAURANT
