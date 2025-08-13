@@ -24,4 +24,5 @@ import sss_backend.utils.schema as schemas
 urlpatterns = [
     # path('admin/', admin.site.urls),
     path("graphql_conjunto/", csrf_exempt(GraphQLView.as_view(graphiql=True, schema=schemas.schema_conjunto))),
+    path("graphql_restaurant/", csrf_exempt(GraphQLView.as_view(graphiql=True, schema=schemas.schema_restaurant))),
 ]

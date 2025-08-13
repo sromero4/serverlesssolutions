@@ -54,7 +54,10 @@ LOCAL_APPS_CONJUNTO = [
     'Apps.conjunto.usuario',
 ]
 
-INSTALLED_APPS = THIRD_PARTY_APPS + DJANGO_APPS + LOCAL_APPS_CONJUNTO
+LOCAL_APPS_RESTAURANT = [
+]
+
+INSTALLED_APPS = THIRD_PARTY_APPS + DJANGO_APPS + LOCAL_APPS_CONJUNTO + LOCAL_APPS_RESTAURANT
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -97,13 +100,35 @@ DATABASES = {
     # },
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'sss_napoli',
+        'NAME': 'sss_cholaoscaleno',
         'USER': config('DB_USER'),
         'PASSWORD': config('DB_PASSWORD'),
         'HOST': config('DB_HOST'),
         'PORT': config('DB_PORT'),
         # 'PROYECTO': 'base',
         # 'GRAPH':'graphql',
+        'ATOMIC_REQUESTS': True
+    },
+    'napoli': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'sss_napoli',
+        'USER': config('DB_USER'),
+        'PASSWORD': config('DB_PASSWORD'),
+        'HOST': config('DB_HOST'),
+        'PORT': config('DB_PORT'),
+        'PROYECTO': 'conjunto',
+        'GRAPH':'graphql_conjunto',
+        'ATOMIC_REQUESTS': True
+    },
+    'cholaoscaleno': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'sss_cholaoscaleno',
+        'USER': config('DB_USER'),
+        'PASSWORD': config('DB_PASSWORD'),
+        'HOST': config('DB_HOST'),
+        'PORT': config('DB_PORT'),
+        'PROYECTO': 'restaurant',
+        'GRAPH':'graphql_restaurant',
         'ATOMIC_REQUESTS': True
     },
 }
