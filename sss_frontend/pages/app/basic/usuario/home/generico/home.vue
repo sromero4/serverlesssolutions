@@ -1340,7 +1340,7 @@ import { VueGoodTable } from 'vue-good-table';
 import PrettyCheck from 'pretty-checkbox-vue/check'
 import PrettyRadio from 'pretty-checkbox-vue/radio'
 import ScColorpicker from '~/components/Colorpicker'
-import { provideApolloClient, useMutation, useQuery } from '@vue/apollo-composable/dist';
+import { provideApolloClient, useMutation, useQuery } from '@vue/apollo-composable';
 import gql from 'graphql-tag'
 import { required, minLength, sameAs, maxLength } from 'vuelidate/lib/validators'
 

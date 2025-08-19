@@ -289,7 +289,7 @@
 
 <script>
 
-import { provideApolloClient, useMutation, useQuery } from '@vue/apollo-composable/dist';
+import { provideApolloClient, useMutation, useQuery } from '@vue/apollo-composable';
 import gql from 'graphql-tag'
 import { validationMixin } from 'vuelidate'
 import { required, minLength } from 'vuelidate/lib/validators'

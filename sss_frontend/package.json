@@ -63,6 +63,8 @@
 		"fernet": "^0.4.0",
 		"flatpickr": "^4.6.13",
 		"graphql": "15.10.1",
+		"@vue/apollo-composable": "^4.0.2",
+		"@vue/apollo-util": "^4.1.0",
 		"graphql-tag": "^2.12.6",
 		"highlight.js": "^11.11.1",
 		"howler": "^2.2.4",

@@ -52,7 +52,7 @@
 </template>
 
 <script>
-import { provideApolloClient, useQuery } from '@vue/apollo-composable/dist';
+import { provideApolloClient, useQuery } from '@vue/apollo-composable';
 
 import gql from 'graphql-tag'
 

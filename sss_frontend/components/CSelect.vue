@@ -22,7 +22,7 @@
 </template>
 
 <script>
-import { provideApolloClient, useMutation, useQuery } from '@vue/apollo-composable/dist';
+import { provideApolloClient, useMutation, useQuery } from '@vue/apollo-composable';
 import gql from 'graphql-tag'
 import { scValidation } from '~/assets/js/utils';
 import { ScProgressCircular } from '~/components/progress'
