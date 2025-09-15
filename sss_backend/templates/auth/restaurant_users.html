@@ -1,0 +1,613 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Gestión de Usuarios - Restaurant{% endblock %}
+
+{% block body_class %}restaurant-users-page{% endblock %}
+
+{% block content %}
+<div class="dashboard-container">
+    <!-- Header -->
+    <header class="dashboard-header">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <div class="d-flex align-items-center">
+                        <i class="fas fa-utensils logo-icon me-3"></i>
+                        <div>
+                            <h1 class="dashboard-title">Gestión de Usuarios</h1>
+                            <p class="dashboard-subtitle">Sistema de Gestión de Restaurantes</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 text-end">
+                    <div class="user-info">
+                        <span class="welcome-text">Hola, {{ user.first_name|default:user.username }}!</span>
+                        <div class="btn-group">
+                            <a href="{% url 'auth:restaurant_dashboard' %}" class="btn btn-outline-light btn-sm me-2">
+                                <i class="fas fa-arrow-left me-1"></i>
+                                Volver al Dashboard
+                            </a>
+                            <a href="{% url 'auth:project_selection' %}" class="btn btn-outline-light btn-sm me-2">
+                                <i class="fas fa-building me-1"></i>
+                                Cambiar Proyecto
+                            </a>
+                            <a href="{% url 'auth:logout' %}" class="btn btn-outline-danger btn-sm">
+                                <i class="fas fa-sign-out-alt me-1"></i>
+                                Cerrar Sesión
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="dashboard-main">
+        <div class="container-fluid">
+            <div class="row">
+                <!-- Sidebar -->
+                <div class="col-md-3">
+                    <div class="sidebar">
+                        <div class="sidebar-header">
+                            <h5><i class="fas fa-utensils me-2"></i>Menú Restaurant</h5>
+                        </div>
+                        <nav class="sidebar-nav">
+                            <a href="{% url 'auth:restaurant_dashboard' %}" class="nav-item">
+                                <i class="fas fa-home"></i>
+                                <span>Dashboard</span>
+                            </a>
+                            <a href="{% url 'auth:restaurant_users' %}" class="nav-item active">
+                                <i class="fas fa-users"></i>
+                                <span>Usuarios</span>
+                            </a>
+                            <a href="#" class="nav-item">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span>Pedidos</span>
+                            </a>
+                            <a href="#" class="nav-item">
+                                <i class="fas fa-hamburger"></i>
+                                <span>Productos</span>
+                            </a>
+                            <a href="#" class="nav-item">
+                                <i class="fas fa-carrot"></i>
+                                <span>Ingredientes</span>
+                            </a>
+                            <a href="#" class="nav-item">
+                                <i class="fas fa-boxes"></i>
+                                <span>Inventario</span>
+                            </a>
+                            <a href="#" class="nav-item">
+                                <i class="fas fa-clock"></i>
+                                <span>Jornadas</span>
+                            </a>
+                            <a href="#" class="nav-item">
+                                <i class="fas fa-chart-line"></i>
+                                <span>Reportes</span>
+                            </a>
+                        </nav>
+                    </div>
+                </div>
+
+                <!-- Content Area -->
+                <div class="col-md-9">
+                    <div class="content-area">
+                        <!-- Header Section -->
+                        <div class="page-header">
+                            <div class="row align-items-center">
+                                <div class="col-md-6">
+                                    <h2><i class="fas fa-users me-3"></i>Gestión de Usuarios</h2>
+                                    <p class="page-subtitle">Administra los usuarios del sistema Restaurant</p>
+                                </div>
+                                <div class="col-md-6 text-end">
+                                    <a href="{% url 'auth:restaurant_add_user' %}" class="btn btn-primary">
+                                        <i class="fas fa-plus me-2"></i>
+                                        Agregar Usuario
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Users Table -->
+                        <div class="users-table-container">
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th><i class="fas fa-user me-2"></i>Usuario</th>
+                                            <th><i class="fas fa-envelope me-2"></i>Email</th>
+                                            <th><i class="fas fa-id-card me-2"></i>Nombre Completo</th>
+                                            <th><i class="fas fa-shield-alt me-2"></i>Rol</th>
+                                            <th><i class="fas fa-calendar me-2"></i>Fecha de Registro</th>
+                                            <th><i class="fas fa-toggle-on me-2"></i>Estado</th>
+                                            <th><i class="fas fa-cogs me-2"></i>Acciones</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {% for user_item in users %}
+                                        <tr>
+                                            <td>
+                                                <div class="user-info-cell">
+                                                    <div class="user-avatar">
+                                                        <i class="fas fa-user"></i>
+                                                    </div>
+                                                    <div class="user-details">
+                                                        <strong>{{ user_item.username }}</strong>
+                                                        {% if user_item.id == user.id %}
+                                                            <small class="text-muted">(Tú)</small>
+                                                        {% endif %}
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>{{ user_item.email|default:"Sin email" }}</td>
+                                            <td>
+                                                {% if user_item.first_name or user_item.last_name %}
+                                                    {{ user_item.first_name }} {{ user_item.last_name }}
+                                                {% else %}
+                                                    <span class="text-muted">Sin nombre</span>
+                                                {% endif %}
+                                            </td>
+                                            <td>
+                                                {% if user_item.is_superuser %}
+                                                    <span class="badge badge-superuser">Superusuario</span>
+                                                {% elif user_item.is_staff %}
+                                                    <span class="badge badge-staff">Staff</span>
+                                                {% else %}
+                                                    <span class="badge badge-user">Usuario</span>
+                                                {% endif %}
+                                            </td>
+                                            <td>{{ user_item.date_joined|date:"d/m/Y H:i" }}</td>
+                                            <td>
+                                                {% if user_item.is_active %}
+                                                    <span class="status-badge status-active">
+                                                        <i class="fas fa-check-circle me-1"></i>
+                                                        Activo
+                                                    </span>
+                                                {% else %}
+                                                    <span class="status-badge status-inactive">
+                                                        <i class="fas fa-times-circle me-1"></i>
+                                                        Inactivo
+                                                    </span>
+                                                {% endif %}
+                                            </td>
+                                            <td>
+                                                <div class="action-buttons">
+                                                    <a href="{% url 'auth:restaurant_edit_user' user_item.id %}" 
+                                                       class="btn btn-sm btn-outline-primary" 
+                                                       title="Editar usuario">
+                                                        <i class="fas fa-edit"></i>
+                                                    </a>
+                                                    {% if user_item.id != user.id %}
+                                                        <a href="{% url 'auth:restaurant_delete_user' user_item.id %}" 
+                                                           class="btn btn-sm btn-outline-danger" 
+                                                           title="Eliminar usuario"
+                                                           onclick="return confirm('¿Estás seguro de que quieres eliminar este usuario?')">
+                                                            <i class="fas fa-trash"></i>
+                                                        </a>
+                                                    {% else %}
+                                                        <button class="btn btn-sm btn-outline-secondary" disabled title="No puedes eliminar tu propio usuario">
+                                                            <i class="fas fa-trash"></i>
+                                                        </button>
+                                                    {% endif %}
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        {% empty %}
+                                        <tr>
+                                            <td colspan="7" class="text-center py-4">
+                                                <div class="empty-state">
+                                                    <i class="fas fa-users fa-3x text-muted mb-3"></i>
+                                                    <h5 class="text-muted">No hay usuarios registrados</h5>
+                                                    <p class="text-muted">Comienza agregando el primer usuario al sistema</p>
+                                                    <a href="{% url 'auth:restaurant_add_user' %}" class="btn btn-primary">
+                                                        <i class="fas fa-plus me-2"></i>
+                                                        Agregar Usuario
+                                                    </a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <!-- Stats Summary -->
+                        <div class="stats-summary mt-4">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="stat-card">
+                                        <div class="stat-icon">
+                                            <i class="fas fa-users"></i>
+                                        </div>
+                                        <div class="stat-content">
+                                            <h3>{{ users|length }}</h3>
+                                            <p>Total Usuarios</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="stat-card">
+                                        <div class="stat-icon">
+                                            <i class="fas fa-user-check"></i>
+                                        </div>
+                                        <div class="stat-content">
+                                            <h3>{{ users|length }}</h3>
+                                            <p>Usuarios Activos</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="stat-card">
+                                        <div class="stat-icon">
+                                            <i class="fas fa-shield-alt"></i>
+                                        </div>
+                                        <div class="stat-content">
+                                            <h3>{{ users|length }}</h3>
+                                            <p>Staff</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="stat-card">
+                                        <div class="stat-icon">
+                                            <i class="fas fa-crown"></i>
+                                        </div>
+                                        <div class="stat-content">
+                                            <h3>{{ users|length }}</h3>
+                                            <p>Superusuarios</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    .restaurant-users-page {
+        background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #fecfef 100%);
+        min-height: 100vh;
+    }
+
+    .dashboard-container {
+        min-height: 100vh;
+    }
+
+    .dashboard-header {
+        background: linear-gradient(135deg, #ff6b6b 0%, #ff8e8e 100%);
+        color: white;
+        padding: 25px 0;
+        box-shadow: 0 4px 20px rgba(255, 107, 107, 0.3);
+    }
+
+    .logo-icon {
+        font-size: 2.5rem;
+        color: white;
+    }
+
+    .dashboard-title {
+        font-size: 2.2rem;
+        font-weight: 700;
+        margin: 0;
+        color: white;
+    }
+
+    .dashboard-subtitle {
+        font-size: 1rem;
+        margin: 0;
+        opacity: 0.9;
+        color: white;
+    }
+
+    .user-info {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+
+    .welcome-text {
+        font-weight: 500;
+        color: white;
+    }
+
+    .dashboard-main {
+        padding: 30px 0;
+    }
+
+    .sidebar {
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        padding: 25px;
+        height: fit-content;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .sidebar-header h5 {
+        color: #ff6b6b;
+        font-weight: 600;
+        margin-bottom: 25px;
+        font-size: 1.1rem;
+    }
+
+    .sidebar-nav {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .nav-item {
+        display: flex;
+        align-items: center;
+        padding: 15px 20px;
+        color: #4a5568;
+        text-decoration: none;
+        border-radius: 12px;
+        transition: all 0.3s ease;
+        font-weight: 500;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .nav-item:hover {
+        background: linear-gradient(135deg, #ff6b6b 0%, #ff8e8e 100%);
+        color: white;
+        text-decoration: none;
+        transform: translateX(5px);
+    }
+
+    .nav-item.active {
+        background: linear-gradient(135deg, #ff6b6b 0%, #ff8e8e 100%);
+        color: white;
+        box-shadow: 0 5px 15px rgba(255, 107, 107, 0.3);
+    }
+
+    .nav-item i {
+        margin-right: 12px;
+        width: 20px;
+        text-align: center;
+        font-size: 1.1rem;
+    }
+
+    .content-area {
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        padding: 35px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .page-header {
+        margin-bottom: 30px;
+        padding-bottom: 20px;
+        border-bottom: 2px solid #f1f3f4;
+    }
+
+    .page-header h2 {
+        color: #2d3748;
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+
+    .page-subtitle {
+        color: #718096;
+        margin: 0;
+    }
+
+    .users-table-container {
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+    }
+
+    .table {
+        margin: 0;
+    }
+
+    .table thead th {
+        background: linear-gradient(135deg, #ff6b6b 0%, #ff8e8e 100%);
+        color: white;
+        border: none;
+        padding: 20px 15px;
+        font-weight: 600;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    .table tbody tr {
+        transition: all 0.3s ease;
+    }
+
+    .table tbody tr:hover {
+        background-color: #f8f9fa;
+        transform: scale(1.01);
+    }
+
+    .table tbody td {
+        padding: 20px 15px;
+        vertical-align: middle;
+        border-top: 1px solid #e9ecef;
+    }
+
+    .user-info-cell {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .user-avatar {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #ff6b6b 0%, #ff8e8e 100%);
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+    }
+
+    .user-details strong {
+        color: #2d3748;
+        font-size: 1rem;
+    }
+
+    .badge {
+        padding: 8px 12px;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    .badge-superuser {
+        background: linear-gradient(135deg, #9c27b0 0%, #e91e63 100%);
+        color: white;
+    }
+
+    .badge-staff {
+        background: linear-gradient(135deg, #ffc107 0%, #ffeb3b 100%);
+        color: #2d3748;
+    }
+
+    .badge-user {
+        background: linear-gradient(135deg, #4caf50 0%, #8bc34a 100%);
+        color: white;
+    }
+
+    .status-badge {
+        padding: 6px 12px;
+        border-radius: 15px;
+        font-size: 0.8rem;
+        font-weight: 600;
+        display: inline-flex;
+        align-items: center;
+    }
+
+    .status-active {
+        background: #d4edda;
+        color: #155724;
+    }
+
+    .status-inactive {
+        background: #f8d7da;
+        color: #721c24;
+    }
+
+    .action-buttons {
+        display: flex;
+        gap: 8px;
+    }
+
+    .action-buttons .btn {
+        width: 35px;
+        height: 35px;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+    }
+
+    .action-buttons .btn:hover {
+        transform: scale(1.1);
+    }
+
+    .empty-state {
+        text-align: center;
+        padding: 40px 20px;
+    }
+
+    .stats-summary {
+        margin-top: 30px;
+    }
+
+    .stat-card {
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        border-radius: 15px;
+        padding: 25px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        display: flex;
+        align-items: center;
+        transition: all 0.3s ease;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .stat-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    }
+
+    .stat-icon {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #ff6b6b 0%, #ff8e8e 100%);
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        margin-right: 20px;
+    }
+
+    .stat-content h3 {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #2d3748;
+        margin: 0;
+    }
+
+    .stat-content p {
+        color: #4a5568;
+        margin: 5px 0 0 0;
+        font-weight: 600;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .dashboard-header .row {
+            text-align: center;
+        }
+        
+        .user-info {
+            justify-content: center;
+            margin-top: 15px;
+        }
+        
+        .sidebar {
+            margin-bottom: 20px;
+        }
+        
+        .table-responsive {
+            font-size: 0.9rem;
+        }
+        
+        .action-buttons {
+            flex-direction: column;
+            gap: 5px;
+        }
+        
+        .stat-card {
+            margin-bottom: 15px;
+        }
+    }
+</style>
+{% endblock %}

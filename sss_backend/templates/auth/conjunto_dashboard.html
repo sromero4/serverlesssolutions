@@ -1,0 +1,660 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Dashboard Conjunto - SSS{% endblock %}
+
+{% block body_class %}conjunto-dashboard-page{% endblock %}
+
+{% block content %}
+<div class="dashboard-container">
+    <!-- Header -->
+    <header class="dashboard-header">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <div class="d-flex align-items-center">
+                        <i class="fas fa-building logo-icon me-3"></i>
+                        <div>
+                            <h1 class="dashboard-title">Conjunto Dashboard</h1>
+                            <p class="dashboard-subtitle">Sistema de Gestión de Conjuntos Residenciales</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 text-end">
+                    <div class="user-info">
+                        <span class="welcome-text">Hola, {{ user.first_name|default:user.username }}!</span>
+                        <div class="btn-group">
+                            <a href="{% url 'auth:project_selection' %}" class="btn btn-outline-light btn-sm me-2">
+                                <i class="fas fa-arrow-left me-1"></i>
+                                Cambiar Proyecto
+                            </a>
+                            <a href="{% url 'auth:logout' %}" class="btn btn-outline-danger btn-sm">
+                                <i class="fas fa-sign-out-alt me-1"></i>
+                                Cerrar Sesión
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="dashboard-main">
+        <div class="container-fluid">
+            <div class="row">
+                <!-- Sidebar -->
+                <div class="col-md-3">
+                    <div class="sidebar">
+                        <div class="sidebar-header">
+                            <h5><i class="fas fa-building me-2"></i>Menú Conjunto</h5>
+                        </div>
+                        <nav class="sidebar-nav">
+                            <a href="#" class="nav-item active">
+                                <i class="fas fa-home"></i>
+                                <span>Dashboard</span>
+                            </a>
+                            <a href="#" class="nav-item">
+                                <i class="fas fa-building"></i>
+                                <span>Torres</span>
+                            </a>
+                            <a href="#" class="nav-item">
+                                <i class="fas fa-door-open"></i>
+                                <span>Apartamentos</span>
+                            </a>
+                            <a href="#" class="nav-item">
+                                <i class="fas fa-users"></i>
+                                <span>Habitantes</span>
+                            </a>
+                            <a href="#" class="nav-item">
+                                <i class="fas fa-user-tie"></i>
+                                <span>Propietarios</span>
+                            </a>
+                            <a href="#" class="nav-item">
+                                <i class="fas fa-id-card"></i>
+                                <span>Personas</span>
+                            </a>
+                            <a href="#" class="nav-item">
+                                <i class="fas fa-chart-line"></i>
+                                <span>Reportes</span>
+                            </a>
+                        </nav>
+                    </div>
+                </div>
+
+                <!-- Content Area -->
+                <div class="col-md-9">
+                    <div class="content-area">
+                        <!-- Welcome Card -->
+                        <div class="welcome-card">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <h2><i class="fas fa-building me-3"></i>¡Bienvenido al Sistema Conjunto!</h2>
+                                    <p class="welcome-text">
+                                        Gestiona tu conjunto residencial de manera eficiente. Administra torres, 
+                                        apartamentos, habitantes, propietarios y mantén un control completo de tu comunidad.
+                                    </p>
+                                </div>
+                                <div class="col-md-4 text-end">
+                                    <div class="welcome-icon">
+                                        <i class="fas fa-building"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Stats Cards -->
+                        <div class="row mt-4">
+                            <div class="col-md-4">
+                                <div class="stat-card torres-card">
+                                    <div class="stat-icon">
+                                        <i class="fas fa-building"></i>
+                                    </div>
+                                    <div class="stat-content">
+                                        <h3>{{ stats.total_torres }}</h3>
+                                        <p>Torres</p>
+                                        <small class="text-muted">En el conjunto</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="stat-card apartamentos-card">
+                                    <div class="stat-icon">
+                                        <i class="fas fa-door-open"></i>
+                                    </div>
+                                    <div class="stat-content">
+                                        <h3>{{ stats.total_apartamentos }}</h3>
+                                        <p>Apartamentos</p>
+                                        <small class="text-muted">Disponibles</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="stat-card habitantes-card">
+                                    <div class="stat-icon">
+                                        <i class="fas fa-users"></i>
+                                    </div>
+                                    <div class="stat-content">
+                                        <h3>{{ stats.total_habitantes }}</h3>
+                                        <p>Habitantes</p>
+                                        <small class="text-muted">Registrados</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mt-3">
+                            <div class="col-md-6">
+                                <div class="stat-card propietarios-card">
+                                    <div class="stat-icon">
+                                        <i class="fas fa-user-tie"></i>
+                                    </div>
+                                    <div class="stat-content">
+                                        <h3>{{ stats.total_propietarios }}</h3>
+                                        <p>Propietarios</p>
+                                        <small class="text-muted">Activos</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="stat-card personas-card">
+                                    <div class="stat-icon">
+                                        <i class="fas fa-id-card"></i>
+                                    </div>
+                                    <div class="stat-content">
+                                        <h3>{{ stats.total_personas }}</h3>
+                                        <p>Personas</p>
+                                        <small class="text-muted">En el sistema</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Quick Actions -->
+                        <div class="quick-actions mt-4">
+                            <h4><i class="fas fa-bolt me-2"></i>Acciones Rápidas</h4>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <a href="#" class="action-card">
+                                        <i class="fas fa-plus"></i>
+                                        <span>Nueva Torre</span>
+                                    </a>
+                                </div>
+                                <div class="col-md-3">
+                                    <a href="#" class="action-card">
+                                        <i class="fas fa-door-open"></i>
+                                        <span>Nuevo Apartamento</span>
+                                    </a>
+                                </div>
+                                <div class="col-md-3">
+                                    <a href="#" class="action-card">
+                                        <i class="fas fa-user-plus"></i>
+                                        <span>Registrar Habitante</span>
+                                    </a>
+                                </div>
+                                <div class="col-md-3">
+                                    <a href="#" class="action-card">
+                                        <i class="fas fa-chart-bar"></i>
+                                        <span>Ver Reportes</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Recent Activity -->
+                        <div class="recent-activity mt-4">
+                            <h4><i class="fas fa-history me-2"></i>Actividad Reciente</h4>
+                            <div class="activity-list">
+                                <div class="activity-item">
+                                    <div class="activity-icon">
+                                        <i class="fas fa-user-plus"></i>
+                                    </div>
+                                    <div class="activity-content">
+                                        <h6>Nuevo habitante registrado</h6>
+                                        <p class="text-muted">Juan Pérez - Torre A, Apt 101</p>
+                                    </div>
+                                    <div class="activity-time">
+                                        <small>Hace 10 min</small>
+                                    </div>
+                                </div>
+                                <div class="activity-item">
+                                    <div class="activity-icon">
+                                        <i class="fas fa-door-open"></i>
+                                    </div>
+                                    <div class="activity-content">
+                                        <h6>Apartamento creado</h6>
+                                        <p class="text-muted">Torre B, Apartamento 205</p>
+                                    </div>
+                                    <div class="activity-time">
+                                        <small>Hace 1 hora</small>
+                                    </div>
+                                </div>
+                                <div class="activity-item">
+                                    <div class="activity-icon">
+                                        <i class="fas fa-building"></i>
+                                    </div>
+                                    <div class="activity-content">
+                                        <h6>Nueva torre agregada</h6>
+                                        <p class="text-muted">Torre C - 20 apartamentos</p>
+                                    </div>
+                                    <div class="activity-time">
+                                        <small>Hace 3 horas</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    .conjunto-dashboard-page {
+        background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 50%, #fcb69f 100%);
+        min-height: 100vh;
+    }
+
+    .dashboard-container {
+        min-height: 100vh;
+    }
+
+    .dashboard-header {
+        background: linear-gradient(135deg, #ffc107 0%, #ffeb3b 100%);
+        color: #2d3748;
+        padding: 25px 0;
+        box-shadow: 0 4px 20px rgba(255, 193, 7, 0.3);
+    }
+
+    .logo-icon {
+        font-size: 2.5rem;
+        color: #2d3748;
+    }
+
+    .dashboard-title {
+        font-size: 2.2rem;
+        font-weight: 700;
+        margin: 0;
+        color: #2d3748;
+    }
+
+    .dashboard-subtitle {
+        font-size: 1rem;
+        margin: 0;
+        opacity: 0.8;
+        color: #2d3748;
+    }
+
+    .user-info {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+
+    .welcome-text {
+        font-weight: 500;
+        color: #2d3748;
+    }
+
+    .dashboard-main {
+        padding: 30px 0;
+    }
+
+    .sidebar {
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        padding: 25px;
+        height: fit-content;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .sidebar-header h5 {
+        color: #ffc107;
+        font-weight: 600;
+        margin-bottom: 25px;
+        font-size: 1.1rem;
+    }
+
+    .sidebar-nav {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .nav-item {
+        display: flex;
+        align-items: center;
+        padding: 15px 20px;
+        color: #4a5568;
+        text-decoration: none;
+        border-radius: 12px;
+        transition: all 0.3s ease;
+        font-weight: 500;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .nav-item:hover {
+        background: linear-gradient(135deg, #ffc107 0%, #ffeb3b 100%);
+        color: #2d3748;
+        text-decoration: none;
+        transform: translateX(5px);
+    }
+
+    .nav-item.active {
+        background: linear-gradient(135deg, #ffc107 0%, #ffeb3b 100%);
+        color: #2d3748;
+        box-shadow: 0 5px 15px rgba(255, 193, 7, 0.3);
+    }
+
+    .nav-item i {
+        margin-right: 12px;
+        width: 20px;
+        text-align: center;
+        font-size: 1.1rem;
+    }
+
+    .content-area {
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        padding: 35px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .welcome-card {
+        background: linear-gradient(135deg, #ffc107 0%, #ffeb3b 100%);
+        color: #2d3748;
+        border-radius: 20px;
+        padding: 35px;
+        margin-bottom: 35px;
+        box-shadow: 0 10px 30px rgba(255, 193, 7, 0.3);
+    }
+
+    .welcome-card h2 {
+        font-size: 2.2rem;
+        font-weight: 700;
+        margin-bottom: 15px;
+        color: #2d3748;
+    }
+
+    .welcome-text {
+        font-size: 1.1rem;
+        opacity: 0.9;
+        margin: 0;
+        line-height: 1.6;
+        color: #2d3748;
+    }
+
+    .welcome-icon {
+        font-size: 5rem;
+        opacity: 0.8;
+        color: #2d3748;
+    }
+
+    .stat-card {
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        border-radius: 15px;
+        padding: 30px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        display: flex;
+        align-items: center;
+        transition: all 0.3s ease;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .stat-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    .stat-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: linear-gradient(135deg, #ffc107 0%, #ffeb3b 100%);
+    }
+
+    .torres-card::before {
+        background: linear-gradient(135deg, #ffc107 0%, #ffeb3b 100%);
+    }
+
+    .apartamentos-card::before {
+        background: linear-gradient(135deg, #ff9800 0%, #ffb74d 100%);
+    }
+
+    .habitantes-card::before {
+        background: linear-gradient(135deg, #4caf50 0%, #8bc34a 100%);
+    }
+
+    .propietarios-card::before {
+        background: linear-gradient(135deg, #2196f3 0%, #03a9f4 100%);
+    }
+
+    .personas-card::before {
+        background: linear-gradient(135deg, #9c27b0 0%, #e91e63 100%);
+    }
+
+    .stat-icon {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.8rem;
+        margin-right: 25px;
+        color: white;
+    }
+
+    .torres-card .stat-icon {
+        background: linear-gradient(135deg, #ffc107 0%, #ffeb3b 100%);
+        color: #2d3748;
+    }
+
+    .apartamentos-card .stat-icon {
+        background: linear-gradient(135deg, #ff9800 0%, #ffb74d 100%);
+    }
+
+    .habitantes-card .stat-icon {
+        background: linear-gradient(135deg, #4caf50 0%, #8bc34a 100%);
+    }
+
+    .propietarios-card .stat-icon {
+        background: linear-gradient(135deg, #2196f3 0%, #03a9f4 100%);
+    }
+
+    .personas-card .stat-icon {
+        background: linear-gradient(135deg, #9c27b0 0%, #e91e63 100%);
+    }
+
+    .stat-content h3 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #2d3748;
+        margin: 0;
+    }
+
+    .stat-content p {
+        color: #4a5568;
+        margin: 5px 0;
+        font-weight: 600;
+        font-size: 1.1rem;
+    }
+
+    .stat-content small {
+        color: #718096;
+        font-size: 0.9rem;
+    }
+
+    .quick-actions h4 {
+        color: #2d3748;
+        font-weight: 600;
+        margin-bottom: 25px;
+        font-size: 1.3rem;
+    }
+
+    .action-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 30px 20px;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        text-decoration: none;
+        color: #4a5568;
+        transition: all 0.3s ease;
+        text-align: center;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .action-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        color: #ffc107;
+        text-decoration: none;
+    }
+
+    .action-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: linear-gradient(135deg, #ffc107 0%, #ffeb3b 100%);
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
+    }
+
+    .action-card:hover::before {
+        transform: scaleX(1);
+    }
+
+    .action-card i {
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+        color: #ffc107;
+        transition: all 0.3s ease;
+    }
+
+    .action-card:hover i {
+        transform: scale(1.1);
+    }
+
+    .action-card span {
+        font-weight: 600;
+        font-size: 1rem;
+    }
+
+    .recent-activity h4 {
+        color: #2d3748;
+        font-weight: 600;
+        margin-bottom: 25px;
+        font-size: 1.3rem;
+    }
+
+    .activity-list {
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        border-radius: 15px;
+        padding: 25px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .activity-item {
+        display: flex;
+        align-items: center;
+        padding: 20px 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .activity-item:last-child {
+        border-bottom: none;
+    }
+
+    .activity-icon {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #ffc107 0%, #ffeb3b 100%);
+        color: #2d3748;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 20px;
+        font-size: 1.2rem;
+    }
+
+    .activity-content {
+        flex: 1;
+    }
+
+    .activity-content h6 {
+        margin: 0;
+        color: #2d3748;
+        font-weight: 600;
+    }
+
+    .activity-content p {
+        margin: 5px 0 0 0;
+        color: #718096;
+    }
+
+    .activity-time {
+        color: #a0aec0;
+        font-size: 0.9rem;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .dashboard-header .row {
+            text-align: center;
+        }
+        
+        .user-info {
+            justify-content: center;
+            margin-top: 15px;
+        }
+        
+        .sidebar {
+            margin-bottom: 20px;
+        }
+        
+        .stat-card {
+            margin-bottom: 20px;
+        }
+        
+        .action-card {
+            margin-bottom: 15px;
+        }
+        
+        .welcome-card h2 {
+            font-size: 1.8rem;
+        }
+        
+        .welcome-icon {
+            font-size: 3rem;
+        }
+    }
+</style>
+{% endblock %}

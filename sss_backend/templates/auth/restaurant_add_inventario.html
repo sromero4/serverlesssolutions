@@ -1,0 +1,662 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Nuevo Inventario - Restaurant{% endblock %}
+
+{% block body_class %}restaurant-add-inventario-page{% endblock %}
+
+{% block content %}
+<div class="dashboard-container">
+    <!-- Header -->
+    <header class="dashboard-header">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <div class="d-flex align-items-center">
+                        <i class="fas fa-utensils logo-icon me-3"></i>
+                        <div>
+                            <h1 class="dashboard-title">Nuevo Inventario</h1>
+                            <p class="dashboard-subtitle">Sistema de Gestión de Restaurantes</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 text-end">
+                    <div class="user-info">
+                        <span class="welcome-text">Hola, {{ user.first_name|default:user.username }}!</span>
+                        <div class="btn-group">
+                            <a href="{% url 'auth:restaurant_inventario' %}" class="btn btn-outline-light btn-sm me-2">
+                                <i class="fas fa-arrow-left me-1"></i>
+                                Volver a Inventario
+                            </a>
+                            <a href="{% url 'auth:restaurant_dashboard' %}" class="btn btn-outline-light btn-sm me-2">
+                                <i class="fas fa-home me-1"></i>
+                                Dashboard
+                            </a>
+                            <a href="{% url 'auth:logout' %}" class="btn btn-outline-danger btn-sm">
+                                <i class="fas fa-sign-out-alt me-1"></i>
+                                Cerrar Sesión
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="dashboard-main">
+        <div class="container-fluid">
+            <div class="row">
+                <!-- Sidebar -->
+                <div class="col-md-3">
+                    <div class="sidebar">
+                        <div class="sidebar-header">
+                            <h5><i class="fas fa-utensils me-2"></i>Menú Restaurant</h5>
+                        </div>
+                        <nav class="sidebar-nav">
+                            <a href="{% url 'auth:restaurant_dashboard' %}" class="nav-item">
+                                <i class="fas fa-home"></i>
+                                <span>Dashboard</span>
+                            </a>
+                            <a href="{% url 'auth:restaurant_users' %}" class="nav-item">
+                                <i class="fas fa-users"></i>
+                                <span>Usuarios</span>
+                            </a>
+                            <a href="{% url 'auth:restaurant_pedidos' %}" class="nav-item">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span>Pedidos</span>
+                            </a>
+                            <a href="{% url 'auth:restaurant_productos' %}" class="nav-item">
+                                <i class="fas fa-hamburger"></i>
+                                <span>Productos</span>
+                            </a>
+                            <a href="{% url 'auth:restaurant_ingredientes' %}" class="nav-item">
+                                <i class="fas fa-carrot"></i>
+                                <span>Ingredientes</span>
+                            </a>
+                            <a href="{% url 'auth:restaurant_inventario' %}" class="nav-item active">
+                                <i class="fas fa-boxes"></i>
+                                <span>Inventario</span>
+                            </a>
+                            <a href="{% url 'auth:restaurant_jornadas' %}" class="nav-item">
+                                <i class="fas fa-clock"></i>
+                                <span>Jornadas</span>
+                            </a>
+                            <a href="#" class="nav-item">
+                                <i class="fas fa-chart-line"></i>
+                                <span>Reportes</span>
+                            </a>
+                        </nav>
+                    </div>
+                </div>
+
+                <!-- Content Area -->
+                <div class="col-md-9">
+                    <div class="content-area">
+                        <!-- Header Section -->
+                        <div class="page-header">
+                            <div class="row align-items-center">
+                                <div class="col-md-8">
+                                    <h2><i class="fas fa-boxes me-3"></i>Nuevo Inventario</h2>
+                                    <p class="page-subtitle">Crea un nuevo registro de inventario</p>
+                                </div>
+                                <div class="col-md-4 text-end">
+                                    <a href="{% url 'auth:restaurant_inventario' %}" class="btn btn-outline-secondary">
+                                        <i class="fas fa-arrow-left me-2"></i>
+                                        Cancelar
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Form Section -->
+                        <div class="form-container">
+                            <form method="post" class="inventario-form" novalidate>
+                                {% csrf_token %}
+                                
+                                <div class="row">
+                                    <!-- Información del Inventario -->
+                                    <div class="col-md-6">
+                                        <div class="form-section">
+                                            <h4 class="form-section-title">
+                                                <i class="fas fa-boxes me-2"></i>
+                                                Información del Inventario
+                                            </h4>
+                                            
+                                            <div class="form-group">
+                                                <label class="form-label">
+                                                    <i class="fas fa-calendar"></i>
+                                                    Fecha y Hora
+                                                </label>
+                                                <div class="datetime-display">
+                                                    <i class="fas fa-clock me-2"></i>
+                                                    <span id="current-datetime">{{ "now"|date:"d/m/Y H:i" }}</span>
+                                                </div>
+                                                <small class="form-text text-muted">
+                                                    Se registrará automáticamente la fecha y hora actual
+                                                </small>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="form-label">
+                                                    <i class="fas fa-user"></i>
+                                                    Responsable
+                                                </label>
+                                                <div class="user-display">
+                                                    <div class="user-avatar">
+                                                        <i class="fas fa-user"></i>
+                                                    </div>
+                                                    <span>{{ user.first_name|default:user.username }}</span>
+                                                </div>
+                                                <small class="form-text text-muted">
+                                                    Tú serás registrado como responsable de este inventario
+                                                </small>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Información Adicional -->
+                                    <div class="col-md-6">
+                                        <div class="form-section">
+                                            <h4 class="form-section-title">
+                                                <i class="fas fa-info-circle me-2"></i>
+                                                Información Adicional
+                                            </h4>
+                                            
+                                            <div class="info-card">
+                                                <h6><i class="fas fa-lightbulb me-2"></i>¿Qué es un Inventario?</h6>
+                                                <p>Un inventario es un registro que se crea para documentar el estado actual de los productos y ingredientes del restaurante en un momento específico.</p>
+                                            </div>
+
+                                            <div class="info-card">
+                                                <h6><i class="fas fa-exclamation-triangle me-2"></i>Importante</h6>
+                                                <p>Este registro se creará con la fecha y hora actual. Asegúrate de que sea el momento correcto para realizar el inventario.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Confirmación -->
+                                <div class="form-section">
+                                    <h4 class="form-section-title">
+                                        <i class="fas fa-check-circle me-2"></i>
+                                        Confirmación
+                                    </h4>
+                                    
+                                    <div class="confirmation-card">
+                                        <div class="confirmation-content">
+                                            <div class="confirmation-icon">
+                                                <i class="fas fa-boxes"></i>
+                                            </div>
+                                            <div class="confirmation-text">
+                                                <h5>¿Estás seguro de crear este inventario?</h5>
+                                                <p>Se creará un nuevo registro de inventario con la fecha y hora actual. Esta acción no se puede deshacer.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Form Actions -->
+                                <div class="form-actions">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <a href="{% url 'auth:restaurant_inventario' %}" class="btn btn-outline-secondary">
+                                                <i class="fas fa-times me-2"></i>
+                                                Cancelar
+                                            </a>
+                                        </div>
+                                        <div class="col-md-6 text-end">
+                                            <button type="submit" class="btn btn-primary">
+                                                <i class="fas fa-save me-2"></i>
+                                                Crear Inventario
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                        <!-- Help Section -->
+                        <div class="help-section">
+                            <div class="help-card">
+                                <h5><i class="fas fa-lightbulb me-2"></i>Consejos para el Inventario</h5>
+                                <ul class="help-list">
+                                    <li>
+                                        <i class="fas fa-check-circle me-2"></i>
+                                        Realiza inventarios regularmente para mantener un control preciso
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-check-circle me-2"></i>
+                                        Asegúrate de que todos los productos estén correctamente contados
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-check-circle me-2"></i>
+                                        Documenta cualquier observación importante en el momento
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-check-circle me-2"></i>
+                                        Compara con inventarios anteriores para detectar tendencias
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    .restaurant-add-inventario-page {
+        background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #fecfef 100%);
+        min-height: 100vh;
+    }
+
+    .dashboard-container {
+        min-height: 100vh;
+    }
+
+    .dashboard-header {
+        background: linear-gradient(135deg, #ff6b6b 0%, #ff8e8e 100%);
+        color: white;
+        padding: 25px 0;
+        box-shadow: 0 4px 20px rgba(255, 107, 107, 0.3);
+    }
+
+    .logo-icon {
+        font-size: 2.5rem;
+        color: white;
+    }
+
+    .dashboard-title {
+        font-size: 2.2rem;
+        font-weight: 700;
+        margin: 0;
+        color: white;
+    }
+
+    .dashboard-subtitle {
+        font-size: 1rem;
+        margin: 0;
+        opacity: 0.9;
+        color: white;
+    }
+
+    .user-info {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+
+    .welcome-text {
+        font-weight: 500;
+        color: white;
+    }
+
+    .dashboard-main {
+        padding: 30px 0;
+    }
+
+    .sidebar {
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        padding: 25px;
+        height: fit-content;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .sidebar-header h5 {
+        color: #ff6b6b;
+        font-weight: 600;
+        margin-bottom: 25px;
+        font-size: 1.1rem;
+    }
+
+    .sidebar-nav {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .nav-item {
+        display: flex;
+        align-items: center;
+        padding: 15px 20px;
+        color: #4a5568;
+        text-decoration: none;
+        border-radius: 12px;
+        transition: all 0.3s ease;
+        font-weight: 500;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .nav-item:hover {
+        background: linear-gradient(135deg, #ff6b6b 0%, #ff8e8e 100%);
+        color: white;
+        text-decoration: none;
+        transform: translateX(5px);
+    }
+
+    .nav-item.active {
+        background: linear-gradient(135deg, #ff6b6b 0%, #ff8e8e 100%);
+        color: white;
+        box-shadow: 0 5px 15px rgba(255, 107, 107, 0.3);
+    }
+
+    .nav-item i {
+        margin-right: 12px;
+        width: 20px;
+        text-align: center;
+        font-size: 1.1rem;
+    }
+
+    .content-area {
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        padding: 35px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .page-header {
+        margin-bottom: 30px;
+        padding-bottom: 20px;
+        border-bottom: 2px solid #f1f3f4;
+    }
+
+    .page-header h2 {
+        color: #2d3748;
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+
+    .page-subtitle {
+        color: #718096;
+        margin: 0;
+    }
+
+    .form-container {
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        padding: 30px;
+        margin-bottom: 30px;
+    }
+
+    .form-section {
+        margin-bottom: 30px;
+    }
+
+    .form-section-title {
+        color: #2d3748;
+        font-weight: 600;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #f1f3f4;
+    }
+
+    .form-group {
+        margin-bottom: 25px;
+    }
+
+    .form-label {
+        display: flex;
+        align-items: center;
+        font-weight: 600;
+        color: #4a5568;
+        margin-bottom: 8px;
+        font-size: 0.95rem;
+    }
+
+    .form-label i {
+        margin-right: 8px;
+        color: #ff6b6b;
+        width: 16px;
+    }
+
+    .datetime-display {
+        background: linear-gradient(135deg, #e3f2fd 0%, #f3e5f5 100%);
+        border: 2px solid #e2e8f0;
+        border-radius: 10px;
+        padding: 15px;
+        font-weight: 600;
+        color: #2d3748;
+        display: flex;
+        align-items: center;
+    }
+
+    .user-display {
+        background: linear-gradient(135deg, #e8f5e8 0%, #f0f8f0 100%);
+        border: 2px solid #e2e8f0;
+        border-radius: 10px;
+        padding: 15px;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .user-avatar {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #ff6b6b 0%, #ff8e8e 100%);
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+    }
+
+    .form-text {
+        font-size: 0.85rem;
+        margin-top: 5px;
+    }
+
+    .info-card {
+        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        border-radius: 10px;
+        padding: 20px;
+        border-left: 4px solid #ff6b6b;
+        margin-bottom: 15px;
+    }
+
+    .info-card h6 {
+        color: #2d3748;
+        font-weight: 600;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+    }
+
+    .info-card p {
+        color: #4a5568;
+        font-size: 0.9rem;
+        margin: 0;
+    }
+
+    .confirmation-card {
+        background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+        border: 2px solid #ffc107;
+        border-radius: 15px;
+        padding: 25px;
+        margin: 20px 0;
+    }
+
+    .confirmation-content {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .confirmation-icon {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #ffc107 0%, #ffeb3b 100%);
+        color: #2d3748;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        flex-shrink: 0;
+    }
+
+    .confirmation-text h5 {
+        color: #2d3748;
+        font-weight: 600;
+        margin-bottom: 8px;
+    }
+
+    .confirmation-text p {
+        color: #4a5568;
+        margin: 0;
+        font-size: 0.9rem;
+    }
+
+    .form-actions {
+        margin-top: 30px;
+        padding-top: 20px;
+        border-top: 2px solid #f1f3f4;
+    }
+
+    .help-section {
+        margin-top: 30px;
+    }
+
+    .help-card {
+        background: linear-gradient(135deg, #e3f2fd 0%, #f3e5f5 100%);
+        border-radius: 15px;
+        padding: 25px;
+        border-left: 5px solid #ff6b6b;
+    }
+
+    .help-card h5 {
+        color: #2d3748;
+        font-weight: 600;
+        margin-bottom: 15px;
+    }
+
+    .help-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .help-list li {
+        padding: 8px 0;
+        color: #4a5568;
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .help-list i {
+        color: #4caf50;
+        margin-top: 2px;
+    }
+
+    .btn {
+        border-radius: 10px;
+        font-weight: 600;
+        padding: 12px 25px;
+        transition: all 0.3s ease;
+    }
+
+    .btn-primary {
+        background: linear-gradient(135deg, #ff6b6b 0%, #ff8e8e 100%);
+        border: none;
+    }
+
+    .btn-primary:hover {
+        background: linear-gradient(135deg, #e55a5a 0%, #e67e7e 100%);
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(255, 107, 107, 0.3);
+    }
+
+    .btn-outline-secondary {
+        border: 2px solid #6c757d;
+        color: #6c757d;
+    }
+
+    .btn-outline-secondary:hover {
+        background: #6c757d;
+        color: white;
+        transform: translateY(-2px);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .dashboard-header .row {
+            text-align: center;
+        }
+        
+        .user-info {
+            justify-content: center;
+            margin-top: 15px;
+        }
+        
+        .sidebar {
+            margin-bottom: 20px;
+        }
+        
+        .form-container {
+            padding: 20px;
+        }
+        
+        .form-actions .row {
+            text-align: center;
+        }
+        
+        .form-actions .col-md-6 {
+            margin-bottom: 10px;
+        }
+        
+        .confirmation-content {
+            flex-direction: column;
+            text-align: center;
+        }
+    }
+</style>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    // Update datetime display
+    function updateDateTime() {
+        const now = new Date();
+        const options = {
+            year: 'numeric',
+            month: '2-digit',
+            day: '2-digit',
+            hour: '2-digit',
+            minute: '2-digit'
+        };
+        const formatted = now.toLocaleDateString('es-ES', options);
+        document.getElementById('current-datetime').textContent = formatted;
+    }
+
+    // Update datetime every minute
+    setInterval(updateDateTime, 60000);
+
+    // Form validation
+    document.querySelector('.inventario-form').addEventListener('submit', function(e) {
+        if (!confirm('¿Estás seguro de que quieres crear este inventario?')) {
+            e.preventDefault();
+            return;
+        }
+    });
+
+    // Initialize datetime on page load
+    document.addEventListener('DOMContentLoaded', function() {
+        updateDateTime();
+    });
+</script>
+{% endblock %}
