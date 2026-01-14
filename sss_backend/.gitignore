@@ -1,0 +1,10 @@
+sss_backend/__pycache__/
+db.sqlite3
+media/
+staticfiles/
+venv/
+env/
+.env
+Apps/__pycache__/
+Apps/*/__pycache__/
+Dockerfile

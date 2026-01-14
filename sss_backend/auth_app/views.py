@@ -5,6 +5,7 @@ from django.contrib.auth.decorators import login_required
 from django.views.decorators.csrf import csrf_protect
 from django.http import JsonResponse
 from django.db import connections
+from .forms import IngredienteForm
 
 
 def login_view(request):
@@ -525,35 +526,43 @@ def restaurant_add_ingrediente_view(request):
     """
     if not request.user.is_authenticated:
         return redirect('auth:login')
-    
-    if request.method == 'POST':
-        nombre = request.POST.get('nombre')
-        cantidad = request.POST.get('cantidad')
-        tipo_producto = request.POST.get('tipo_producto', 1)
-        tipo_cantidad = request.POST.get('tipo_cantidad', 1)
         
-        if nombre and cantidad:
+    if request.method == 'POST':
+        form = IngredienteForm(request.POST)
+
+        if form.is_valid():
+            data = form.cleaned_data
+
             try:
-                # Crear ingrediente en la base de datos
                 with connections['cholaoscaleno'].cursor() as cursor:
                     cursor.execute("""
-                        INSERT INTO ingrediente (ing_nombre, ing_cantidad, ing_fechacreacion, 
-                                              usu_codigo, tipprod_codigo, tipcant_codigo)
+                        INSERT INTO ingrediente (
+                            ing_nombre, ing_cantidad, ing_fechacreacion,
+                            usu_codigo, tipprod_codigo, tipcant_codigo
+                        )
                         VALUES (%s, %s, NOW(), %s, %s, %s)
-                    """, [nombre, cantidad, request.user.id, tipo_producto, tipo_cantidad])
-                
-                messages.success(request, f'Ingrediente "{nombre}" creado exitosamente.')
+                    """, [
+                        data['nombre'],
+                        data['cantidad'],
+                        request.user.id,
+                        data.get('tipo_producto', 1),
+                        data.get('tipo_cantidad', 1),
+                    ])
+
+                messages.success(
+                    request,
+                    f'Ingrediente "{data["nombre"]}" creado exitosamente.'
+                )
                 return redirect('auth:restaurant_ingredientes')
-                
+
             except Exception as e:
-                messages.error(request, f'Error al crear ingrediente: {str(e)}')
-        else:
-            messages.error(request, 'Por favor, completa todos los campos obligatorios.')
-    
+                messages.error(request, f'Error al crear ingrediente: {e}')
+
+    else:
+        form = IngredienteForm()
+
     return render(request, 'auth/restaurant_add_ingrediente.html', {
-        'user': request.user,
-        'project_name': 'Restaurant',
-        'project_icon': 'fas fa-utensils'
+        'form': form
     })
 
 
