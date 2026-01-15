@@ -33,7 +33,24 @@
 
     <!-- Main Content -->
     <main class="{% block main_class %}{% endblock %}">
-        {% block content %}{% endblock %}
+        <div class="dashboard-container">
+            <!-- Header -->
+            {% include 'header.html' %}
+
+            <!-- Main Content -->
+            <main class="dashboard-main">
+                <div class="container-fluid">
+                    <div class="row">
+                        <!-- Sidebar -->
+                        {% include 'sidebar.html' %}
+                        <!-- Content Area -->
+                        <div class="col-md-9">
+                            {% block content %}{% endblock %}
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
     </main>
 
     <!-- Bootstrap JS -->
