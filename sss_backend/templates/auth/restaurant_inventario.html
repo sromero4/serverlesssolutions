@@ -2,291 +2,207 @@
 {% load static %}
 
 {% block title %}Gestión de Inventario - Restaurant{% endblock %}
+{% block dashboard_title %}
+    Gestión de Inventario
+{% endblock %}
+
+{% block dashboard_subtitle %}
+    Sistema de Gestión de Restaurantes
+{% endblock %}
 
 {% block body_class %}restaurant-inventario-page{% endblock %}
 
 {% block content %}
-<div class="dashboard-container">
-    <!-- Header -->
-    <header class="dashboard-header">
-        <div class="container-fluid">
-            <div class="row align-items-center">
-                <div class="col-md-6">
-                    <div class="d-flex align-items-center">
-                        <i class="fas fa-utensils logo-icon me-3"></i>
-                        <div>
-                            <h1 class="dashboard-title">Gestión de Inventario</h1>
-                            <p class="dashboard-subtitle">Sistema de Gestión de Restaurantes</p>
-                        </div>
+<div class="content-area">
+    <!-- Header Section -->
+    <div class="page-header">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <h2><i class="fas fa-boxes me-3"></i>Gestión de Inventario</h2>
+                <p class="page-subtitle">Control y seguimiento del inventario del restaurante</p>
+            </div>
+            <div class="col-md-6 text-end">
+                <a href="{% url 'auth:restaurant_add_inventario' %}" class="btn btn-primary">
+                    <i class="fas fa-plus me-2"></i>
+                    Nuevo Inventario
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Inventario Table -->
+    <div class="inventario-table-container">
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th><i class="fas fa-hashtag me-2"></i>Código</th>
+                        <th><i class="fas fa-calendar me-2"></i>Fecha y Hora</th>
+                        <th><i class="fas fa-user me-2"></i>Responsable</th>
+                        <th><i class="fas fa-clock me-2"></i>Hora</th>
+                        <th><i class="fas fa-tag me-2"></i>Tipo</th>
+                        <th><i class="fas fa-cogs me-2"></i>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for inventario in inventarios %}
+                    <tr>
+                        <td>
+                            <span class="inventario-codigo">#{{ inventario.inv_codigo }}</span>
+                        </td>
+                        <td>
+                            <div class="fecha-info">
+                                <strong>{{ inventario.inv_fechahora|date:"d/m/Y" }}</strong>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="user-info-cell">
+                                <div class="user-avatar">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <span>{{ inventario.username|default:"N/A" }}</span>
+                            </div>
+                        </td>
+                        <td>
+                            <span class="hora">{{ inventario.inv_fechahora|time:"H:i" }}</span>
+                        </td>
+                        <td>
+                            <span class="tipo-badge">Inventario</span>
+                        </td>
+                        <td>
+                            <div class="action-buttons">
+                                <button class="btn btn-sm btn-outline-primary" title="Ver detalles">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                                <button class="btn btn-sm btn-outline-warning" title="Editar inventario">
+                                    <i class="fas fa-edit"></i>
+                                </button>
+                                <button class="btn btn-sm btn-outline-success" title="Duplicar inventario">
+                                    <i class="fas fa-copy"></i>
+                                </button>
+                                <button class="btn btn-sm btn-outline-danger" title="Eliminar inventario">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+                    {% empty %}
+                    <tr>
+                        <td colspan="6" class="text-center py-4">
+                            <div class="empty-state">
+                                <i class="fas fa-boxes fa-3x text-muted mb-3"></i>
+                                <h5 class="text-muted">No hay inventarios registrados</h5>
+                                <p class="text-muted">Comienza creando el primer registro de inventario</p>
+                                <a href="{% url 'auth:restaurant_add_inventario' %}" class="btn btn-primary">
+                                    <i class="fas fa-plus me-2"></i>
+                                    Nuevo Inventario
+                                </a>
+                            </div>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Stats Summary -->
+    <div class="stats-summary mt-4">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-boxes"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3>{{ inventarios|length }}</h3>
+                        <p>Total Inventarios</p>
                     </div>
                 </div>
-                <div class="col-md-6 text-end">
-                    <div class="user-info">
-                        <span class="welcome-text">Hola, {{ user.first_name|default:user.username }}!</span>
-                        <div class="btn-group">
-                            <a href="{% url 'auth:restaurant_dashboard' %}" class="btn btn-outline-light btn-sm me-2">
-                                <i class="fas fa-arrow-left me-1"></i>
-                                Volver al Dashboard
-                            </a>
-                            <a href="{% url 'auth:project_selection' %}" class="btn btn-outline-light btn-sm me-2">
-                                <i class="fas fa-building me-1"></i>
-                                Cambiar Proyecto
-                            </a>
-                            <a href="{% url 'auth:logout' %}" class="btn btn-outline-danger btn-sm">
-                                <i class="fas fa-sign-out-alt me-1"></i>
-                                Cerrar Sesión
-                            </a>
-                        </div>
+            </div>
+            <div class="col-md-3">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-calendar-day"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3>{{ inventarios|length }}</h3>
+                        <p>Hoy</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-calendar-week"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3>{{ inventarios|length }}</h3>
+                        <p>Esta Semana</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3>{{ inventarios|length }}</h3>
+                        <p>Este Mes</p>
                     </div>
                 </div>
             </div>
         </div>
-    </header>
+    </div>
 
-    <!-- Main Content -->
-    <main class="dashboard-main">
-        <div class="container-fluid">
-            <div class="row">
-                <!-- Sidebar -->
-                <div class="col-md-3">
-                    <div class="sidebar">
-                        <div class="sidebar-header">
-                            <h5><i class="fas fa-utensils me-2"></i>Menú Restaurant</h5>
-                        </div>
-                        <nav class="sidebar-nav">
-                            <a href="{% url 'auth:restaurant_dashboard' %}" class="nav-item">
-                                <i class="fas fa-home"></i>
-                                <span>Dashboard</span>
-                            </a>
-                            <a href="{% url 'auth:restaurant_users' %}" class="nav-item">
-                                <i class="fas fa-users"></i>
-                                <span>Usuarios</span>
-                            </a>
-                            <a href="{% url 'auth:restaurant_pedidos' %}" class="nav-item">
-                                <i class="fas fa-shopping-cart"></i>
-                                <span>Pedidos</span>
-                            </a>
-                            <a href="{% url 'auth:restaurant_productos' %}" class="nav-item">
-                                <i class="fas fa-hamburger"></i>
-                                <span>Productos</span>
-                            </a>
-                            <a href="{% url 'auth:restaurant_ingredientes' %}" class="nav-item">
-                                <i class="fas fa-carrot"></i>
-                                <span>Ingredientes</span>
-                            </a>
-                            <a href="{% url 'auth:restaurant_inventario' %}" class="nav-item active">
-                                <i class="fas fa-boxes"></i>
-                                <span>Inventario</span>
-                            </a>
-                            <a href="{% url 'auth:restaurant_jornadas' %}" class="nav-item">
-                                <i class="fas fa-clock"></i>
-                                <span>Jornadas</span>
-                            </a>
-                            <a href="#" class="nav-item">
-                                <i class="fas fa-chart-line"></i>
-                                <span>Reportes</span>
-                            </a>
-                        </nav>
+    <!-- Quick Actions -->
+    <div class="quick-actions mt-4">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="action-card">
+                    <div class="action-icon">
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="action-content">
+                        <h5>Nuevo Inventario</h5>
+                        <p>Crear un nuevo registro de inventario</p>
+                        <a href="{% url 'auth:restaurant_add_inventario' %}" class="btn btn-primary btn-sm">
+                            Crear
+                        </a>
                     </div>
                 </div>
-
-                <!-- Content Area -->
-                <div class="col-md-9">
-                    <div class="content-area">
-                        <!-- Header Section -->
-                        <div class="page-header">
-                            <div class="row align-items-center">
-                                <div class="col-md-6">
-                                    <h2><i class="fas fa-boxes me-3"></i>Gestión de Inventario</h2>
-                                    <p class="page-subtitle">Control y seguimiento del inventario del restaurante</p>
-                                </div>
-                                <div class="col-md-6 text-end">
-                                    <a href="{% url 'auth:restaurant_add_inventario' %}" class="btn btn-primary">
-                                        <i class="fas fa-plus me-2"></i>
-                                        Nuevo Inventario
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Inventario Table -->
-                        <div class="inventario-table-container">
-                            <div class="table-responsive">
-                                <table class="table table-hover">
-                                    <thead>
-                                        <tr>
-                                            <th><i class="fas fa-hashtag me-2"></i>Código</th>
-                                            <th><i class="fas fa-calendar me-2"></i>Fecha y Hora</th>
-                                            <th><i class="fas fa-user me-2"></i>Responsable</th>
-                                            <th><i class="fas fa-clock me-2"></i>Hora</th>
-                                            <th><i class="fas fa-tag me-2"></i>Tipo</th>
-                                            <th><i class="fas fa-cogs me-2"></i>Acciones</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        {% for inventario in inventarios %}
-                                        <tr>
-                                            <td>
-                                                <span class="inventario-codigo">#{{ inventario.inv_codigo }}</span>
-                                            </td>
-                                            <td>
-                                                <div class="fecha-info">
-                                                    <strong>{{ inventario.inv_fechahora|date:"d/m/Y" }}</strong>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="user-info-cell">
-                                                    <div class="user-avatar">
-                                                        <i class="fas fa-user"></i>
-                                                    </div>
-                                                    <span>{{ inventario.username|default:"N/A" }}</span>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <span class="hora">{{ inventario.inv_fechahora|time:"H:i" }}</span>
-                                            </td>
-                                            <td>
-                                                <span class="tipo-badge">Inventario</span>
-                                            </td>
-                                            <td>
-                                                <div class="action-buttons">
-                                                    <button class="btn btn-sm btn-outline-primary" title="Ver detalles">
-                                                        <i class="fas fa-eye"></i>
-                                                    </button>
-                                                    <button class="btn btn-sm btn-outline-warning" title="Editar inventario">
-                                                        <i class="fas fa-edit"></i>
-                                                    </button>
-                                                    <button class="btn btn-sm btn-outline-success" title="Duplicar inventario">
-                                                        <i class="fas fa-copy"></i>
-                                                    </button>
-                                                    <button class="btn btn-sm btn-outline-danger" title="Eliminar inventario">
-                                                        <i class="fas fa-trash"></i>
-                                                    </button>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        {% empty %}
-                                        <tr>
-                                            <td colspan="6" class="text-center py-4">
-                                                <div class="empty-state">
-                                                    <i class="fas fa-boxes fa-3x text-muted mb-3"></i>
-                                                    <h5 class="text-muted">No hay inventarios registrados</h5>
-                                                    <p class="text-muted">Comienza creando el primer registro de inventario</p>
-                                                    <a href="{% url 'auth:restaurant_add_inventario' %}" class="btn btn-primary">
-                                                        <i class="fas fa-plus me-2"></i>
-                                                        Nuevo Inventario
-                                                    </a>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        {% endfor %}
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-
-                        <!-- Stats Summary -->
-                        <div class="stats-summary mt-4">
-                            <div class="row">
-                                <div class="col-md-3">
-                                    <div class="stat-card">
-                                        <div class="stat-icon">
-                                            <i class="fas fa-boxes"></i>
-                                        </div>
-                                        <div class="stat-content">
-                                            <h3>{{ inventarios|length }}</h3>
-                                            <p>Total Inventarios</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="stat-card">
-                                        <div class="stat-icon">
-                                            <i class="fas fa-calendar-day"></i>
-                                        </div>
-                                        <div class="stat-content">
-                                            <h3>{{ inventarios|length }}</h3>
-                                            <p>Hoy</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="stat-card">
-                                        <div class="stat-icon">
-                                            <i class="fas fa-calendar-week"></i>
-                                        </div>
-                                        <div class="stat-content">
-                                            <h3>{{ inventarios|length }}</h3>
-                                            <p>Esta Semana</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="stat-card">
-                                        <div class="stat-icon">
-                                            <i class="fas fa-calendar-alt"></i>
-                                        </div>
-                                        <div class="stat-content">
-                                            <h3>{{ inventarios|length }}</h3>
-                                            <p>Este Mes</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Quick Actions -->
-                        <div class="quick-actions mt-4">
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <div class="action-card">
-                                        <div class="action-icon">
-                                            <i class="fas fa-plus"></i>
-                                        </div>
-                                        <div class="action-content">
-                                            <h5>Nuevo Inventario</h5>
-                                            <p>Crear un nuevo registro de inventario</p>
-                                            <a href="{% url 'auth:restaurant_add_inventario' %}" class="btn btn-primary btn-sm">
-                                                Crear
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="action-card">
-                                        <div class="action-icon">
-                                            <i class="fas fa-chart-bar"></i>
-                                        </div>
-                                        <div class="action-content">
-                                            <h5>Reportes</h5>
-                                            <p>Ver reportes de inventario</p>
-                                            <button class="btn btn-outline-primary btn-sm">
-                                                Ver Reportes
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="action-card">
-                                        <div class="action-icon">
-                                            <i class="fas fa-download"></i>
-                                        </div>
-                                        <div class="action-content">
-                                            <h5>Exportar</h5>
-                                            <p>Exportar datos de inventario</p>
-                                            <button class="btn btn-outline-success btn-sm">
-                                                Exportar
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+            </div>
+            <div class="col-md-4">
+                <div class="action-card">
+                    <div class="action-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <div class="action-content">
+                        <h5>Reportes</h5>
+                        <p>Ver reportes de inventario</p>
+                        <button class="btn btn-outline-primary btn-sm">
+                            Ver Reportes
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="action-card">
+                    <div class="action-icon">
+                        <i class="fas fa-download"></i>
+                    </div>
+                    <div class="action-content">
+                        <h5>Exportar</h5>
+                        <p>Exportar datos de inventario</p>
+                        <button class="btn btn-outline-success btn-sm">
+                            Exportar
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
-    </main>
+    </div>
 </div>
 {% endblock %}
 
