@@ -3,95 +3,18 @@
 
 {% block title %}Gestión de Usuarios - Restaurant{% endblock %}
 
+{% block dashboard_title %}
+    Gestión de Usuarios Oliver
+{% endblock %}
+
+{% block dashboard_subtitle %}
+    Sistema de Gestión de Restaurantes
+{% endblock %}
+
 {% block body_class %}restaurant-users-page{% endblock %}
 
 {% block content %}
-<div class="dashboard-container">
-    <!-- Header -->
-    <header class="dashboard-header">
-        <div class="container-fluid">
-            <div class="row align-items-center">
-                <div class="col-md-6">
-                    <div class="d-flex align-items-center">
-                        <i class="fas fa-utensils logo-icon me-3"></i>
-                        <div>
-                            <h1 class="dashboard-title">Gestión de Usuarios Oliver</h1>
-                            <p class="dashboard-subtitle">Sistema de Gestión de Restaurantes</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 text-end">
-                    <div class="user-info">
-                        <span class="welcome-text">Hola, {{ user.first_name|default:user.username }}!</span>
-                        <div class="btn-group">
-                            <a href="{% url 'auth:restaurant_dashboard' %}" class="btn btn-outline-light btn-sm me-2">
-                                <i class="fas fa-arrow-left me-1"></i>
-                                Volver al Dashboard
-                            </a>
-                            <a href="{% url 'auth:project_selection' %}" class="btn btn-outline-light btn-sm me-2">
-                                <i class="fas fa-building me-1"></i>
-                                Cambiar Proyecto
-                            </a>
-                            <a href="{% url 'auth:logout' %}" class="btn btn-outline-danger btn-sm">
-                                <i class="fas fa-sign-out-alt me-1"></i>
-                                Cerrar Sesión
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
 
-    <!-- Main Content -->
-    <main class="dashboard-main">
-        <div class="container-fluid">
-            <div class="row">
-                <!-- Sidebar -->
-                <div class="col-md-3">
-                    <div class="sidebar">
-                        <div class="sidebar-header">
-                            <h5><i class="fas fa-utensils me-2"></i>Menú Restaurant</h5>
-                        </div>
-                        <nav class="sidebar-nav">
-                            <a href="{% url 'auth:restaurant_dashboard' %}" class="nav-item">
-                                <i class="fas fa-home"></i>
-                                <span>Dashboard</span>
-                            </a>
-                            <a href="{% url 'auth:restaurant_users' %}" class="nav-item active">
-                                <i class="fas fa-users"></i>
-                                <span>Usuarios</span>
-                            </a>
-                            <a href="#" class="nav-item">
-                                <i class="fas fa-shopping-cart"></i>
-                                <span>Pedidos</span>
-                            </a>
-                            <a href="#" class="nav-item">
-                                <i class="fas fa-hamburger"></i>
-                                <span>Productos</span>
-                            </a>
-                            <a href="#" class="nav-item">
-                                <i class="fas fa-carrot"></i>
-                                <span>Ingredientes</span>
-                            </a>
-                            <a href="#" class="nav-item">
-                                <i class="fas fa-boxes"></i>
-                                <span>Inventario</span>
-                            </a>
-                            <a href="#" class="nav-item">
-                                <i class="fas fa-clock"></i>
-                                <span>Jornadas</span>
-                            </a>
-                            <a href="#" class="nav-item">
-                                <i class="fas fa-chart-line"></i>
-                                <span>Reportes</span>
-                            </a>
-                        </nav>
-                    </div>
-                </div>
-
-                <!-- Content Area -->
-                <div class="col-md-9">
                     <div class="content-area">
                         <!-- Header Section -->
                         <div class="page-header">
