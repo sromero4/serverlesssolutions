@@ -1,7 +1,7 @@
 from django.db import models
 
 from Apps.restaurant.estado.models import Estado
-from Apps.restaurant.estado.models import Usuario
+from Apps.restaurant.usuario.models import Usuario
 
 class Producto(models.Model):
     prod_codigo = models.AutoField(primary_key=True)
@@ -11,8 +11,8 @@ class Producto(models.Model):
     prod_imagen = models.CharField(max_length=255, blank=True, null=True)
     prod_fechacreacion = models.DateTimeField()
     prod_fechamodificacion = models.DateTimeField(blank=True, null=True)
-    est_codigo = models.ForeignKey('Estado', models.DO_NOTHING, db_column='est_codigo')
-    usu_codigo = models.ForeignKey('Usuario', models.DO_NOTHING, db_column='usu_codigo')
+    est_codigo = models.ForeignKey(Estado, models.DO_NOTHING)
+    usu_codigo = models.ForeignKey(Usuario, models.DO_NOTHING)
 
     def __str__(self):
         return self.prod_nombre

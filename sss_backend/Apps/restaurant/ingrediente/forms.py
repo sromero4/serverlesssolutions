@@ -7,10 +7,8 @@ class CrearIngredienteForm(forms.ModelForm):
     class Meta:
         model = Ingrediente
         fields = (
-            'nombre',
-            'cantidad',
-            'fechacreacion',
-            'usuario',
-            'tipoproducto',
-            'tipocantidad',
+            'ing_nombre',
+            'ing_cantidad',
+            'tipprod_codigo',
+            'tipcant_codigo',
         )

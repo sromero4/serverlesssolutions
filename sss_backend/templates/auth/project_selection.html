@@ -66,6 +66,28 @@
                 <i class="fas fa-arrow-right"></i>
             </div>
         </div>
+
+        <!-- Mapas Project Card -->
+        <div class="project-card mapas-card" onclick="selectProject('mapas')">
+            <div class="project-icon">
+                <i class="fas fa-building"></i>
+            </div>
+            <div class="project-content">
+                <h3 class="project-title">Mapas</h3>
+                <p class="project-description">
+                    Sistema de gestión de paqueteria, para la busqueda de la mejor ruta
+                </p>
+                <div class="project-features">
+                    <span class="feature-tag">Fotos</span>
+                    <span class="feature-tag">Paquetes</span>
+                    <span class="feature-tag">Mapas</span>
+                    <span class="feature-tag">Rutas</span>
+                </div>
+            </div>
+            <div class="project-arrow">
+                <i class="fas fa-arrow-right"></i>
+            </div>
+        </div>
     </div>
 
     <!-- User Actions -->
@@ -448,6 +470,8 @@
                 window.location.href = '{% url "auth:restaurant_dashboard" %}';
             } else if (projectType === 'conjunto') {
                 window.location.href = '{% url "auth:conjunto_dashboard" %}';
+            }else if (projectType === 'mapas') {
+                window.location.href = '{% url "mapas" %}';
             }
         }, 1500);
     }

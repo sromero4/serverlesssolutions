@@ -15,8 +15,8 @@ class Pedido(models.Model):
     ped_adicional = models.TextField(blank=True, null=True)
     ped_metodopago = models.CharField(max_length=50, blank=True, null=True)
     ped_fechacreacion = models.DateTimeField()
-    usu_codigo = models.ForeignKey('Usuario', models.DO_NOTHING, db_column='usu_codigo')
-    jor_codigo = models.ForeignKey('Jornada', models.DO_NOTHING, db_column='jor_codigo')
+    usu_codigo = models.ForeignKey(Usuario, models.DO_NOTHING)
+    jor_codigo = models.ForeignKey(Jornada, models.DO_NOTHING)
 
     def __str__(self):
         return self.per_mesa
