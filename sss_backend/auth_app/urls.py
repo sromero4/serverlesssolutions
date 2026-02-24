@@ -10,6 +10,7 @@ urlpatterns = [
     
     # Restaurant Dashboard
     path('restaurant/', views.restaurant_dashboard_view, name='restaurant_dashboard'),
+    path('mapas/', views.restaurant_dashboard_view, name='restaurant_dashboard'),
     
     # Restaurant - Usuarios
     path('restaurant/users/', views.restaurant_users_view, name='restaurant_users'),

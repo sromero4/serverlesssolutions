@@ -32,6 +32,7 @@ urlpatterns = [
     path('', redirect_to_login, name='home'),
     path('auth/', include('auth_app.urls')),
     path('restaurant/', include('Apps.restaurant.urls')),
+    path('mapas/', include('Apps.mapas.urls')),
     path("graphql_conjunto/", csrf_exempt(GraphQLView.as_view(graphiql=True, schema=schemas.schema_conjunto))),
     # path("graphql_restaurant/", csrf_exempt(GraphQLView.as_view(graphiql=True, schema=schemas.schema_restaurant))),
 ]
